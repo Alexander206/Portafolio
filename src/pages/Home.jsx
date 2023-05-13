@@ -1,7 +1,14 @@
 import React from "react";
 
+import Header from "../components/Header";
+
 const Home = () => {
-  return <main>En construcción</main>;
+  return (
+    <>
+      <Header />
+      <main>En construcción</main>
+    </>
+  );
 };
 
 export default Home;
