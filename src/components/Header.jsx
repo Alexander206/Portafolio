@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import "../styles/components/header.scss";
 
 // Resources
-import logo from "../assets/logo.jpg";
+import logo from "../assets/Logo.jpg";
 import menuIcon from "../assets/icon/menu-icon.svg";
 import navIconLinkedin from "../assets/icon/nav-icon1.svg";
 import navIconGithub from "../assets/icon/nav-icon2.svg";
