@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import "../styles/components/header.scss";
 
 // Resources
-/* import logo from "../assets/logo.jpg"; */
+import logo from "../assets/logo.jpg";
 import menuIcon from "../assets/icon/menu-icon.svg";
 import navIconLinkedin from "../assets/icon/nav-icon1.svg";
 import navIconGithub from "../assets/icon/nav-icon2.svg";
@@ -44,9 +44,9 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="header">
+    <header className={`header${scrolled ? " scrolled" : ""}`}>
       <a href="/" className="header_logo">
-        {/* <img src={logo} alt="logo profile" /> */}
+        <img src={logo} alt="logo profile" />
       </a>
 
       <button className="header_btn" onClick={() => setHandlerMenu(!handlerMenu)}>
