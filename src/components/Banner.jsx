@@ -10,6 +10,7 @@ import "../styles/pages/home.scss";
 
 // Resources
 import img from "../assets/me.svg";
+import light from "../assets/light.svg";
 import imgHtml from "../assets/icon/HTML.svg";
 import imgCss from "../assets/icon/CSS.svg";
 import imgJavaScript from "../assets/icon/javaScript.svg";
@@ -18,16 +19,16 @@ import imgNode from "../assets/icon/node.svg";
 import headerImg from "../assets/icon/header-img.svg";
 
 const Banner = ({ welcome, greeting, description, timer, profession }) => {
-    const [gradient, setgradient] = useState([-1000, -1000]);
-
-    const handlerGradient = (event) => {
-        setgradient([event.clientX, event.clientY]);
-    };
-
     return (
         <section className="banner">
-            <article className="container" onMouseMove={handlerGradient}>
+            <article className="container">
                 <article className="text">
+                    <figure className="light">
+                        <img src={light} alt="ligth" />
+                        <img src={light} alt="ligth" />
+                        <img src={light} alt="ligth" />
+                    </figure>
+
                     <span>{welcome}</span>
 
                     <Greeting greeting={greeting} timer={timer} profession={profession} />
@@ -57,14 +58,6 @@ const Banner = ({ welcome, greeting, description, timer, profession }) => {
                     <img className="node_img animate__animated animate__zoomIn" src={imgNode} alt="Programing image" />
                 </figure>
             </article>
-
-            <div
-                className="gradient"
-                onMouseMove={handlerGradient}
-                style={{
-                    background: `radial-gradient(circle at ${gradient[0]}px ${gradient[1]}px, rgba(0,0,0,0.2204176334106729) 0%, rgba(0,0,0,0.6612529002320185) 100%)`,
-                }}
-            ></div>
         </section>
     );
 };

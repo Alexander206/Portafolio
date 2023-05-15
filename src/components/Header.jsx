@@ -14,14 +14,7 @@ import navIconInstagram from "../assets/icon/nav-icon3.svg";
 
 // Components
 import HashLink from "./atoms/HashLink.jsx";
-
-const SocialLink = ({ icon, link }) => {
-    return (
-        <a href={link} target="_blank">
-            <img src={icon} alt="" />
-        </a>
-    );
-};
+import SocialLink from "./atoms/SocialLink";
 
 // Principal component
 const Header = () => {

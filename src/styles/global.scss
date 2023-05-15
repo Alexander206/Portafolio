@@ -35,24 +35,45 @@ html {
     min-height: auto;
     font-size: 62.5%;
 
+    background: var(--oscure);
+
     body {
         position: relative;
 
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
 
         overflow-x: hidden;
         height: 100%;
+        min-height: 100%;
         font-family: "Centra", sans-serif !important;
         font-weight: 400;
-        background-color: var(--oscure);
+
+        background: url("../assets/bg_banner.png");
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
 
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
             "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
+        #root {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            min-height: 100%;
+            width: 100%;
+
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 1rem;
+        }
     }
 
     h1,
@@ -107,21 +128,10 @@ html {
         border-radius: 5px;
         height: 40%;
     }
+}
 
-    #root {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        min-height: 100%;
-        width: 100%;
-
-        background-color: rgba(255, 255, 255, 0);
-        border-radius: 1rem;
-        margin: 2%;
-
-        main {
-            width: 100%;
-        }
+@media (min-width: 800px) {
+    html body {
+        background-attachment: scroll;
     }
 }
