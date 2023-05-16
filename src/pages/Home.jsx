@@ -39,17 +39,17 @@ const Home = () => {
                     text="Como Licenciado en Diseño Tecnológico, he desarrollado habilidades que me han permitido mejorar
                         en la comunicación, la dirección de grupos y la adaptabilidad."
                 />
-
-                <div
-                    className="gradient"
-                    onMouseMove={handlerGradient}
-                    style={{
-                        background: `radial-gradient(circle at ${gradient[0]}px ${gradient[1]}px, rgba(20,20,20,0.6446953781512605) 0%, rgba(20,20,20,0.4906337535014006) 32%, rgba(20,20,20,0.7315301120448179) 100%)`,
-                    }}
-                ></div>
             </main>
 
             <Footer />
+
+            <div
+                className="gradient"
+                onMouseMove={handlerGradient}
+                style={{
+                    background: `radial-gradient(circle at ${gradient[0]}px ${gradient[1]}px, rgba(20,20,20,0.6446953781512605) 0%, rgba(20,20,20,0.4906337535014006) 32%, rgba(20,20,20,0.7315301120448179) 100%)`,
+                }}
+            ></div>
         </>
     );
 };

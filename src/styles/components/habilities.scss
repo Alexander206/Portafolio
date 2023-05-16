@@ -108,9 +108,10 @@
             .ability_target {
                 display: grid;
                 align-items: start;
-                justify-content: start;
+                justify-content: center;
                 justify-items: center;
                 align-content: space-between;
+                width: 100%;
 
                 img {
                     height: 20rem;
