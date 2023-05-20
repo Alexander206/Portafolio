@@ -8,7 +8,7 @@ const HashLink = ({ text, route, setActiveLink, activeLink }) => {
     };
 
     return (
-        <li onClick={() => onUpdateActiveLink(text)} className={activeLink === text ? "active" : ""}>
+        <li onClick={() => onUpdateActiveLink(text)} className={activeLink === route ? "active" : ""}>
             <Link to={route}>{text}</Link>
         </li>
     );

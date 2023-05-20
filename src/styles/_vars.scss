@@ -1,10 +1,20 @@
 :root {
-    --ligth: #ffffff;
-    --oscure: #151515;
-    --desactive: rgba(0, 0, 0, 0.55);
-    --grey: rgb(93, 93, 93);
-    --greyLigth: rgba(217, 217, 217, 0.1);
-    --greyLigthMedium: rgba(255, 255, 255, 0.5);
-    --text: #b8b8b8;
-    --green: #00af66;
+    --primary: #10b5fa;
+    --primaryHover: #076787;
+    --darkPrimary: #076787;
+
+    --secundary: #de5e60;
+
+    --highLight: #ffffff;
+    --light: #f0f0f2;
+    --darkLight: #4c4e59;
+
+    --dark: #2f3238;
+    --black: #26292e;
+
+    --lightNeutral: #e2e8f0;
+    --neutral: #7F8289;
+    --darkNeutral: #7F8289;
+
+    --textNeutral: #b8b8b8;
 }

@@ -6,8 +6,7 @@ import { useState, useEffect } from "react";
 import "../styles/components/header.scss";
 
 // Resources
-import logo from "../assets/Logo.jpg";
-import menuIcon from "../assets/icon/menu-icon.svg";
+import logo from "../assets/icon/light_logo.svg";
 import navIconLinkedin from "../assets/icon/nav-icon1.svg";
 import navIconGithub from "../assets/icon/nav-icon2.svg";
 import navIconInstagram from "../assets/icon/nav-icon3.svg";
@@ -18,7 +17,8 @@ import SocialLink from "./atoms/SocialLink";
 
 // Principal component
 const Header = () => {
-    const [activeLink, setActiveLink] = useState("Inicio");
+    const searchParams = window.location.pathname;
+    const [activeLink, setActiveLink] = useState(searchParams);
     const [handlerMenu, setHandlerMenu] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -44,21 +44,15 @@ const Header = () => {
                 </a>
 
                 <button className="header_btn" onClick={() => setHandlerMenu(!handlerMenu)}>
-                    <img src={menuIcon} alt="Button header" />
+                    <ion-icon name="reorder-three"></ion-icon>
                 </button>
 
                 <nav className={`header_navbar ${handlerMenu ? "open" : "close"}`}>
                     <div className="navbar_list routes">
                         <HashLink route="/" text="Inicio" setActiveLink={setActiveLink} activeLink={activeLink} />
                         <HashLink
-                            route="/#projects"
+                            route="/projects"
                             text="Proyectos"
-                            setActiveLink={setActiveLink}
-                            activeLink={activeLink}
-                        />
-                        <HashLink
-                            route="/#education"
-                            text="Educación"
                             setActiveLink={setActiveLink}
                             activeLink={activeLink}
                         />
@@ -72,7 +66,7 @@ const Header = () => {
 
                     <div className="navbar_list btn_contact">
                         <HashLink
-                            route="/#contact"
+                            route="/contact"
                             text="Contáctame"
                             setActiveLink={setActiveLink}
                             activeLink={activeLink}

@@ -1,7 +1,13 @@
+// Dependences
 import React from "react";
 
+// Components
 import SocialLink from "./atoms/SocialLink";
 
+// Styles
+import "../styles/components/footer.scss";
+
+// Resources
 import navIconLinkedin from "../assets/icon/nav-icon1.svg";
 import navIconGithub from "../assets/icon/nav-icon2.svg";
 import navIconInstagram from "../assets/icon/nav-icon3.svg";

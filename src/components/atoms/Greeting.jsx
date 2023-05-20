@@ -5,7 +5,7 @@ const Greeting = ({ greeting, timer, profession }) => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState("");
-    const [delta, setDelta] = useState(300 - Math.random() * 50);
+    const [delta, setDelta] = useState(200 - Math.random() * 50);
     const [index, setIndex] = useState(1);
     const toRotate = profession;
     const period = timer;
@@ -39,7 +39,7 @@ const Greeting = ({ greeting, timer, profession }) => {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
             setIndex(1);
-            setDelta(500);
+            setDelta(150);
         } else {
             setIndex((prevIndex) => prevIndex + 1);
         }
@@ -48,6 +48,7 @@ const Greeting = ({ greeting, timer, profession }) => {
     return (
         <h1>
             {greeting}
+            <br />
             <span className="txt-rotate" dataperiod="800" data-rotate={`${toRotate}`}>
                 <span className="wrap">{text}</span>
             </span>
