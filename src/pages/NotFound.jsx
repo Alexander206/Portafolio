@@ -1,10 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-const NotFound = ({ setIsLoading }) => {
-    useEffect(() => {
-        setIsLoading(false);
-    }, []);
-
+const NotFound = () => {
     return <div>NotFound</div>;
 };
 

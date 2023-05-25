@@ -1,0 +1,38 @@
+@mixin headerCenterBtn {
+    .header_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 4rem;
+        background-color: transparent;
+        border: none;
+        z-index: 1;
+
+        ion-icon {
+            font-size: 3rem;
+            color: var(--dark);
+            transition: 0.2s;
+        }
+
+        &:hover {
+            ion-icon {
+                color: var(--primary);
+                transition: 0.2s;
+            }
+        }
+
+        &:active {
+            ion-icon {
+                color: var(--primaryHover);
+            }
+        }
+    }
+}
+
+@mixin responsive-headerCenterBtn {
+    .header_btn {
+        display: none;
+        transition: 0.2s;
+    }
+}

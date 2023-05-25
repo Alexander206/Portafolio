@@ -7,11 +7,16 @@ import Footer from "../components/Footer";
 
 import Game from "../components/Game";
 
+import "../styles/pages/projects.scss";
+
 const Proyects = () => {
     return (
         <>
             <LoadingPage />
             <Header />
+            <main>
+                
+            </main>
             <Game />
             <Footer />
         </>

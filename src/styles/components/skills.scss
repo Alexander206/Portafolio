@@ -1,3 +1,6 @@
+@import "./organims/skillsAboutContainer.scss";
+@import "./atoms/abilityTarget.scss";
+
 .about {
     position: relative;
     display: flex;
@@ -20,400 +23,50 @@
         background: transparent;
         z-index: 2;
 
-        .about_container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
+        @include SkillsAboutContainer;
 
-            background-color: var(--black);
-
-            padding: 1rem;
-            padding-top: 4rem;
-
-            h2 {
-                color: var(--light);
-                font-weight: bold;
-                text-align: center;
-                font-size: 44px;
-            }
-
-            .text {
+        .abilities_container {
+            .ability {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: stretch;
                 justify-content: space-around;
-                gap: 2rem;
 
-                background: transparent;
                 width: 100%;
-                text-align: center;
-
+                height: 100%;
                 padding: 2rem;
-                padding-bottom: 3rem;
+                padding-bottom: 6rem;
 
-                article {
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-
-                    h2 {
-                        text-align: start;
-                        color: var(--light);
-                        font-size: 3.1rem;
-                        font-weight: bold;
-                        margin: 0;
-                        margin-bottom: 4rem;
-
-                        span {
-                            font-weight: bold;
-                        }
-                    }
-
-                    p {
-                        text-align: left;
-                        max-width: 55rem;
-                        color: var(--neutral);
-                        font-size: 18px;
-                        letter-spacing: 0.8px;
-                        line-height: 1.5em;
-
-                        span {
-                            color: var(--primary);
-                        }
-                    }
-
-                    .skills {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        gap: 2rem;
-                        align-items: center;
-                        justify-content: center;
-
-                        width: 100%;
-                        margin: 2rem 0;
-                        margin-top: 4rem;
-                        order: 1;
-
-                        .skills_item {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: space-around;
-                            width: 100%;
-                            height: 100%;
-
-                            ion-icon {
-                                font-size: 4rem;
-                                font-weight: 100;
-                                color: var(--light);
-                                transition: 0.3s;
-                                margin-bottom: 2rem;
-                            }
-
-                            span {
-                                text-align: center;
-                                font-size: 1.4rem;
-                                transition: 0.3s;
-                                color: var(--neutral);
-                            }
-                        }
-
-                        .skills_item:hover {
-                            ion-icon {
-                                color: var(--neutral);
-                                transition: 0.3s;
-                            }
-                        }
-                    }
-
-                    a {
-                        width: 25rem;
-                        color: var(--light);
-                        font-weight: 700;
-                        font-size: 20px;
-                        margin-top: 40px;
-                        letter-spacing: 0.8px;
-                        display: flex;
-                        align-items: center;
-                        margin-bottom: 2rem;
-                        order: 2;
-                        transition: 0.3s;
-
-                        img {
-                            width: 2.6rem;
-                            color: var(--light);
-                            margin-left: 1rem;
-                            transition: 0.3s;
-                        }
-                    }
-
-                    a:hover {
-                        color: var(--primary);
-                        transition: 0.3s;
-
-                        img {
-                            margin-left: 25px;
-                            transition: 0.3s;
-                        }
-                    }
-                }
-
-                .img {
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    width: 90%;
-                    height: 100%;
-                    padding: 0 2rem;
-                    margin: 0;
-
-                    .principal_img {
-                        user-select: none;
-                        width: 100%;
-                        padding-top: 25%;
-                    }
-
-                    .html_img,
-                    .css_img,
-                    .javaScript_img,
-                    .react_img,
-                    .node_img {
-                        position: absolute;
-                        width: 15%;
-                        animation: updown 3s linear infinite;
-                    }
-
-                    .html_img {
-                        top: 12%;
-                        left: 25%;
-                    }
-
-                    .css_img {
-                        top: 30%;
-                        right: 8%;
-                    }
-
-                    .javaScript_img {
-                        top: 5%;
-                        right: 25%;
-                    }
-
-                    .react_img {
-                        left: 5%;
-                        top: 30%;
-                    }
-
-                    .node_img {
-                        bottom: 30%;
-                        right: 2%;
-                    }
-
-                    @keyframes updown {
-                        0% {
-                            transform: translateY(-10px);
-                        }
-                        50% {
-                            transform: translateY(10px);
-                        }
-                        100% {
-                            transform: translateY(-10px);
-                        }
-                    }
-                }
+                @include abilityTarget;
             }
         }
 
-        .ability {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            justify-content: space-around;
-
-            width: 100%;
-            height: 100%;
-            padding: 2rem;
-            padding-bottom: 6rem;
-
-            .ability_target {
-                display: grid;
-                align-items: start;
-                justify-content: center;
-                justify-items: center;
-                align-content: space-between;
-                width: 100%;
-
-                img {
-                    height: 20rem;
-                    padding: 2rem 0;
-                }
-
-                h3 {
-                    text-align: center;
-                    color: var(--textNeutral);
-                    font-size: 2rem;
-                    font-weight: 500;
-                    line-height: 1.2;
-                }
-
-                p {
-                    max-width: 40rem;
-                    text-align: center;
-                    color: var(--neutral);
-                    font-size: 18px;
-                    letter-spacing: 0.8px;
-                    line-height: 1.5em;
-                    margin: 2rem 0;
-                }
-            }
-        }
-
-        .btn_projects {
+        .btn_curriculum {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 20rem;
-            padding: 0;
-            margin-top: 4rem;
 
-            .custom-btn {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                width: 100%;
-                height: 5rem;
-                color: var(--light);
-                border-radius: 5px;
-
-                font-size: 1.8rem;
-                font-weight: 500;
-                background: transparent;
-                outline: none;
-
-                cursor: pointer;
-                transition: all 0.3s ease;
-                padding: 10px 25px;
-            }
-
-            .btn-8 {
-                background-color: var(--darkLight);
-                background-image: linear-gradient(315deg, var(--darkLight) 0%, var(--darkPrimary) 74%);
-                line-height: 42px;
-                padding: 0;
-                border: none;
-            }
-
-            .btn-8 span {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-            }
-
-            .btn-8:before,
-            .btn-8:after {
-                position: absolute;
-                content: "";
-                right: 0;
-                bottom: 0;
-                background: var(--darkPrimary);
-                box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-                    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
-                transition: all 0.3s ease;
-            }
-
-            .btn-8:before {
-                height: 0%;
-                width: 2px;
-            }
-
-            .btn-8:after {
-                width: 0%;
-                height: 2px;
-            }
-
-            .btn-8:hover:before {
-                height: 100%;
-            }
-
-            .btn-8:hover:after {
-                width: 100%;
-            }
-
-            .btn-8:hover {
-                background: transparent;
-            }
-
-            .btn-8 span:hover {
-                color: var(--primary);
-            }
-
-            .btn-8 span:before,
-            .btn-8 span:after {
-                position: absolute;
-                content: "";
-                left: 0;
-                top: 0;
-                background: var(--darkPrimary);
-                box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-                    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
-                transition: all 0.3s ease;
-            }
-
-            .btn-8 span:before {
-                width: 2px;
-                height: 0%;
-            }
-
-            .btn-8 span:after {
-                height: 2px;
-                width: 0%;
-            }
-
-            .btn-8 span:hover:before {
-                height: 100%;
-            }
-
-            .btn-8 span:hover:after {
-                width: 100%;
-            }
+            background-color: var(--light);
+            font-size: 1.8rem;
+            padding: 1rem 3rem;
+            margin: 4rem 0;
         }
     }
 }
 
+.targets {
+    background: linear-gradient(to right, #1818189d, #38383885), url("../../assets/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 5rem 0;
+}
+
 @media (min-width: 800px) {
     .about .container {
-        .about_container {
-            position: relative;
-            bottom: 10rem;
-            border-radius: 5rem;
-            padding: 4rem;
-
-            .text {
-                flex-direction: row;
-
-                article {
-                    width: 50%;
-
-                    .skills {
-                        flex-direction: row;
-                        grid-template-columns: 1fr 1fr 1fr 1fr;
-                    }
-                }
-
-                .img {
-                    width: 35%;
-                }
-            }
-        }
+        @include responsive-skillsAboutContainer;
 
         .abilities_container {
             display: flex;

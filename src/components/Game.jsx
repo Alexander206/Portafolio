@@ -51,23 +51,10 @@ class Game extends React.Component {
     render() {
         const { cursorGrabbed, gameOver, debug } = this.state;
         const screenStyle = cursorGrabbed ? { cursor: "none" } : {};
-        const appClass = debug ? "app app--debug" : "app";
+        const appClass = debug ? "app app--debug" : "game";
 
         return (
             <div className={appClass} style={screenStyle}>
-                <section className="container">
-                    <h1>Hello!</h1>
-                    <h2>Welcome to the internet.</h2>
-                    <p>This is a classic website, no traps or weird stuff!</p>
-                    <p>
-                        Feel free to browse, relax and, I don't know, click the button down there? Might as well, right?
-                    </p>
-
-                    <button className="debug-button" onClick={this.handleToggleDebug}>
-                        Debug
-                    </button>
-                </section>
-
                 <button className="trap-button" onClick={this.handleButtonClicked}>
                     {gameOver && "Nice one"}
                     {cursorGrabbed && "Gotcha!"}

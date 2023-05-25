@@ -1,5 +1,5 @@
 // Dependences
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // Componets
 import LoadingPage from "../components/LoadingPage";
@@ -12,6 +12,10 @@ import Skills from "../components/Skills";
 import "../styles/pages/home.scss";
 
 // Resourses
+import data from "../_data/home.json";
+
+const bannerData = data.banner;
+const skillsData = data.skills;
 
 const Home = () => {
     return (
@@ -21,14 +25,23 @@ const Home = () => {
 
             <main>
                 <Banner
-                    timer="2000"
-                    welcome="Ver proyectos"
-                    greeting="Hola! Soy Jeisson Alexander,"
-                    profession={[" Web Developer", " Front-End Developer", " Back-End Developer", " Web Designer"]}
-                    description="Tengo experiencia en proyectos de programación y diseño web. He trabajado en diversos proyectos con instituciones de renombre como la Universidad Pedagógica Nacional."
+                    timer={bannerData.timer}
+                    welcome={bannerData.welcome}
+                    greeting={bannerData.greeting}
+                    profession={bannerData.profession}
+                    description={bannerData.description}
                 />
 
-                <Skills />
+                <Skills
+                    text={skillsData.text}
+                    ability={skillsData.ability}
+                    imgMe={skillsData.imgMe}
+                    images={skillsData.images}
+                    imgDesing={skillsData.imgDesing}
+                    imgCurriculum={skillsData.imgCurriculum}
+                    imgResponsive={skillsData.imgResponsive}
+                    link={skillsData.link}
+                />
             </main>
 
             <Footer />
