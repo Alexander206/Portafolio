@@ -27,7 +27,7 @@ const SkillsAboutContainer = ({ text, imgMe, ability, images }) => {
 
     return (
         <article className="about_container">
-            <h2>Skills</h2>
+            <h2>Habilidades</h2>
 
             <div className="separator"></div>
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 // Resources
-import logo from "../../assets/icon/dark_logo.svg";
+import logo from "../../assets/me.jpg";
 
 const HeaderLogo = () => {
     return (

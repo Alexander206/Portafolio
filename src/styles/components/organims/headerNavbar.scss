@@ -19,7 +19,7 @@
             a {
                 position: relative;
                 font-size: 1.8rem;
-                color: var(--light);
+                color: var(--lightNeutral);
                 opacity: 0.75;
                 transition: 0.3s;
 
@@ -76,7 +76,7 @@
             }
 
             a img {
-                width: 40%;
+                width: 45%;
                 z-index: 1;
                 transition: 0.3s ease-in-out;
             }
@@ -90,7 +90,7 @@
         .btn_contact li a {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--light);
+            color: var(--lightNeutral);
             background-color: transparent;
             border: 1px solid var(--lightNeutral);
             border-radius: 1rem;

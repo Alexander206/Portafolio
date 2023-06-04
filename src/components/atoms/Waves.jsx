@@ -20,10 +20,10 @@ const Waves = () => {
                     />
                 </defs>
                 <g className="parallax">
-                    <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(47,50,56,0.7" />
-                    <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(47,50,56,0.5)" />
-                    <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(47,50,56,0.3)" />
-                    <use xlinkHref="#gentle-wave" x="48" y="7" fill="rgba(47,50,56)" />
+                    <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(38,41,46,0.7" />
+                    <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(38,41,46,0.5)" />
+                    <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(38,41,46,0.3)" />
+                    <use xlinkHref="#gentle-wave" x="48" y="7" fill="rgba(38,41,46)" />
                 </g>
             </svg>
         </div>

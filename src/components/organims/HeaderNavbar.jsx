@@ -14,7 +14,6 @@ const HeaderNavbar = ({ handlerMenu, activeLink, setActiveLink }) => {
         <nav className={`header_navbar ${handlerMenu ? "open" : "close"}`}>
             <div className="navbar_list routes">
                 <HashLink route="/" text="Inicio" setActiveLink={setActiveLink} activeLink={activeLink} />
-                <HashLink route="/#skills" text="Sobre mi" setActiveLink={setActiveLink} activeLink={activeLink} />
                 <HashLink route="/projects" text="Proyectos" setActiveLink={setActiveLink} activeLink={activeLink} />
             </div>
 

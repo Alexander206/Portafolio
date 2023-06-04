@@ -7,17 +7,19 @@ import Greeting from "../atoms/Greeting";
 
 const BannerText = ({ welcome, greeting, description, timer, profession }) => {
     return (
-        <article className="text">
-            <Greeting greeting={greeting} timer={timer} profession={profession} />
+        <>
+            <article className="text">
+                <Greeting greeting={greeting} timer={timer} profession={profession} />
 
-            <p>{description}</p>
+                <p>{description}</p>
 
-            <Link to="/projects" className="btn_projects">
-                <button className="custom-btn btn-8">
-                    <span>{welcome}</span>
-                </button>
-            </Link>
-        </article>
+                <Link to="/projects" className="btn_projects">
+                    <button className="custom-btn btn-8">
+                        <span>{welcome}</span>
+                    </button>
+                </Link>
+            </article>
+        </>
     );
 };
 

@@ -8,11 +8,19 @@ main {
     width: 100%;
     height: 100%;
 
+    background-image: url("../../assets/bg2.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: calc(100vh * 2);
+
     @include banner;
 }
 
 @media (min-width: 800px) {
     main {
+        background-position: top;
+        background-size: 100vw;
+
         @include responsive-banner;
     }
 }

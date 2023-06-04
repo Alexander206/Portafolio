@@ -3,7 +3,6 @@ import React from "react";
 
 // Components
 import SkillsAboutContainer from "./organims/SkillsAboutContainer";
-import SkillsAbilitiesContainer from "./organims/SkillsAbilitiesContainer";
 
 // Principal component
 const Skills = ({ text, ability, imgMe, images, imgDesing, imgCurriculum, imgResponsive, link }) => {
@@ -16,22 +15,14 @@ const Skills = ({ text, ability, imgMe, images, imgDesing, imgCurriculum, imgRes
 
     return (
         <>
-            <section className="about" id="skills">
+            <section className="about" id="Sobremi">
                 <article className="container">
                     <SkillsAboutContainer text={text} ability={ability} imgMe={imgMe} images={images} />
-                </article>
-            </section>
 
-            <section className="about targets">
-                <article className="container">
-                    <SkillsAbilitiesContainer
-                        imgDesing={imgDesing}
-                        imgCurriculum={imgCurriculum}
-                        imgResponsive={imgResponsive}
-                    />
-
-                    <a href={link} target="_blank" className="btn_curriculum">
-                        <span>Ver hoja de vida</span>
+                    <a href={link} className="btn_curriculum" target="_blank">
+                        <button className="custom-btn btn-8">
+                            <span>Hoja de vida</span>
+                        </button>
                     </a>
                 </article>
             </section>
