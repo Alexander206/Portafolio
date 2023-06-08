@@ -1,5 +1,13 @@
 import React from "react";
 
+const Tecnology = ({ img }) => {
+    return (
+        <li>
+            <img src={img} alt="tecnology" />
+        </li>
+    );
+};
+
 const Abilities = () => {
     return (
         <section className="abilities">
@@ -8,25 +16,11 @@ const Abilities = () => {
                     <h2>Tecnologías</h2>
 
                     <ul>
-                        <li>
-                            <img src="" alt="tecnology" />
-                        </li>
-
-                        <li>
-                            <img src="" alt="tecnology" />
-                        </li>
-
-                        <li>
-                            <img src="" alt="tecnology" />
-                        </li>
-
-                        <li>
-                            <img src="" alt="tecnology" />
-                        </li>
-
-                        <li>
-                            <img src="" alt="tecnology" />
-                        </li>
+                        <Tecnology />
+                        <Tecnology />
+                        <Tecnology />
+                        <Tecnology />
+                        <Tecnology />
                     </ul>
                 </article>
             </article>

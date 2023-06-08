@@ -9,7 +9,7 @@ import Banner from "../components/Banner";
 import Skills from "../components/Skills";
 import Abilities from "../components/Abilities";
 
-// Estyles
+// Styles
 import "../styles/pages/home.scss";
 
 // Resourses
@@ -24,7 +24,7 @@ const Home = () => {
             <LoadingPage />
             <Header />
 
-            <main>
+            <main className="main_home">
                 <Banner
                     timer={bannerData.timer}
                     welcome={bannerData.welcome}
@@ -44,7 +44,7 @@ const Home = () => {
                     link={skillsData.link}
                 />
 
-                <Abilities />
+                {/* <Abilities /> */}
             </main>
 
             <Footer />

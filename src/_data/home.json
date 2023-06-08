@@ -27,9 +27,12 @@
             { "img": "react.svg", "id": "react" },
             { "img": "node.svg", "id": "node" }
         ],
-        "imgDesing": "design.svg",
-        "imgCurriculum": "curriculum.svg",
-        "imgResponsive": "responsive.svg",
+        "tecnologies": [
+            { "img": "nodejs.png" },
+            { "img": "reactjs.png" },
+            { "img": "expressjs.png" },
+            { "img": "mongodb.png" }
+        ],
         "link": "https://drive.google.com/file/d/1sF0PBac5Z58viBODipNhiSbGKZyUKm0f/view?usp=share_link"
     }
 }
