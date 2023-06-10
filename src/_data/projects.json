@@ -14,27 +14,30 @@
             "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
             "author": ["Jeisson Gavilán"],
             "location": "CINNDET UPN",
-            "link": ""
+            "link": "",
+            "repo": ""
         },
         {
-            "img": "",
+            "img": "DMED.png",
             "title": "Propuesta para orientar docentes",
             "category": "ACADÉMICO",
             "date": "2021/ Bogotá - Colombia",
             "text": "Diseño de una propuesta para orientar a docentes en formación de la Licenciatura en Diseño Tecnológico, para el desarrollo de sus materiales educativos digitales.",
             "author": ["Jeisson Gavilán", "José Moreno"],
             "location": "UPN",
-            "link": ""
+            "link": "",
+            "repo": ""
         },
         {
             "img": "",
-            "title": "DISEÑO WEB",
-            "category": "Zombie STORE",
+            "title": "Zombie STORE",
+            "category": "DISEÑO WEB",
             "date": "2023/ Bogotá - Colombia",
             "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
             "author": ["Jeisson Gavilán"],
             "location": "BIT",
-            "link": ""
+            "link": "",
+            "repo": ""
         }
     ]
 }

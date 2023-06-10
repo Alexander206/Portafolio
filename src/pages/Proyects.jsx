@@ -1,84 +1,158 @@
 import React, { useState, useEffect } from "react";
 
-// Componets
+// Components
 import LoadingPage from "../components/LoadingPage";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Game from "../components/Game";
 import Project from "../components/Project";
 import CategoriesComponent from "../components/CategoriesComponent";
+import GrabZone from "../components/atoms/GrabZone";
 
 // Style
 import "../styles/pages/projects.scss";
+import "../styles/components/game.scss";
 
 // Resourses
 import data from "../_data/projects.json";
 
 const Proyects = () => {
-  const [selectCategory, setSelectCategory] = useState(true);
-  const [itemSelect, setItemSelect] = useState("Todos");
-  const [stateProjects, setStateProjects] = useState();
+    const [debug, setDebug] = useState(false);
+    const [cursorGrabbed, setCursorGrabbed] = useState(false);
+    const [gameOver, setGameOver] = useState(false);
 
-  const Categories = data.categories.map((item, index) => {
+    const handleToggleDebug = () => {
+        setDebug(!debug);
+    };
+
+    const handleCursorGrabbed = () => {
+        setCursorGrabbed(true);
+        setTimeout(() => {
+            setCursorGrabbed(false);
+        }, 2000);
+    };
+
+    const handleButtonClicked = () => {
+        setGameOver(true);
+        setTimeout(() => {
+            setGameOver(false);
+        }, 4000);
+    };
+
+    // Estado para selecionar cateogiras
+    const [selectCategory, setSelectCategory] = useState(true);
+    // Estado para la categoria seleccionada
+    const [itemSelect, setItemSelect] = useState("Todos");
+    // Estado para actualizar los proyectos
+    const [stateProjects, setStateProjects] = useState();
+
+    // Mapeo de categorias
+    const Categories = data.categories.map((item, index) => {
+        return (
+            <CategoriesComponent
+                key={index}
+                id={item}
+                category={item}
+                componentClass={selectCategory && itemSelect === item ? "btn_active" : "btn_desactive"}
+                selectCategory={selectCategory}
+                setSelectCategory={setSelectCategory}
+                itemSelect={itemSelect}
+                setItemSelect={setItemSelect}
+            />
+        );
+    });
+
+    // Filtro de proyectos con diferentes categorias
+    const FilterProjects = data.projects.filter((item) => {
+        const categoryFilter = item.category.split(" ")[0].toLocaleLowerCase();
+        const itemFilter = itemSelect.toLocaleLowerCase();
+
+        return categoryFilter === itemFilter;
+    });
+
+    // proyectos filtrados
+    const Projects = FilterProjects.map((item, index) => {
+        return (
+            <Project
+                key={index}
+                img={item.img}
+                title={item.title}
+                category={item.category}
+                date={item.date}
+                text={item.text}
+                author={item.author}
+                location={item.location}
+                link={item.link}
+                repo={item.repo}
+            />
+        );
+    });
+
+    // Proyectos completos
+    const AllProjects = data.projects.map((item, index) => {
+        return (
+            <Project
+                key={index}
+                img={item.img}
+                title={item.title}
+                category={item.category}
+                date={item.date}
+                text={item.text}
+                author={item.author}
+                location={item.location}
+                link={item.link}
+                repo={item.repo}
+            />
+        );
+    });
+
+    // Siclo de vida del componente
+    useEffect(() => {
+        data.categories.forEach((item) => {
+            if (itemSelect === item) {
+                setStateProjects(Projects);
+            } else if (itemSelect === "Todos") {
+                setStateProjects(AllProjects);
+            }
+        });
+    }, [itemSelect]);
+
+    const screenStyle = cursorGrabbed ? { cursor: "none" } : {};
+    const appClass = debug ? "app app--debug" : "main_projects";
+
     return (
-      <CategoriesComponent
-        key={index}
-        id={item}
-        category={item}
-        componentClass={selectCategory && itemSelect === item ? "btn_active" : "btn_desactive"}
-        selectCategory={selectCategory}
-        setSelectCategory={setSelectCategory}
-        itemSelect={itemSelect}
-        setItemSelect={setItemSelect}
-      />
+        <>
+            <LoadingPage />
+            <Header />
+            <main className={appClass} style={screenStyle}>
+                <section className="title">
+                    <h1>{data.title}</h1>
+                    <p>
+                        {data.text1} <span>{data.textSpan}</span> {data.text2}
+                    </p>
+                </section>
+
+                <section className="container">
+                    <article className="filtrer">
+                        <h2>{data.categoryText}</h2>
+                        <ul>{Categories}</ul>
+                    </article>
+
+                    <article className="projects_container">{stateProjects}</article>
+                </section>
+
+               {/*  <button className="trap-button" onClick={handleButtonClicked}>
+                    {gameOver && "Nice one"}
+                    {cursorGrabbed && "Gotcha!"}
+                    {!gameOver && !cursorGrabbed && "Button!"}
+                </button> */}
+
+                {/* <div className="grab-zone-wrapper">
+                    <GrabZone onCursorGrabbed={handleCursorGrabbed} cursorGrabbed={cursorGrabbed} gameOver={gameOver} />
+                </div> */}
+            </main>
+            <Footer />
+        </>
     );
-  });
-
-  const Projects = data.projects.map((item, index) => {
-    return (
-      <Project
-        key={index}
-        img={item.img}
-        title={item.title}
-        category={item.category}
-        date={item.date}
-        text={item.text}
-        author={item.author}
-        location={item.location}
-        link={item.link}
-      />
-    );
-  });
-
-  useEffect(() => {
-    setStateProjects(Projects);
-  }, []);
-
-  return (
-    <>
-      <LoadingPage />
-      <Header />
-      <main className="main_projects">
-        <section className="title">
-          <h1>{data.title}</h1>
-          <p>
-            {data.text1} <span>{data.textSpan}</span> {data.text2}
-          </p>
-        </section>
-
-        <section className="container">
-          <article className="filtrer">
-            <h2>{data.categoryText}</h2>
-            <ul>{Categories}</ul>
-          </article>
-
-          <article className="projects_container">{stateProjects}</article>
-        </section>
-      </main>
-      <Game />
-      <Footer />
-    </>
-  );
 };
 
 export default Proyects;

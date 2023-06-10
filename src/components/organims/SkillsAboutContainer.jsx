@@ -41,7 +41,7 @@ const SkillsAboutContainer = ({ text, imgMe, ability, images }) => {
 
                     <article className="skills">{componentSkills}</article>
 
-                    <Link to="/#contact">
+                    <Link to="/contact">
                         Contácta conmigo <img src={imgText} />
                     </Link>
                 </article>

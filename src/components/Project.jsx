@@ -1,25 +1,98 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Project = ({ img, title, category, date, text, author, location, link }) => {
-    return (
-        <a className="projects_link" href={link} target="_blank">
-            <figure className="projects_img">
+import GrabZone from "../components/atoms/GrabZone";
+
+const Project = ({ img, title, category, date, text, author, location, link, repo }) => {
+    img = new URL(`../assets/proyects/${img}`, import.meta.url).pathname;
+
+    let imgLink;
+
+    const [cursorGrabbed, setCursorGrabbed] = useState(false);
+    const [gameOver, setGameOver] = useState(false);
+
+    const handleCursorGrabbed = () => {
+        setCursorGrabbed(true);
+        setTimeout(() => {
+            setCursorGrabbed(false);
+        }, 1000);
+    };
+
+    const handleButtonClicked = () => {
+        setGameOver(true);
+        setTimeout(() => {
+            setGameOver(false);
+        }, 4000);
+    };
+
+    const screenStyle = cursorGrabbed ? { cursor: "none" } : {};
+
+    const listAuthor = author.map((item, index) => {
+        return (
+            <div key={index}>
+                {item} <br />
+            </div>
+        );
+    });
+
+    if (link.length < 1) {
+        imgLink = (
+            <div className="container_game">
+                <button className="projects_img" onClick={handleButtonClicked}>
+                    <img src={img} alt="image project" />
+                </button>
+                <div className="grab-zone-wrapper">
+                    <GrabZone onCursorGrabbed={handleCursorGrabbed} cursorGrabbed={cursorGrabbed} gameOver={gameOver} />
+                </div>
+            </div>
+        );
+    } else {
+        imgLink = (
+            <a className="projects_img" href={link}>
                 <img src={img} alt="image project" />
-            </figure>
+            </a>
+        );
+    }
+
+    const iconLink = link ? (
+        <a href={link}>
+            <ion-icon name="earth-outline"></ion-icon>
+        </a>
+    ) : (
+        <span className="upss">Aún está en construcción</span>
+    );
+
+    const iconRepo = repo ? (
+        <a href={repo}>
+            <ion-icon name="logo-github"></ion-icon>
+        </a>
+    ) : (
+        false
+    );
+
+    return (
+        <article className="projects_link" target="_blank" style={screenStyle}>
+            {imgLink}
             <article className="projects_data">
                 <span className="projects_category"> {category} </span>
-                <h3 className="projects_title"> {title} </h3>
+                <a href={link} className="projects_title">
+                    {title}
+                </a>
                 <span className="projects_date"> {date} </span>
 
                 <p className="projects_text">{text}</p>
 
                 <span className="projects_author">
-                    {author}
-                    <br />
+                    {listAuthor}
                     {location}
                 </span>
             </article>
-        </a>
+
+            <article className="container_btns">
+                {iconLink}
+
+                {iconRepo}
+            </article>
+        </article>
     );
 };
 
