@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import GrabZone from "../components/atoms/GrabZone";
+import GrabZone from "../atoms/GrabZone";
 
 const Project = ({ img, title, category, date, text, author, location, link, repo }) => {
-    img = new URL(`../assets/proyects/${img}`, import.meta.url).pathname;
+    img = new URL(`../../assets/proyects/${img}`, import.meta.url).pathname;
 
     let imgLink;
 

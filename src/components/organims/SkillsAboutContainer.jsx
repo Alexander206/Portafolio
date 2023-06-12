@@ -9,10 +9,12 @@ import SkillsItem from "../atoms/SkillsItem";
 import imgText from "../../assets/icon/header-img.svg";
 
 const SkillsAboutContainer = ({ text, imgMe, ability, images }) => {
+    // Lista de componentes de habilidades blandas
     const componentSkills = ability.map((item, index) => {
         return <SkillsItem key={index} icon={item.icon} text={item.text} />;
     });
 
+    // Lista de imagenes de tecnologías
     const componentImages = images.map((item, index) => {
         const img = new URL(`../../assets/skills/${item.img}`, import.meta.url).pathname;
         return (

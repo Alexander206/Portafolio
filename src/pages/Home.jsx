@@ -18,6 +18,7 @@ import data from "../_data/home.json";
 const bannerData = data.banner;
 const skillsData = data.skills;
 
+// Principal component
 const Home = () => {
     return (
         <>

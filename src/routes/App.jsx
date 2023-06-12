@@ -8,6 +8,7 @@ import Proyects from "../pages/Proyects";
 import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 
+// Principal component
 function App() {
     return (
         <BrowserRouter>

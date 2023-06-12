@@ -1,7 +1,7 @@
+// components
 import React from "react";
 
-import "../../styles/components/atoms/waves.scss";
-
+// Principal component
 const Waves = () => {
     return (
         <div className="container_waves">

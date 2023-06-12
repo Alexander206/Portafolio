@@ -47,11 +47,13 @@
         }
     }
 
-    .container {
+    .container_filter {
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
+        width: 100%;
+        max-width: 132rem;
 
         margin-bottom: 7rem;
 
@@ -250,7 +252,7 @@
 
     .grab-zone-wrapper {
         position: absolute;
-        bottom: 0;
+        top: 0;
         right: 0;
         overflow: hidden;
         transform: translateX(0) translateY(0%);
@@ -261,7 +263,7 @@
         align-items: center;
         justify-content: center;
         max-width: 30rem;
-        height: 700px;
+        height: 42rem;
         border-radius: 50%;
 
         &__danger {
@@ -465,7 +467,7 @@
 
 @media (min-width: 800px) {
     .main_projects {
-        .container {
+        .container_filter {
             flex-direction: row;
 
             .filtrer {

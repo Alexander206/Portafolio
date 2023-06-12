@@ -1,6 +1,7 @@
 // Dependences
 import React, { useState, useEffect } from "react";
 
+// Component principal
 const Greeting = ({ greeting, timer, profession }) => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);

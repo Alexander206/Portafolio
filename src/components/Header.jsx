@@ -10,6 +10,9 @@ import HeaderLogo from "./atoms/HeaderLogo";
 import HeaderNavbar from "./organims/HeaderNavbar";
 import HeaderCenterBtn from "./atoms/HeaderCenterBtn";
 
+// Resources
+import data from "../_data/general.json";
+
 // Principal component
 const Header = () => {
     const searchParams = window.location.pathname;
@@ -36,9 +39,16 @@ const Header = () => {
             <section className="container">
                 <HeaderLogo />
 
-                <HeaderCenterBtn handlerMenu={handlerMenu} setHandlerMenu={setHandlerMenu}/>
+                <HeaderCenterBtn handlerMenu={handlerMenu} setHandlerMenu={setHandlerMenu} />
 
-                <HeaderNavbar handlerMenu={handlerMenu} activeLink={activeLink} setActiveLink={setActiveLink} />
+                <HeaderNavbar
+                    handlerMenu={handlerMenu}
+                    activeLink={activeLink}
+                    setActiveLink={setActiveLink}
+                    linkedin={data.linkedin}
+                    github={data.github}
+                    instagram={data.instagram}
+                />
             </section>
         </header>
     );

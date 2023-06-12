@@ -1,5 +1,10 @@
+// Components
 @import "../components/banner.scss";
 @import "../components/skills.scss";
+
+// Resources
+$imgBackground: "../../assets/bg.jpg";
+$colorText: --light;
 
 .main_home {
     display: flex;
@@ -8,11 +13,15 @@
     width: 100%;
     height: 100%;
 
-    @include banner;
+    @include banner($imgBackground, $colorText);
+
+    @include skills;
 }
 
 @media (min-width: 800px) {
     .main_home {
         @include responsive-banner;
+
+        @include skills_responsive;
     }
 }

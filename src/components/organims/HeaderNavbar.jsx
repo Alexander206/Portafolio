@@ -9,7 +9,7 @@ import navIconLinkedin from "../../assets/icon/nav-icon1.svg";
 import navIconGithub from "../../assets/icon/nav-icon2.svg";
 import navIconInstagram from "../../assets/icon/nav-icon3.svg";
 
-const HeaderNavbar = ({ handlerMenu, activeLink, setActiveLink }) => {
+const HeaderNavbar = ({ handlerMenu, activeLink, setActiveLink, linkedin, github, instagram }) => {
     return (
         <nav className={`header_navbar ${handlerMenu ? "open" : "close"}`}>
             <div className="navbar_list routes">

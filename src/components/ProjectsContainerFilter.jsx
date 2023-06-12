@@ -1,23 +1,13 @@
 // Dependences
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-// Components
-import LoadingPage from "../components/LoadingPage";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import CategoriesComponent from "../components/CategoriesComponent";
-import Project from "../components/organims/Project";
-import ProjectsTitle from "../components/ProjectsTitle";
-
-// Style
-import "../styles/pages/projects.scss";
-import "../styles/components/game.scss";
+// components
+import Project from "./organims/Project";
 
 // Resourses
 import data from "../_data/projects.json";
 
-// Principal component
-const Proyects = () => {
+const ProjectsContainerFilter = ({ categoryText }) => {
     // Estado para selecionar cateogiras
     const [selectCategory, setSelectCategory] = useState(true);
     // Estado para la categoria seleccionada
@@ -97,24 +87,15 @@ const Proyects = () => {
     }, [itemSelect]);
 
     return (
-        <>
-            <LoadingPage />
-            <Header />
-            <main className="main_projects">
-                <ProjectsTitle title={data.title} text1={data.text1} textSpan={data.textSpan} text2={data.text2} />
+        <section className="container_filter">
+            <article className="filtrer">
+                <h2>{categoryText}</h2>
+                <ul>{Categories}</ul>
+            </article>
 
-                <section className="container_filter">
-                    <article className="filtrer">
-                        <h2>{data.categoryText}</h2>
-                        <ul>{Categories}</ul>
-                    </article>
-
-                    <article className="projects_container">{stateProjects}</article>
-                </section>
-            </main>
-            <Footer />
-        </>
+            <article className="projects_container">{stateProjects}</article>
+        </section>
     );
 };
 
-export default Proyects;
+export default ProjectsContainerFilter;
