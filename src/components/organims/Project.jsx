@@ -47,14 +47,14 @@ const Project = ({ img, title, category, date, text, author, location, link, rep
         );
     } else {
         imgLink = (
-            <a className="projects_img" href={link}>
+            <a className="projects_img" href={link} target="_blank">
                 <img src={img} alt="image project" />
             </a>
         );
     }
 
     const iconLink = link ? (
-        <a href={link}>
+        <a href={link} target="_blank">
             <ion-icon name="earth-outline"></ion-icon>
         </a>
     ) : (
@@ -62,7 +62,7 @@ const Project = ({ img, title, category, date, text, author, location, link, rep
     );
 
     const iconRepo = repo ? (
-        <a href={repo}>
+        <a href={repo} target="_blank">
             <ion-icon name="logo-github"></ion-icon>
         </a>
     ) : (
@@ -70,7 +70,7 @@ const Project = ({ img, title, category, date, text, author, location, link, rep
     );
 
     return (
-        <article className="projects_link" target="_blank" style={screenStyle}>
+        <article className="projects_link" style={screenStyle}>
             {imgLink}
             <article className="projects_data">
                 <span className="projects_category"> {category} </span>
@@ -81,10 +81,9 @@ const Project = ({ img, title, category, date, text, author, location, link, rep
 
                 <p className="projects_text">{text}</p>
 
-                <span className="projects_author">
-                    {listAuthor}
-                    {location}
-                </span>
+                <p className="projects_location">{location}</p>
+
+                <span className="projects_author">{listAuthor}</span>
             </article>
 
             <article className="container_btns">

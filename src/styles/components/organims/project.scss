@@ -1,0 +1,149 @@
+@import "../atoms/grabZone.scss";
+
+@mixin project {
+    .projects_link {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        text-decoration: none;
+        max-width: 37rem;
+        background-color: var(--dark);
+        border-radius: 1rem;
+        transition: 0.3s;
+
+        &:hover {
+            box-shadow: 0 0 1rem rgb(26 26 26 / 38%);
+            transform: translateY(-6px);
+            transition: 0.3s;
+        }
+
+        .container_game {
+            width: 100%;
+            min-height: 26rem;
+            height: 26rem;
+            overflow: hidden;
+            cursor: pointer;
+
+            .grab-zone-wrapper {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 42rem;
+                overflow: hidden;
+                transform: translateX(0) translateY(0%);
+
+                @include grabZone;
+            }
+        }
+
+        .projects_img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 26rem;
+            height: 26rem;
+            border-radius: 1rem 1rem 0 0;
+            overflow: hidden;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .projects_data > * {
+            margin: 1rem 0;
+            line-height: 1.5;
+            letter-spacing: 0.8px;
+        }
+
+        .projects_data {
+            position: relative;
+            height: 100%;
+            background-color: var(--dark);
+            padding: 2rem;
+            margin-bottom: 5rem;
+
+            .projects_category {
+                font-size: 1.4rem;
+                letter-spacing: 3px;
+                color: var(--primary);
+            }
+
+            .projects_title {
+                display: block;
+                font-size: 1.8rem;
+                color: var(--light);
+            }
+
+            .projects_date {
+                font-size: 1.4rem;
+                color: var(--darkNeutral);
+            }
+
+            .projects_text {
+                font-size: 1.6rem;
+                font-weight: normal;
+                color: var(--neutral);
+                margin-bottom: 2rem;
+            }
+
+            .projects_location {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: var(--darkNeutral);
+                border: 1px solid var(--darkLight);
+                border-radius: 1rem;
+
+                padding: 1rem 2rem;
+                margin-bottom: 7rem;
+            }
+
+            .projects_author {
+                position: absolute;
+                bottom: 1rem;
+                font-size: 1.4rem;
+                color: var(--darkNeutral);
+            }
+        }
+
+        .container_btns {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 2rem;
+            width: 100%;
+
+            padding: 2rem 0;
+            padding-left: 2rem;
+
+            .upss {
+                width: 100%;
+                text-align: center;
+                color: var(--secundary);
+                font-size: 1.6rem;
+            }
+
+            a ion-icon {
+                color: var(--primary);
+                font-size: 2.8rem;
+                transition: 0.3s;
+            }
+
+            a ion-icon:hover {
+                color: var(--darkPrimary);
+                transition: 0.3s;
+            }
+        }
+    }
+}

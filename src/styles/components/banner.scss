@@ -2,7 +2,7 @@
 @import "./organims/bannerText.scss";
 @import "./atoms/waves.scss";
 
-@mixin banner($imgBackground, $colorText) {
+@mixin banner {
     .banner {
         position: relative;
         display: flex;
@@ -11,7 +11,7 @@
 
         width: 100%;
         height: 100%;
-        color: var($colorText);
+        color: var(--light);
 
         padding: 10rem 0rem 5rem 0rem;
 
@@ -22,7 +22,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url(#{$imgBackground});
+            background-image: url("../../assets/bg.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -37,9 +37,9 @@
             width: 100%;
             height: 100%;
 
-            background: #000000ea;
-            background: -webkit-linear-gradient(to right, #1e1e1f, #25262738);
-            background: linear-gradient(to right, #1e1e1f, #1414144f);
+            background: var(--black);
+            background: -webkit-linear-gradient(to right, #0f0f0fe4, #1414141c);
+            background: linear-gradient(to right, #0f0f0fe4, #1414141c);
 
             -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(0px);

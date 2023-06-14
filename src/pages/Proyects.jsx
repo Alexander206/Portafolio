@@ -5,9 +5,10 @@ import React, { useState, useEffect } from "react";
 import LoadingPage from "../components/LoadingPage";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ProjectsTitle from "../components/ProjectsTitle";
 import CategoriesComponent from "../components/CategoriesComponent";
 import Project from "../components/organims/Project";
-import ProjectsTitle from "../components/ProjectsTitle";
+
 
 // Style
 import "../styles/pages/projects.scss";

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // Components
 import Greeting from "../atoms/Greeting";
 
+// Principal component
 const BannerText = ({ welcome, greeting, description, timer, profession }) => {
     return (
         <>
@@ -13,7 +14,7 @@ const BannerText = ({ welcome, greeting, description, timer, profession }) => {
 
                 <p>{description}</p>
 
-                <Link to="/projects" className="btn_projects">
+                <Link to="/projects" className="btn_curriculum">
                     <button className="custom-btn btn-8">
                         <span>{welcome}</span>
                     </button>

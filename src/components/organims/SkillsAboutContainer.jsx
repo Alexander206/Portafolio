@@ -8,6 +8,7 @@ import SkillsItem from "../atoms/SkillsItem";
 // Resources
 import imgText from "../../assets/icon/header-img.svg";
 
+// Principal component
 const SkillsAboutContainer = ({ text, imgMe, ability, images }) => {
     // Lista de componentes de habilidades blandas
     const componentSkills = ability.map((item, index) => {

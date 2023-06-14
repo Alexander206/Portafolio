@@ -2,10 +2,6 @@
 @import "../components/banner.scss";
 @import "../components/skills.scss";
 
-// Resources
-$imgBackground: "../../assets/bg.jpg";
-$colorText: --light;
-
 .main_home {
     display: flex;
     flex-direction: column;
@@ -13,7 +9,7 @@ $colorText: --light;
     width: 100%;
     height: 100%;
 
-    @include banner($imgBackground, $colorText);
+    @include banner;
 
     @include skills;
 }

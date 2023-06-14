@@ -1,3 +1,7 @@
+// Component
+@import "../atoms/greeting.scss";
+@import "../atoms/btnCurriculum.scss";
+
 @mixin bannerText {
     .text {
         display: flex;
@@ -10,35 +14,7 @@
         padding: 2rem;
         z-index: 2;
 
-        h1 {
-            align-items: center;
-            font-size: 44px;
-            font-weight: 700;
-            color: var(--light);
-            letter-spacing: 0.8px;
-            line-height: 1;
-            margin-bottom: 20px;
-
-            span {
-                display: inline;
-
-                color: var(--light);
-                border-radius: 0;
-                border: none;
-                font-size: 44px;
-                background: transparent;
-                border-right: 0.08em solid var(--darkNeutral);
-                border: none;
-
-                padding: 0;
-                margin-bottom: 16px;
-            }
-
-            .txt-rotate > .wrap {
-                color: var(--primary);
-                border-right: 0.08em solid var(--darkNeutral);
-            }
-        }
+        @include greeting;
 
         p {
             transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
@@ -51,126 +27,10 @@
             letter-spacing: 0.8px;
             line-height: 1.5em;
             width: 96%;
+            margin-bottom: 6rem;
         }
 
-        .btn_projects {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            width: 25rem;
-            color: var(--light);
-            font-weight: 700;
-            font-size: 20px;
-            letter-spacing: 0.8px;
-
-            padding: 0;
-            margin-top: 60px;
-            margin-bottom: 60px;
-            transition: 0.3s;
-
-            .custom-btn {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                width: 100%;
-                height: 5rem;
-                color: var(--light);
-                border-radius: 5px;
-
-                font-weight: 500;
-                background: transparent;
-                outline: none;
-
-                cursor: pointer;
-                transition: all 0.3s ease;
-                padding: 10px 25px;
-            }
-
-            .btn-8 {
-                background-color: var(--darkLight);
-                background-image: linear-gradient(315deg, var(--dark) 0%, var(--darkPrimary) 74%);
-                line-height: 42px;
-                padding: 0;
-                border: none;
-
-                &:before,
-                &:after {
-                    position: absolute;
-                    content: "";
-                    right: 0;
-                    bottom: 0;
-                    background: var(--darkPrimary);
-                    transition: all 0.3s ease;
-                }
-
-                &::before {
-                    height: 0%;
-                    width: 2px;
-                }
-
-                &:after {
-                    width: 0%;
-                    height: 2px;
-                }
-
-                &:hover:before {
-                    height: 100%;
-                }
-
-                &:hover:after {
-                    width: 100%;
-                }
-
-                &:hover {
-                    background: var(--dark);
-                }
-
-                span {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-
-                    &:hover {
-                        color: var(--light);
-                    }
-
-                    &:before,
-                    &:after {
-                        position: absolute;
-                        content: "";
-                        left: 0;
-                        top: 0;
-                        background: var(--darkPrimary);
-                        transition: all 0.3s ease;
-                    }
-
-                    &:before {
-                        width: 2px;
-                        height: 0%;
-                    }
-
-                    &:after {
-                        height: 2px;
-                        width: 0%;
-                    }
-
-                    &:hover:before {
-                        height: 100%;
-                    }
-
-                    &:hover:after {
-                        width: 100%;
-                    }
-                }
-            }
-        }
+        @include btn_curriculum;
     }
 }
 
@@ -179,10 +39,7 @@
         align-items: start;
         justify-content: center;
 
-        h1 {
-            text-align: left;
-            margin-bottom: 6rem;
-        }
+        @include greeting_responsive;
 
         p {
             text-align: left;

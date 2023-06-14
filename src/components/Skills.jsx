@@ -15,7 +15,7 @@ const Skills = ({ text, ability, imgMe, images, imgDesing, imgCurriculum, imgRes
 
     return (
         <>
-            <section className="about" id="Sobremi">
+            <section className="about">
                 <article className="container">
                     <SkillsAboutContainer text={text} ability={ability} imgMe={imgMe} images={images} />
 

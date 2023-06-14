@@ -7,7 +7,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import Skills from "../components/Skills";
-import Abilities from "../components/Abilities";
 
 // Styles
 import "../styles/pages/home.scss";
@@ -44,8 +43,6 @@ const Home = () => {
                     imgResponsive={skillsData.imgResponsive}
                     link={skillsData.link}
                 />
-
-                {/* <Abilities /> */}
             </main>
 
             <Footer />
