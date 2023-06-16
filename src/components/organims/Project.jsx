@@ -14,7 +14,7 @@ const Project = ({ img, title, category, date, text, author, location, link, rep
         setCursorGrabbed(true);
         setTimeout(() => {
             setCursorGrabbed(false);
-        }, 1000);
+        }, 1500);
     };
 
     const handleButtonClicked = () => {

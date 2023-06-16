@@ -22,7 +22,7 @@ const Home = () => {
     return (
         <>
             <LoadingPage />
-            <Header />
+            <Header classPage={"header_home"}/>
 
             <main className="main_home">
                 <Banner

@@ -14,7 +14,7 @@ import HeaderCenterBtn from "./atoms/HeaderCenterBtn";
 import data from "../_data/general.json";
 
 // Principal component
-const Header = () => {
+const Header = ({ classPage }) => {
     const searchParams = window.location.pathname;
     const [activeLink, setActiveLink] = useState(searchParams);
     const [handlerMenu, setHandlerMenu] = useState(false);
@@ -35,7 +35,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`header${scrolled ? " scrolled" : ""}`}>
+        <header className={`header${scrolled ? " scrolled" : ""} ${classPage}`}>
             <section className="container">
                 <HeaderLogo />
 

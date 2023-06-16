@@ -9,7 +9,6 @@ import ProjectsTitle from "../components/ProjectsTitle";
 import CategoriesComponent from "../components/CategoriesComponent";
 import Project from "../components/organims/Project";
 
-
 // Style
 import "../styles/pages/projects.scss";
 import "../styles/components/game.scss";
@@ -100,7 +99,7 @@ const Proyects = () => {
     return (
         <>
             <LoadingPage />
-            <Header />
+            <Header classPage={"header_projects"} />
             <main className="main_projects">
                 <ProjectsTitle title={data.title} text1={data.text1} textSpan={data.textSpan} text2={data.text2} />
 

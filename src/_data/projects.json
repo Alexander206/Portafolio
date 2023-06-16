@@ -8,6 +8,39 @@
     "projects": [
         {
             "img": "",
+            "title": "Buscador de seminarios electivos SIFA",
+            "category": "DESARROLLO WEB",
+            "date": "2023/ Bogotá - Colombia",
+            "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
+            "author": ["Jeisson Gavilán"],
+            "location": "CINNDET UPN",
+            "link": "http://sifa.upn.edu.co/",
+            "repo": ""
+        },
+        {
+            "img": "",
+            "title": "Plataforma virtual para ETICT",
+            "category": "DESARROLLO WEB",
+            "date": "2023/ Bogotá - Colombia",
+            "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
+            "author": ["Jeisson Gavilán"],
+            "location": "CINNDET UPN",
+            "link": "http://sifa.upn.edu.co/",
+            "repo": ""
+        },
+        {
+            "img": "",
+            "title": "Yachay Urqu - Buscador de Bioindicadores",
+            "category": "DESARROLLO WEB",
+            "date": "2023/ Bogotá - Colombia",
+            "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
+            "author": ["Jeisson Gavilán"],
+            "location": "CINNDET UPN",
+            "link": "http://sifa.upn.edu.co/",
+            "repo": ""
+        },
+        {
+            "img": "",
             "title": "Campus Virtual de la UPN",
             "category": "DESARROLLO WEB",
             "date": "2022/ Bogotá - Colombia",
@@ -29,8 +62,41 @@
             "repo": ""
         },
         {
+            "img": "foodiesApp.png",
+            "title": "Foodies App",
+            "category": "DISEÑO WEB",
+            "date": "2023/ Bogotá - Colombia",
+            "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
+            "author": ["Jeisson Gavilán"],
+            "location": "BIT",
+            "link": "",
+            "repo": ""
+        },
+        {
             "img": "",
             "title": "Zombie STORE",
+            "category": "DISEÑO WEB",
+            "date": "2023/ Bogotá - Colombia",
+            "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
+            "author": ["Jeisson Gavilán"],
+            "location": "BIT",
+            "link": "",
+            "repo": ""
+        },
+        {
+            "img": "foodiesApp.png",
+            "title": "Directorio Telefonico",
+            "category": "DISEÑO WEB",
+            "date": "2023/ Bogotá - Colombia",
+            "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
+            "author": ["Jeisson Gavilán"],
+            "location": "BIT",
+            "link": "",
+            "repo": ""
+        },
+        {
+            "img": "foodiesApp.png",
+            "title": "Maquetaje web",
             "category": "DISEÑO WEB",
             "date": "2023/ Bogotá - Colombia",
             "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",

@@ -2,6 +2,11 @@
 @import "./atoms/headerCenterBtn.scss";
 @import "./organims/headerNavbar.scss";
 
+.header_home {
+    background: rgb(36, 36, 36);
+    background: linear-gradient(180deg, rgb(21, 21, 21) 0%, rgba(21, 21, 21, 0) 100%);
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -10,8 +15,6 @@
     justify-content: space-between;
 
     width: 100%;
-    background: rgb(36, 36, 36);
-    background: linear-gradient(180deg, rgb(21, 21, 21) 0%, rgba(21, 21, 21, 0) 100%);
 
     transition: 0.32s ease-in-out;
     z-index: 999;
@@ -24,7 +27,7 @@
         width: 100%;
         max-width: 132rem;
 
-        padding: 3rem 1.2rem;
+        padding: 3rem 2rem;
         transition: 0.32s ease-in-out;
 
         // ************ LOGO ************ \\

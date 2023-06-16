@@ -7,7 +7,7 @@
         .btn_desactive,
         .btn_active {
             color: var(--darkNeutral);
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             padding: 1rem;
             border-bottom: none;
             transition: 0.3s;
@@ -30,6 +30,15 @@
 
         .btn_active:hover {
             color: var(--primary);
+        }
+    }
+}
+
+@mixin categoriescomponent_responsive {
+    li {
+        .btn_desactive,
+        .btn_active {
+            font-size: 1.8rem;
         }
     }
 }
