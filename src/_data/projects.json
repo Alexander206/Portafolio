@@ -7,7 +7,7 @@
     "categories": ["Todos", "Desarrollo", "Diseño", "Académico"],
     "projects": [
         {
-            "img": "",
+            "img": "sifa.png",
             "title": "Buscador de seminarios electivos SIFA",
             "category": "DESARROLLO WEB",
             "date": "2023/ Bogotá - Colombia",
