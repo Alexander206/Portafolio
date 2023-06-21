@@ -11,11 +11,15 @@
             "title": "Buscador de seminarios electivos SIFA",
             "category": "DESARROLLO WEB",
             "date": "2023/ Bogotá - Colombia",
-            "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
+            "text": "Aplicación web en Vainilla Js y Express JS con una base de datos en MySQL. Esta app permite a los estudiantes de posgrado buscar electivas de manera rápida y sencilla. ",
             "author": ["Jeisson Gavilán"],
             "location": "CINNDET UPN",
             "link": "http://sifa.upn.edu.co/",
-            "repo": ""
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", "Boostrap"]
+            }
         },
         {
             "img": "",
@@ -26,7 +30,11 @@
             "author": ["Jeisson Gavilán"],
             "location": "CINNDET UPN",
             "link": "http://sifa.upn.edu.co/",
-            "repo": ""
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+            }
         },
         {
             "img": "",
@@ -37,7 +45,11 @@
             "author": ["Jeisson Gavilán"],
             "location": "CINNDET UPN",
             "link": "http://sifa.upn.edu.co/",
-            "repo": ""
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+            }
         },
         {
             "img": "",
@@ -48,7 +60,11 @@
             "author": ["Jeisson Gavilán"],
             "location": "CINNDET UPN",
             "link": "",
-            "repo": ""
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+            }
         },
         {
             "img": "DMED.png",
@@ -59,7 +75,11 @@
             "author": ["Jeisson Gavilán", "José Moreno"],
             "location": "UPN",
             "link": "asdasdad",
-            "repo": ""
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+            }
         },
         {
             "img": "foodiesApp.png",
@@ -70,7 +90,11 @@
             "author": ["Jeisson Gavilán"],
             "location": "BIT",
             "link": "",
-            "repo": ""
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+            }
         },
         {
             "img": "",
@@ -81,7 +105,11 @@
             "author": ["Jeisson Gavilán"],
             "location": "BIT",
             "link": "",
-            "repo": ""
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+            }
         },
         {
             "img": "foodiesApp.png",
@@ -92,7 +120,11 @@
             "author": ["Jeisson Gavilán"],
             "location": "BIT",
             "link": "",
-            "repo": ""
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+            }
         },
         {
             "img": "foodiesApp.png",
@@ -103,7 +135,11 @@
             "author": ["Jeisson Gavilán"],
             "location": "BIT",
             "link": "",
-            "repo": ""
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+            }
         }
     ]
 }

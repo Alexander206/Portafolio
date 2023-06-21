@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+// Dependences
+import React, { useState, useContext } from "react";
 
+// Components
 import GrabZone from "../atoms/GrabZone";
+import ModalProject from "../atoms/ModalProject";
 
-const Project = ({ img, title, category, date, text, author, location, link, repo }) => {
-    img = new URL(`../../assets/proyects/${img}`, import.meta.url).pathname;
+// Resourses
+import ProjectsContext from "../../context/ProjectsContext";
 
+const Project = ({ id }) => {
     let imgLink;
 
+    // Estados para el modal y el "juego"
     const [cursorGrabbed, setCursorGrabbed] = useState(false);
     const [gameOver, setGameOver] = useState(false);
+    const [modalShow, setModalShow] = React.useState(false);
+
+    // Contexto de los proyectos
+    const projectData = useContext(ProjectsContext)[id];
+
+    // Enrutamiento de las imagenes
+    const img = new URL(`../../assets/proyects/${projectData.img}`, import.meta.url).pathname;
 
     const handleCursorGrabbed = () => {
         setCursorGrabbed(true);
@@ -17,16 +29,10 @@ const Project = ({ img, title, category, date, text, author, location, link, rep
         }, 1500);
     };
 
-    const handleButtonClicked = () => {
-        setGameOver(true);
-        setTimeout(() => {
-            setGameOver(false);
-        }, 4000);
-    };
-
     const screenStyle = cursorGrabbed ? { cursor: "none" } : {};
 
-    const listAuthor = author.map((item, index) => {
+    // Lista de autores del proyecto
+    const listAuthor = projectData.author.map((item, index) => {
         return (
             <div key={index}>
                 {item} <br />
@@ -34,12 +40,14 @@ const Project = ({ img, title, category, date, text, author, location, link, rep
         );
     });
 
-    if (link.length < 1) {
+    // Validacin si tiene o no link para hacer el "Juego"
+    if (projectData.link.length < 1) {
         imgLink = (
             <div className="container_game">
-                <button className="projects_img" onClick={handleButtonClicked}>
+                <button className="projects_img" onClick={() => setModalShow(true)}>
                     <img src={img} alt="image project" />
                 </button>
+
                 <div className="grab-zone-wrapper">
                     <GrabZone onCursorGrabbed={handleCursorGrabbed} cursorGrabbed={cursorGrabbed} gameOver={gameOver} />
                 </div>
@@ -47,21 +55,23 @@ const Project = ({ img, title, category, date, text, author, location, link, rep
         );
     } else {
         imgLink = (
-            <a className="projects_img" href={link} target="_blank">
+            <button className="projects_img" onClick={() => setModalShow(true)}>
                 <img src={img} alt="image project" />
-            </a>
+            </button>
         );
     }
 
-    const iconLink = link ? (
-        <a href={link} target="_blank">
+    // Validación para los links
+    const iconLink = projectData.link ? (
+        <a href={projectData.link} target="_blank">
             <ion-icon name="earth-outline"></ion-icon>
         </a>
     ) : (
         <span className="upss">Aún está en construcción</span>
     );
 
-    const iconRepo = repo ? (
+    // Validación para el repositorio
+    const iconRepo = projectData.repo ? (
         <a href={repo} target="_blank">
             <ion-icon name="logo-github"></ion-icon>
         </a>
@@ -72,25 +82,24 @@ const Project = ({ img, title, category, date, text, author, location, link, rep
     return (
         <article className="projects_link" style={screenStyle}>
             {imgLink}
+
             <article className="projects_data">
-                <span className="projects_category"> {category} </span>
-                <a href={link} className="projects_title">
-                    {title}
+                <span className="projects_category"> {projectData.category} </span>
+                <a href={projectData.link} className="projects_title" target="_blank">
+                    {projectData.title}
                 </a>
-                <span className="projects_date"> {date} </span>
-
-                <p className="projects_text">{text}</p>
-
-                <p className="projects_location">{location}</p>
-
+                <span className="projects_date"> {projectData.date} </span>
+                <p className="projects_text">{projectData.text}</p>
+                <p className="projects_location">{projectData.location}</p>
                 <span className="projects_author">{listAuthor}</span>
             </article>
 
             <article className="container_btns">
                 {iconLink}
-
                 {iconRepo}
             </article>
+
+            <ModalProject id={id} show={modalShow} onHide={() => setModalShow(false)} />
         </article>
     );
 };

@@ -14,6 +14,7 @@ import "../styles/pages/projects.scss";
 import "../styles/components/game.scss";
 
 // Resourses
+import ProjectsContext from "../context/ProjectsContext";
 import data from "../_data/projects.json";
 
 // Principal component
@@ -51,38 +52,12 @@ const Proyects = () => {
 
     // proyectos filtrados
     const Projects = FilterProjects.map((item, index) => {
-        return (
-            <Project
-                key={index}
-                img={item.img}
-                title={item.title}
-                category={item.category}
-                date={item.date}
-                text={item.text}
-                author={item.author}
-                location={item.location}
-                link={item.link}
-                repo={item.repo}
-            />
-        );
+        return <Project key={index} id={index} />;
     });
 
     // Proyectos completos
     const AllProjects = data.projects.map((item, index) => {
-        return (
-            <Project
-                key={index}
-                img={item.img}
-                title={item.title}
-                category={item.category}
-                date={item.date}
-                text={item.text}
-                author={item.author}
-                location={item.location}
-                link={item.link}
-                repo={item.repo}
-            />
-        );
+        return <Project key={index} id={index} />;
     });
 
     // Siclo de vida del componente
@@ -97,7 +72,7 @@ const Proyects = () => {
     }, [itemSelect]);
 
     return (
-        <>
+        <ProjectsContext.Provider value={data.projects}>
             <LoadingPage />
             <Header classPage={"header_projects"} />
             <main className="main_projects">
@@ -113,7 +88,7 @@ const Proyects = () => {
                 </section>
             </main>
             <Footer />
-        </>
+        </ProjectsContext.Provider>
     );
 };
 
