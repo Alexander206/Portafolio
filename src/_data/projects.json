@@ -22,14 +22,14 @@
             }
         },
         {
-            "img": "",
+            "img": "etitc.png",
             "title": "Plataforma virtual para ETICT",
             "category": "DESARROLLO WEB",
             "date": "2023/ Bogotá - Colombia",
             "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
             "author": ["Jeisson Gavilán"],
             "location": "CINNDET UPN",
-            "link": "http://sifa.upn.edu.co/",
+            "link": "https://etitc.netlify.app/m1_modelacion/_0_inicio",
             "repo": "",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
@@ -37,15 +37,15 @@
             }
         },
         {
-            "img": "",
+            "img": "yachay.png",
             "title": "Yachay Urqu - Buscador de Bioindicadores",
             "category": "DESARROLLO WEB",
             "date": "2023/ Bogotá - Colombia",
             "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
             "author": ["Jeisson Gavilán"],
             "location": "CINNDET UPN",
-            "link": "http://sifa.upn.edu.co/",
-            "repo": "",
+            "link": "https://trjcerro.github.io/Yachay-Urqu/",
+            "repo": "https://github.com/Trjcerro/Yachay-Urqu",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
                 "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
@@ -67,7 +67,7 @@
             }
         },
         {
-            "img": "DMED.png",
+            "img": "dmed.png",
             "title": "Propuesta para orientar docentes",
             "category": "ACADÉMICO",
             "date": "2021/ Bogotá - Colombia",
@@ -82,15 +82,15 @@
             }
         },
         {
-            "img": "foodiesApp.png",
+            "img": "foodiesapp.png",
             "title": "Foodies App",
             "category": "DISEÑO WEB",
             "date": "2023/ Bogotá - Colombia",
             "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
             "author": ["Jeisson Gavilán"],
             "location": "BIT",
-            "link": "",
-            "repo": "",
+            "link": "https://voluble-pudding-23916d.netlify.app/",
+            "repo": "https://github.com/Alexander206/bit10team",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
                 "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]

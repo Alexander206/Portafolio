@@ -72,7 +72,7 @@ const Project = ({ id }) => {
 
     // Validación para el repositorio
     const iconRepo = projectData.repo ? (
-        <a href={repo} target="_blank">
+        <a href={projectData.repo} target="_blank">
             <ion-icon name="logo-github"></ion-icon>
         </a>
     ) : (
