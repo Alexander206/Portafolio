@@ -15,10 +15,14 @@
             "author": ["Jeisson Gavilán"],
             "location": "CINNDET UPN",
             "link": "http://sifa.upn.edu.co/",
-            "repo": "",
+            "repo": "sadasdas",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", "Boostrap"]
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", "Boostrap"],
+                "achievements": [
+                    "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js,",
+                    "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js,"
+                ]
             }
         },
         {
@@ -33,7 +37,24 @@
             "repo": "",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
+                "achievements": ["", ""]
+            }
+        },
+        {
+            "img": "romeliny.png",
+            "title": "Romeliny",
+            "category": "DISEÑO WEB",
+            "date": "2023/ Bogotá - Colombia",
+            "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
+            "author": ["Jeisson Gavilán"],
+            "location": "BIT",
+            "link": "https://romeliny.netlify.app/",
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
+                "achievements": ["", ""]
             }
         },
         {
@@ -48,11 +69,12 @@
             "repo": "https://github.com/Trjcerro/Yachay-Urqu",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
+                "achievements": ["", ""]
             }
         },
         {
-            "img": "",
+            "img": "campusupn.png",
             "title": "Campus Virtual de la UPN",
             "category": "DESARROLLO WEB",
             "date": "2022/ Bogotá - Colombia",
@@ -63,7 +85,8 @@
             "repo": "",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
+                "achievements": ["", ""]
             }
         },
         {
@@ -78,7 +101,8 @@
             "repo": "",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
+                "achievements": ["", ""]
             }
         },
         {
@@ -93,52 +117,43 @@
             "repo": "https://github.com/Alexander206/bit10team",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
+                "achievements": ["", ""]
             }
         },
         {
-            "img": "",
+            "img": "zombiestore.png",
             "title": "Zombie STORE",
             "category": "DISEÑO WEB",
             "date": "2023/ Bogotá - Colombia",
             "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
             "author": ["Jeisson Gavilán"],
             "location": "BIT",
-            "link": "",
+            "link": "https://alexander206.github.io/bit08react/",
             "repo": "",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
+                "achievements": [
+                    "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js,",
+                    "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js,"
+                ]
             }
         },
         {
-            "img": "foodiesApp.png",
+            "img": "directorio.png",
             "title": "Directorio Telefonico",
             "category": "DISEÑO WEB",
             "date": "2023/ Bogotá - Colombia",
             "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
             "author": ["Jeisson Gavilán"],
             "location": "BIT",
-            "link": "",
+            "link": "https://alexander206.github.io/Directorio-telefonico/index.html",
             "repo": "",
             "modal": {
                 "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
-            }
-        },
-        {
-            "img": "foodiesApp.png",
-            "title": "Maquetaje web",
-            "category": "DISEÑO WEB",
-            "date": "2023/ Bogotá - Colombia",
-            "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
-            "author": ["Jeisson Gavilán"],
-            "location": "BIT",
-            "link": "",
-            "repo": "",
-            "modal": {
-                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""]
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
+                "achievements": ["", ""]
             }
         }
     ]

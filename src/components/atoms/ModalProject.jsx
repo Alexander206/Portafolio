@@ -12,19 +12,71 @@ const ModalProject = (props) => {
     // Contexto del modal
     const projectData = useContext(ProjectsContext)[props.id];
 
+    // Imagenes del modal
     const carouselImages = projectData.modal.images.map((item, index) => {
         // Enrutamiento de las imagenes
         const img = new URL(`../../assets/proyects/${item}`, import.meta.url).pathname;
 
         return (
             <Carousel.Item key={index}>
-                <img className="d-block w-100" src={img} alt="First slide" />
+                <img src={img} alt="First slide" />
+                <img src={img} alt="First slide" />
             </Carousel.Item>
         );
     });
 
+    // tecnologias del modal
+    const tecnologies = projectData.modal.technologies.map((item, index) => {
+        return (
+            <span className="slide" key={index}>
+                {item}
+            </span>
+        );
+    });
+
+    // Logros alcanzados
+    const achievements = projectData.modal.achievements.map((item, index) => {
+        return <li key={index}>{item}</li>;
+    });
+
+    // Validación para los links
+    const iconLink = projectData.link ? (
+        <a href={projectData.link} target="_blank">
+            <ion-icon name="earth-outline"></ion-icon>
+            Sitio web
+        </a>
+    ) : (
+        <span className="upss">Aún está en construcción</span>
+    );
+
+    // Validación para el repositorio
+    const iconRepo = projectData.repo ? (
+        <a href={projectData.repo} target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+            Repositorio
+        </a>
+    ) : (
+        false
+    );
+
+    // Lista de autores del proyecto
+    const listAuthor = projectData.author.map((item, index) => {
+        return (
+            <li key={index}>
+                {item} <br />
+            </li>
+        );
+    });
+
     return (
-        <Modal {...props} className="modal_personalized" size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+        <Modal
+            {...props}
+            className="modal_personalized"
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+            key={projectData.title}
+        >
             <section className="modal_header">
                 <button onClick={props.onHide}>
                     <ion-icon name="close-circle-outline"></ion-icon>
@@ -36,20 +88,29 @@ const ModalProject = (props) => {
 
                 <article className="text">
                     <article className="slider">
-                        <div className="slide-track">
-                            <span className="slide">hola1</span>
-                            <span className="slide">hola2</span>
-                            <span className="slide">hola3</span>
-
-                            <span className="slide">hola1</span>
-                            <span className="slide">hola2</span>
-                            <span className="slide">hola3</span>
-                        </div>
+                        <div className="slide-track">{tecnologies}</div>
                     </article>
 
-                    <h4>{projectData.title}</h4>
-                    <h4>{projectData.title}</h4>
-                    <h4>{projectData.title}</h4>
+                    <article className="info">
+                        <ul className="links">
+                            {iconLink}
+                            {iconRepo}
+                        </ul>
+
+                        <div className="separator"></div>
+
+                        <ul className="author">
+                            <h4>Autores</h4>
+                            {listAuthor}
+                        </ul>
+
+                        <div className="separator"></div>
+
+                        <ul className="achievements">
+                            <h4>Logro y retos superados</h4>
+                            {achievements}
+                        </ul>
+                    </article>
                 </article>
             </section>
         </Modal>

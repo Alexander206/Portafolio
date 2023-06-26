@@ -92,9 +92,9 @@
             color: var(--lightNeutral);
             background-color: transparent;
             border: 1px solid var(--lightNeutral);
-            border-radius: 1rem;
+            border-radius: 1.5rem;
 
-            padding: 1.5rem 3rem;
+            padding: 1rem 2rem;
 
             transition: 0.3s ease-in-out;
 
@@ -104,7 +104,7 @@
                 height: 100%;
                 position: absolute;
                 background-color: var(--lightNeutral);
-                border-radius: 1rem;
+                border-radius: 1.5rem;
                 left: 0;
                 top: 0;
                 z-index: -1;

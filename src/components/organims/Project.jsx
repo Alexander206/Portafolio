@@ -31,15 +31,6 @@ const Project = ({ id }) => {
 
     const screenStyle = cursorGrabbed ? { cursor: "none" } : {};
 
-    // Lista de autores del proyecto
-    const listAuthor = projectData.author.map((item, index) => {
-        return (
-            <div key={index}>
-                {item} <br />
-            </div>
-        );
-    });
-
     // Validacin si tiene o no link para hacer el "Juego"
     if (projectData.link.length < 1) {
         imgLink = (
@@ -91,7 +82,6 @@ const Project = ({ id }) => {
                 <span className="projects_date"> {projectData.date} </span>
                 <p className="projects_text">{projectData.text}</p>
                 <p className="projects_location">{projectData.location}</p>
-                <span className="projects_author">{listAuthor}</span>
             </article>
 
             <article className="container_btns">
