@@ -50,6 +50,8 @@ const Proyects = () => {
         return categoryFilter === itemFilter;
     });
 
+    console.log(FilterProjects);
+
     // proyectos filtrados
     const Projects = FilterProjects.map((item, index) => {
         return <Project key={index} id={index} />;

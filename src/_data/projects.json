@@ -12,16 +12,19 @@
             "category": "DESARROLLO WEB",
             "date": "2023/ Bogotá - Colombia",
             "text": "Aplicación web en Vainilla Js y Express JS con una base de datos en MySQL. Esta app permite a los estudiantes de posgrado buscar electivas de manera rápida y sencilla. ",
-            "author": ["Jeisson Gavilán"],
+            "author": ["Jeisson Gavilán", "Cinndet UPN"],
             "location": "CINNDET UPN",
             "link": "http://sifa.upn.edu.co/",
-            "repo": "sadasdas",
+            "repo": "",
             "modal": {
-                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "images": [
+                    ["sifa_1.png", "sifa_2.png"],
+                    ["sifa_3.png", "sifa_4.png"]
+                ],
                 "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", "Boostrap"],
                 "achievements": [
-                    "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js,",
-                    "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js,"
+                    "Adaptación al proyecto sin documentación: Esto implicó analizar y comprender el código existente, tanto en el frontend como en el backend, y realizar los ajustes necesarios para garantizar su funcionamiento correcto.",
+                    "Desarrollo del MVP en tiempo récord: Se logró completar el MVP en un tiempo aproximado de dos semana. Esto implicó una planificación detallada, y una gestión efectiva del tiempo para alcanzar los objetivos establecidos."
                 ]
             }
         },
@@ -30,15 +33,22 @@
             "title": "Plataforma virtual para ETICT",
             "category": "DESARROLLO WEB",
             "date": "2023/ Bogotá - Colombia",
-            "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
+            "text": "Desarrollo de una plataforma web integral para capacitar a 220 docentes de la Escuela Tecnológica Instituto Técnico Central (ETITC). Se superaron desafíos técnicos al implementar soluciones a medida utilizando lenguajes de programación como JavaScript.",
             "author": ["Jeisson Gavilán"],
             "location": "CINNDET UPN",
             "link": "https://etitc.netlify.app/m1_modelacion/_0_inicio",
             "repo": "",
             "modal": {
-                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
-                "achievements": ["", ""]
+                "images": [
+                    ["etitc_1.png", "etitc_2.png"],
+                    ["etitc_3.png", "etitc_4.png"],
+                    ["etitc_5.png", "etitc_6.png"]
+                ],
+                "technologies": ["HTML", "CSS", "JavaScript", "Boostrap", "CSS Pico"],
+                "achievements": [
+                    "Se implementaron componentes modulares y reutilizables con Js Vanilla en el desarrollo de la plataforma, lo que permitió agilizar el proceso de creación de contenido y facilitó la escalabilidad del sistema.",
+                    "Se desarrollaron layouts tipo plantilla para la virtualización del contenido, lo que garantizó una estructura coherente y consistente en todas las páginas del curso."
+                ]
             }
         },
         {

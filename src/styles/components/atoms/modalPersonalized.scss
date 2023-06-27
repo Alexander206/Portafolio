@@ -1,5 +1,5 @@
 .modal_personalized .modal-dialog {
-    max-width: 132rem;
+    max-width: 122rem;
 
     .modal-content {
         background-color: var(--dark);
@@ -189,10 +189,13 @@
                     }
 
                     .author {
+                        list-style: none;
                         align-items: start;
                         gap: 1rem;
 
                         li {
+                            position: relative;
+                            left: -2rem;
                             font-size: 1.6rem;
                             color: var(--neutral);
                         }

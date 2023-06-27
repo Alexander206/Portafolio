@@ -15,12 +15,13 @@ const ModalProject = (props) => {
     // Imagenes del modal
     const carouselImages = projectData.modal.images.map((item, index) => {
         // Enrutamiento de las imagenes
-        const img = new URL(`../../assets/proyects/${item}`, import.meta.url).pathname;
+        const img = new URL(`../../assets/proyects/${item[0]}`, import.meta.url).pathname;
+        const img2 = new URL(`../../assets/proyects/${item[1]}`, import.meta.url).pathname;
 
         return (
             <Carousel.Item key={index}>
                 <img src={img} alt="First slide" />
-                <img src={img} alt="First slide" />
+                <img src={img2} alt="First slide" />
             </Carousel.Item>
         );
     });
@@ -107,7 +108,7 @@ const ModalProject = (props) => {
                         <div className="separator"></div>
 
                         <ul className="achievements">
-                            <h4>Logro y retos superados</h4>
+                            <h4>Logros significativos y Retos superados</h4>
                             {achievements}
                         </ul>
                     </article>
