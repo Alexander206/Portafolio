@@ -2,9 +2,11 @@ import React from "react";
 
 const SocialLink = ({ icon, link }) => {
     return (
-        <a href={link} target="_blank">
-            <img src={icon} alt="" />
-        </a>
+        <li>
+            <a href={link} target="_blank" aria-label="icon social">
+                <img src={icon} alt="icon social" />
+            </a>
+        </li>
     );
 };
 
