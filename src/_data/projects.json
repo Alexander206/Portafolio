@@ -7,7 +7,8 @@
     "categories": ["Todos", "Desarrollo", "Diseño", "Académico"],
     "projects": [
         {
-            "img": "sifa.png",
+            "id": 0,
+            "img": "sifa.webp",
             "title": "Buscador de seminarios electivos SIFA",
             "category": "DESARROLLO WEB",
             "date": "2023/ Bogotá - Colombia",
@@ -18,8 +19,8 @@
             "repo": "",
             "modal": {
                 "images": [
-                    ["sifa_1.png", "sifa_2.png"],
-                    ["sifa_3.png", "sifa_4.png"]
+                    ["sifa_1.webp", "sifa_2.webp"],
+                    ["sifa_3.webp", "sifa_4.webp"]
                 ],
                 "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", "Boostrap"],
                 "achievements": [
@@ -29,20 +30,45 @@
             }
         },
         {
-            "img": "etitc.png",
+            "id": 1,
+            "img": "romeliny.webp",
+            "title": "Sitio web de Romeliny",
+            "category": "DISEÑO WEB",
+            "date": "2023/ Bogotá - Colombia",
+            "text": "Sitio web de comercio electrónico para Romeliny, una empresa colombiana dedicada a la fabricación de calzado. El objetivo del sitio es brindar una experiencia de compra online elegante y cómoda.",
+            "author": ["Jeisson Gavilán", "Liliana Camargo"],
+            "location": "FREELANCER",
+            "link": "https://www.romeliny.com/",
+            "repo": "https://github.com/Alexander206/Romeliny-web",
+            "modal": {
+                "images": [
+                    ["romeliny_1.webp", "romeliny_2.webp"],
+                    ["romeliny_3.webp", "romeliny_4.webp"],
+                    ["romeliny_5.webp", "romeliny_6.webp"]
+                ],
+                "technologies": ["React Js", "Sass", "Bootstrap", "Node Js", "Express Js", "MongoDB"],
+                "achievements": [
+                    "Integración de tecnologías: Se logró integrar React, SASS y Bootstrap de manera armoniosa, aprovechando las ventajas de cada tecnología para lograr un diseño atractivo y una interfaz de usuario fluida.",
+                    "Implementación de la API RESTful: Se utilizó el módulo Express de Node.js para construir una API RESTful que permite realizar operaciones CRUD de productos en la plataforma de comercio electrónico."
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "img": "etitc.webp",
             "title": "Plataforma virtual para ETICT",
             "category": "DESARROLLO WEB",
             "date": "2023/ Bogotá - Colombia",
-            "text": "Desarrollo de una plataforma web integral para capacitar a 220 docentes de la Escuela Tecnológica Instituto Técnico Central (ETITC). Se superaron desafíos técnicos al implementar soluciones a medida utilizando lenguajes de programación como JavaScript.",
-            "author": ["Jeisson Gavilán"],
+            "text": "Desarrollo de una plataforma web integral para capacitar a 220 docentes de la Escuela Tecnológica Instituto Técnico Central (ETITC). Se superaron desafíos al implementar soluciones a medida utilizando JavaScript.",
+            "author": ["Jeisson Gavilán", "Cinndet UPN"],
             "location": "CINNDET UPN",
             "link": "https://etitc.netlify.app/m1_modelacion/_0_inicio",
             "repo": "",
             "modal": {
                 "images": [
-                    ["etitc_1.png", "etitc_2.png"],
-                    ["etitc_3.png", "etitc_4.png"],
-                    ["etitc_5.png", "etitc_6.png"]
+                    ["etitc_1.webp", "etitc_2.webp"],
+                    ["etitc_3.webp", "etitc_4.webp"],
+                    ["etitc_5.webp", "etitc_6.webp"]
                 ],
                 "technologies": ["HTML", "CSS", "JavaScript", "Boostrap", "CSS Pico"],
                 "achievements": [
@@ -52,39 +78,53 @@
             }
         },
         {
-            "img": "romeliny.png",
-            "title": "Romeliny",
+            "id": 3,
+            "img": "foodiesapp.webp",
+            "title": "Foodies App",
             "category": "DISEÑO WEB",
             "date": "2023/ Bogotá - Colombia",
             "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
-            "author": ["Jeisson Gavilán"],
+            "author": ["Jeisson Gavilán", "Adriana Moreno", "Wendy Carlos"],
             "location": "BIT",
-            "link": "https://romeliny.netlify.app/",
-            "repo": "",
+            "link": "https://voluble-pudding-23916d.netlify.app/",
+            "repo": "https://github.com/Alexander206/bit10team",
             "modal": {
-                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
+                "images": [
+                    ["foodiesapp_1.webp", "foodiesapp_2.webp"],
+                    ["foodiesapp_3.webp", "foodiesapp_4.webp"],
+                    ["foodiesapp_5.webp", "foodiesapp_6.webp"]
+                ],
+                "technologies": ["React Js", "Vite", "Sass", "Git", "Boostrap"],
                 "achievements": ["", ""]
             }
         },
         {
-            "img": "yachay.png",
+            "id": 4,
+            "img": "yachay.webp",
             "title": "Yachay Urqu - Buscador de Bioindicadores",
             "category": "DESARROLLO WEB",
             "date": "2023/ Bogotá - Colombia",
-            "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
-            "author": ["Jeisson Gavilán"],
+            "text": "Plataforma web dedicada a brindar información relevante sobre el parque ecológico Cerro Seco. Este sitio web es un apoyo a un trabajo de grado para un grupo de estudiantes de la UPN.",
+            "author": ["Jeisson Gavilán", "Cristian Goméz", "Cinndet UPN"],
             "location": "CINNDET UPN",
             "link": "https://trjcerro.github.io/Yachay-Urqu/",
             "repo": "https://github.com/Trjcerro/Yachay-Urqu",
             "modal": {
-                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
-                "achievements": ["", ""]
+                "images": [
+                    ["yachay_1.webp", "yachay_2.webp"],
+                    ["yachay_3.webp", "yachay_4.webp"],
+                    ["yachay_5.webp", "yachay_6.webp"]
+                ],
+                "technologies": ["React Js", "Sass", "JSON Data", "Boostrap"],
+                "achievements": [
+                    "Desarrollo en tiempo récord: Nos comprometimos a entregar este proyecto en un plazo ajustado y desafiante. Para lograrlo, implementamos una metodología ágil de desarrollo y establecimos hitos y entregas parciales para mantenernos en el camino correcto.",
+                    "Centralización de información en formato JSON: Para simular una base de datos y gestionar la información de manera eficiente, utilizamos un archivo JSON como fuente centralizada de datos."
+                ]
             }
         },
         {
-            "img": "campusupn.png",
+            "id": 5,
+            "img": "campusupn.webp",
             "title": "Campus Virtual de la UPN",
             "category": "DESARROLLO WEB",
             "date": "2022/ Bogotá - Colombia",
@@ -94,76 +134,72 @@
             "link": "",
             "repo": "",
             "modal": {
-                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "images": ["sifa_1.webp", "sifa_2.webp", "sifa_3.webp"],
                 "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
                 "achievements": ["", ""]
             }
         },
         {
-            "img": "dmed.png",
+            "id": 6,
+            "img": "dmed.webp",
             "title": "Propuesta para orientar docentes",
             "category": "ACADÉMICO",
             "date": "2021/ Bogotá - Colombia",
             "text": "Diseño de una propuesta para orientar a docentes en formación de la Licenciatura en Diseño Tecnológico, para el desarrollo de sus materiales educativos digitales.",
             "author": ["Jeisson Gavilán", "José Moreno"],
             "location": "UPN",
-            "link": "asdasdad",
-            "repo": "",
+            "link": "http://repositorio.pedagogica.edu.co/handle/20.500.12209/16511",
+            "repo": "http://repositorio.pedagogica.edu.co/bitstream/handle/20.500.12209/16511/Diseno_propuesta_orientar_docentes_en_formacion_desde_las_TIC.pdf?sequence=1&isAllowed=y",
             "modal": {
-                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
-                "achievements": ["", ""]
+                "images": [["dmed_1.webp", "dmed_2.webp"]],
+                "technologies": ["Moodle", "Gdevelop 5", "HTML", "CSS", "Illustrator", "Premiere"],
+                "achievements": [
+                    "Durante el proceso de producción del curso virtual, no se implicó solo la materialización en la plataforma Moodle, sino que también se tuvo en cuenta una evolución constante en el aprendizaje de nuevos conocimientos y técnicas",
+                    "Moodle es una plataforma LMS de alta eficiencia para el ámbito de la educación, pero a su vez, presenta muchas limitaciones en cuanto a la posibilidad de modificación a detalle de la interfaz de usuario y parte de la estructura lógica"
+                ]
             }
         },
         {
-            "img": "foodiesapp.png",
-            "title": "Foodies App",
-            "category": "DISEÑO WEB",
-            "date": "2023/ Bogotá - Colombia",
-            "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
-            "author": ["Jeisson Gavilán"],
-            "location": "BIT",
-            "link": "https://voluble-pudding-23916d.netlify.app/",
-            "repo": "https://github.com/Alexander206/bit10team",
-            "modal": {
-                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
-                "achievements": ["", ""]
-            }
-        },
-        {
-            "img": "zombiestore.png",
+            "id": 7,
+            "img": "zombiestore.webp",
             "title": "Zombie STORE",
             "category": "DISEÑO WEB",
             "date": "2023/ Bogotá - Colombia",
             "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
             "author": ["Jeisson Gavilán"],
             "location": "BIT",
-            "link": "https://alexander206.github.io/bit08react/",
+            "link": "",
             "repo": "",
             "modal": {
-                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
+                "images": ["sifa_1.webp", "sifa_2.webp", "sifa_3.webp"],
                 "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
                 "achievements": [
-                    "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js,",
+                    "https://alexander206.github.io/bit08react/",
                     "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js,"
                 ]
             }
         },
         {
-            "img": "directorio.png",
+            "id": 8,
+            "img": "directorio.webp",
             "title": "Directorio Telefonico",
-            "category": "DISEÑO WEB",
+            "category": "DESARROLLO WEB",
             "date": "2023/ Bogotá - Colombia",
-            "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
+            "text": "El proyecto del Directorio Telefónico es una aplicación web que consume una API pública para proporcionar información de contacto y empresas. Diseñado para facilitar la búsqueda de negocios y servicios, esta plataforma centraliza toda la información necesaria en un solo lugar.",
             "author": ["Jeisson Gavilán"],
             "location": "BIT",
             "link": "https://alexander206.github.io/Directorio-telefonico/index.html",
-            "repo": "",
+            "repo": "https://github.com/Alexander206/Directorio-telefonico",
             "modal": {
-                "images": ["sifa_1.png", "sifa_2.png", "sifa_3.png"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
-                "achievements": ["", ""]
+                "images": [
+                    ["directorio_1.webp", "directorio_2.webp"],
+                    ["directorio_3.webp", "directorio_4.webp"]
+                ],
+                "technologies": ["HTML", "CSS", "JavaScript"],
+                "achievements": [
+                    "Superé el reto del tiempo de desarrollo y entrega establecidos, cumpliendo con los plazos establecidos para entregar un producto funcional y de calidad.",
+                    "Implementé componentes reutilizables en HTML y JavaScript puro (vanilla), optimizando la estructura del código y facilitando su mantenimiento a largo plazo"
+                ]
             }
         }
     ]

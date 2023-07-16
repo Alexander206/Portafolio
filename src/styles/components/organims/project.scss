@@ -72,7 +72,7 @@
             .projects_category {
                 font-size: 1.2rem;
                 letter-spacing: 3px;
-                color: var(--darkPrimary);
+                color: var(--primaryHover);
             }
 
             .projects_title {
@@ -128,13 +128,13 @@
             }
 
             a ion-icon {
-                color: var(--primary);
+                color: var(--secundary);
                 font-size: 2.8rem;
                 transition: 0.3s;
             }
 
             a ion-icon:hover {
-                color: var(--darkPrimary);
+                color: var(--secundaryHover);
                 transition: 0.3s;
             }
         }

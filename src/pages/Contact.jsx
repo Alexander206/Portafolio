@@ -48,7 +48,7 @@ const Contact = () => {
                         </ul>
                     </figure>
 
-                    <article className="contact_form">
+                    {/* <article className="contact_form">
                         <h2 className=" form_title"> Enviame un mensaje </h2>
 
                         <form className="enviarMensaje" action="">
@@ -77,7 +77,7 @@ const Contact = () => {
                                 </div>
                             </button>
                         </form>
-                    </article>
+                    </article> */}
                 </section>
             </main>
             <Footer />

@@ -18,14 +18,7 @@ const SkillsAboutContainer = ({ text, imgMe, ability, images }) => {
     // Lista de imagenes de tecnologías
     const componentImages = images.map((item, index) => {
         const img = new URL(`../../assets/skills/${item.img}`, import.meta.url).pathname;
-        return (
-            <img
-                key={index}
-                className={`${item.id}_img animate__animated animate__zoomIn`}
-                src={img}
-                alt="Programing image"
-            />
-        );
+        return <img key={index} className={`${item.id}_img animate__animated animate__zoomIn`} src={img} alt="Programing image" />;
     });
 
     return (
