@@ -44,10 +44,7 @@ const Proyects = () => {
 
     // Filtro de proyectos con diferentes categorias
     const FilterProjects = data.projects.filter((item) => {
-        const categoryFilter = item.category.split(" ")[0].toLocaleLowerCase();
-        const itemFilter = itemSelect.toLocaleLowerCase();
-
-        return categoryFilter === itemFilter;
+        return item.category.some((elemento) => elemento.toUpperCase().includes(itemSelect.toUpperCase()));
     });
 
     // proyectos filtrados

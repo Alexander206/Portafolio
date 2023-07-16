@@ -4,28 +4,29 @@
     "textSpan": " crecer profesionalmente ",
     "text2": "y explorar diferentes tecnologías. Si deseas obtener más detalles sobre alguno de estos proyectos o conocer otros ejemplos de mi trabajo, no dudes en contactarme.",
     "categoryText": "Tipos de proyectos",
-    "categories": ["Todos", "Desarrollo", "Diseño", "Académico"],
+    "categories": ["Todos", "Diseño", "Web", "Académico"],
     "projects": [
         {
             "id": 0,
-            "img": "sifa.webp",
-            "title": "Buscador de seminarios electivos SIFA",
-            "category": "DESARROLLO WEB",
+            "img": "etitc.webp",
+            "title": "Plataforma virtual para ETICT",
+            "category": ["WEB", "FRONT END"],
             "date": "2023/ Bogotá - Colombia",
-            "text": "Aplicación web en Vainilla Js y Express JS con una base de datos en MySQL. Esta app permite a los estudiantes de posgrado buscar electivas de manera rápida y sencilla. ",
+            "text": "Desarrollo de una plataforma web integral para capacitar a 220 docentes de la Escuela Tecnológica Instituto Técnico Central (ETITC). Se superaron desafíos al implementar soluciones a medida utilizando JavaScript.",
             "author": ["Jeisson Gavilán", "Cinndet UPN"],
             "location": "CINNDET UPN",
-            "link": "http://sifa.upn.edu.co/",
+            "link": "https://etitc.netlify.app/m1_modelacion/_0_inicio",
             "repo": "",
             "modal": {
                 "images": [
-                    ["sifa_1.webp", "sifa_2.webp"],
-                    ["sifa_3.webp", "sifa_4.webp"]
+                    ["etitc_1.webp", "etitc_2.webp"],
+                    ["etitc_3.webp", "etitc_4.webp"],
+                    ["etitc_5.webp", "etitc_6.webp"]
                 ],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", "Boostrap"],
+                "technologies": ["HTML", "CSS", "JavaScript", "Boostrap", "CSS Pico"],
                 "achievements": [
-                    "Adaptación al proyecto sin documentación: Esto implicó analizar y comprender el código existente, tanto en el frontend como en el backend, y realizar los ajustes necesarios para garantizar su funcionamiento correcto.",
-                    "Desarrollo del MVP en tiempo récord: Se logró completar el MVP en un tiempo aproximado de dos semana. Esto implicó una planificación detallada, y una gestión efectiva del tiempo para alcanzar los objetivos establecidos."
+                    "Se implementaron componentes modulares y reutilizables con Js Vanilla en el desarrollo de la plataforma, lo que permitió agilizar el proceso de creación de contenido y facilitó la escalabilidad del sistema.",
+                    "Se desarrollaron layouts tipo plantilla para la virtualización del contenido, lo que garantizó una estructura coherente y consistente en todas las páginas del curso."
                 ]
             }
         },
@@ -33,7 +34,7 @@
             "id": 1,
             "img": "romeliny.webp",
             "title": "Sitio web de Romeliny",
-            "category": "DISEÑO WEB",
+            "category": ["WEB", "BACK END", "DISEÑO"],
             "date": "2023/ Bogotá - Colombia",
             "text": "Sitio web de comercio electrónico para Romeliny, una empresa colombiana dedicada a la fabricación de calzado. El objetivo del sitio es brindar una experiencia de compra online elegante y cómoda.",
             "author": ["Jeisson Gavilán", "Liliana Camargo"],
@@ -55,33 +56,49 @@
         },
         {
             "id": 2,
-            "img": "etitc.webp",
-            "title": "Plataforma virtual para ETICT",
-            "category": "DESARROLLO WEB",
+            "img": "sifa.webp",
+            "title": "Buscador de seminarios electivos SIFA",
+            "category": ["WEB", "DISEÑO"],
             "date": "2023/ Bogotá - Colombia",
-            "text": "Desarrollo de una plataforma web integral para capacitar a 220 docentes de la Escuela Tecnológica Instituto Técnico Central (ETITC). Se superaron desafíos al implementar soluciones a medida utilizando JavaScript.",
+            "text": "Aplicación web en Vainilla Js y Express JS con una base de datos en MySQL. Esta app permite a los estudiantes de posgrado buscar electivas de manera rápida y sencilla. ",
             "author": ["Jeisson Gavilán", "Cinndet UPN"],
             "location": "CINNDET UPN",
-            "link": "https://etitc.netlify.app/m1_modelacion/_0_inicio",
+            "link": "http://sifa.upn.edu.co/",
             "repo": "",
             "modal": {
                 "images": [
-                    ["etitc_1.webp", "etitc_2.webp"],
-                    ["etitc_3.webp", "etitc_4.webp"],
-                    ["etitc_5.webp", "etitc_6.webp"]
+                    ["sifa_1.webp", "sifa_2.webp"],
+                    ["sifa_3.webp", "sifa_4.webp"]
                 ],
-                "technologies": ["HTML", "CSS", "JavaScript", "Boostrap", "CSS Pico"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", "Boostrap"],
                 "achievements": [
-                    "Se implementaron componentes modulares y reutilizables con Js Vanilla en el desarrollo de la plataforma, lo que permitió agilizar el proceso de creación de contenido y facilitó la escalabilidad del sistema.",
-                    "Se desarrollaron layouts tipo plantilla para la virtualización del contenido, lo que garantizó una estructura coherente y consistente en todas las páginas del curso."
+                    "Adaptación al proyecto sin documentación: Esto implicó analizar y comprender el código existente, tanto en el frontend como en el backend, y realizar los ajustes necesarios para garantizar su funcionamiento correcto.",
+                    "Desarrollo del MVP en tiempo récord: Se logró completar el MVP en un tiempo aproximado de dos semana. Esto implicó una planificación detallada, y una gestión efectiva del tiempo para alcanzar los objetivos establecidos."
                 ]
             }
         },
         {
             "id": 3,
+            "img": "campusupn.webp",
+            "title": "Campus Virtual de la UPN",
+            "category": ["WEB", "FULL STACK"],
+            "date": "2022/ Bogotá - Colombia",
+            "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
+            "author": ["Jeisson Gavilán"],
+            "location": "CINNDET UPN",
+            "link": "",
+            "repo": "",
+            "modal": {
+                "images": ["sifa_1.webp", "sifa_2.webp", "sifa_3.webp"],
+                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
+                "achievements": ["", ""]
+            }
+        },
+        {
+            "id": 4,
             "img": "foodiesapp.webp",
             "title": "Foodies App",
-            "category": "DISEÑO WEB",
+            "category": ["WEB", "FRONT END", "DISEÑO"],
             "date": "2023/ Bogotá - Colombia",
             "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
             "author": ["Jeisson Gavilán", "Adriana Moreno", "Wendy Carlos"],
@@ -99,10 +116,10 @@
             }
         },
         {
-            "id": 4,
+            "id": 5,
             "img": "yachay.webp",
             "title": "Yachay Urqu - Buscador de Bioindicadores",
-            "category": "DESARROLLO WEB",
+            "category": ["WEB", "FRONT END", "DISEÑO"],
             "date": "2023/ Bogotá - Colombia",
             "text": "Plataforma web dedicada a brindar información relevante sobre el parque ecológico Cerro Seco. Este sitio web es un apoyo a un trabajo de grado para un grupo de estudiantes de la UPN.",
             "author": ["Jeisson Gavilán", "Cristian Goméz", "Cinndet UPN"],
@@ -123,27 +140,10 @@
             }
         },
         {
-            "id": 5,
-            "img": "campusupn.webp",
-            "title": "Campus Virtual de la UPN",
-            "category": "DESARROLLO WEB",
-            "date": "2022/ Bogotá - Colombia",
-            "text": "Desarrollo web del Campus virtual de la Universidad Pedagógica Nacional. Identificamos los principales espacios que los aspirantes, estudiantes, profesores y funcionaros necesitan de manera digital.",
-            "author": ["Jeisson Gavilán"],
-            "location": "CINNDET UPN",
-            "link": "",
-            "repo": "",
-            "modal": {
-                "images": ["sifa_1.webp", "sifa_2.webp", "sifa_3.webp"],
-                "technologies": ["HTML", "CSS", "JavaScript", "ExpressJS", "MySQL", ""],
-                "achievements": ["", ""]
-            }
-        },
-        {
             "id": 6,
-            "img": "dmed_0.webp",
+            "img": "dmed.webp",
             "title": "Propuesta para orientar docentes",
-            "category": "ACADÉMICO",
+            "category": ["ACADÉMICO"],
             "date": "2021/ Bogotá - Colombia",
             "text": "Diseño de una propuesta para orientar a docentes en formación de la Licenciatura en Diseño Tecnológico, para el desarrollo de sus materiales educativos digitales.",
             "author": ["Jeisson Gavilán", "José Moreno"],
@@ -163,7 +163,7 @@
             "id": 7,
             "img": "zombiestore.webp",
             "title": "Zombie STORE",
-            "category": "DISEÑO WEB",
+            "category": ["WEB"],
             "date": "2023/ Bogotá - Colombia",
             "text": "Proyecto del BootCamp - BIT, buscando fortalecer las habilidades técnicas en la construcción de páginas web con React Js, haciendo una lista de productos con la posibilidad de agregar y eliminar productos.",
             "author": ["Jeisson Gavilán"],
@@ -183,7 +183,7 @@
             "id": 8,
             "img": "directorio.webp",
             "title": "Directorio Telefonico",
-            "category": "DESARROLLO WEB",
+            "category": ["WEB"],
             "date": "2023/ Bogotá - Colombia",
             "text": "El proyecto del Directorio Telefónico es una aplicación web que consume una API pública para proporcionar información de contacto y empresas. Diseñado para facilitar la búsqueda de negocios y servicios, esta plataforma centraliza toda la información necesaria en un solo lugar.",
             "author": ["Jeisson Gavilán"],

@@ -31,6 +31,20 @@ const Project = ({ id }) => {
 
     const screenStyle = cursorGrabbed ? { cursor: "none" } : {};
 
+    // Creación de categorias
+
+    const formattedCategories = projectData.category.map((item, index) => {
+        return index !== projectData.category.length - 1 ? `${item} - ` : item;
+    });
+
+    const categories = formattedCategories.map((item, index) => {
+        return (
+            <span key={index} className="projects_category">
+                {item}
+            </span>
+        );
+    });
+
     // Validacin si tiene o no link para hacer el "Juego"
     if (projectData.link.length < 1) {
         imgLink = (
@@ -75,7 +89,7 @@ const Project = ({ id }) => {
             {imgLink}
 
             <article className="projects_data">
-                <span className="projects_category"> {projectData.category} </span>
+                <article>{categories}</article>
                 <a href={projectData.link} className="projects_title" target="_blank">
                     {projectData.title}
                 </a>
