@@ -1,3 +1,3 @@
 User-agent: *
 
-Sitemap: https://alexander-mg.netlify.app/
+Sitemap: http://alexandergm.com/

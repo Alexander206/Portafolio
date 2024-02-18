@@ -1,0 +1,144 @@
+@mixin btn_curriculum {
+    .btn_curriculum {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 20rem;
+        color: var(--dark);
+        font-weight: 700;
+        font-size: 1.6rem;
+        letter-spacing: 0.8px;
+
+        padding: 0;
+        margin-bottom: 60px;
+        transition: 0.3s;
+
+        .custom-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: 5rem;
+            color: var(--dark);
+            border-radius: 5px;
+
+            font-weight: 500;
+            background: transparent;
+            outline: none;
+
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 10px 25px;
+        }
+
+        .btn-8 {
+            background-color: transparent;
+            line-height: 42px;
+            padding: 0;
+            border: 1px solid var(--dark);
+            border-radius: 0px;
+
+            &:before,
+            &:after {
+                position: absolute;
+                content: "";
+                right: 0;
+                bottom: 0;
+                background: var(--darkPrimary);
+                transition: all 0.3s ease;
+            }
+
+            &::before {
+                height: 0%;
+                width: 2px;
+            }
+
+            &:after {
+                width: 0%;
+                height: 2px;
+            }
+
+            &:hover:before {
+                height: 100%;
+            }
+
+            &:hover:after {
+                width: 100%;
+            }
+
+            &:hover {
+                border: none;
+                background: var(--dark);
+            }
+
+            span {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+
+                &:hover {
+                    color: var(--light);
+                }
+
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    background: var(--darkPrimary);
+                    transition: all 0.3s ease;
+                }
+
+                &:before {
+                    width: 2px;
+                    height: 0%;
+                }
+
+                &:after {
+                    height: 2px;
+                    width: 0%;
+                }
+
+                &:hover:before {
+                    height: 100%;
+                }
+
+                &:hover:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .btn_projetcs {
+        background-color: var(--darkTrasparent);
+        border: 1px solid var(--darkPrimary);
+        border-radius: 5rem;
+        color: var(--primary);
+        width: 15rem;
+
+        &:hover {
+            background-color: var(--primary);
+            color: var(--black);
+            border: 1px solid var(--dark);
+
+            .custom-btn {
+                color: var(--black);
+            }
+        }
+
+        .custom-btn {
+            color: var(--primary);
+            padding: 0.5rem;
+            height: 4rem;
+        }
+    }
+}

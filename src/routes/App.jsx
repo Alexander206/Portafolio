@@ -1,12 +1,12 @@
 // Dependencias
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Componentes
-import Home from "../pages/Home";
-import Proyects from "../pages/Proyects";
-import Contact from "../pages/Contact";
-import NotFound from "../pages/NotFound";
+import Home from "../pages/home";
+import Proyects from "../pages/projects";
+import Services from "../pages/services";
+import Contact from "../pages/contact";
+import NotFound from "../pages/not_found";
 
 // Principal component
 function App() {
@@ -15,6 +15,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/projects" element={<Proyects />} />
+                <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/*" element={<NotFound />} />
             </Routes>

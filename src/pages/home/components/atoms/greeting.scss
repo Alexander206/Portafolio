@@ -1,0 +1,44 @@
+@mixin greeting {
+    h1 {
+        align-items: center;
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--lightNeutral);
+        letter-spacing: 0.8px;
+        line-height: 1;
+        margin-bottom: 20px;
+
+        span {
+            display: inline;
+
+            color: var(--black);
+            border-radius: 0;
+            border: none;
+            font-size: 30px;
+            background: transparent;
+            border-right: 0.08em solid var(--darkNeutral);
+            border: none;
+
+            padding: 0;
+            margin-bottom: 16px;
+        }
+
+        .txt-rotate > .wrap {
+            color: var(--primaryAccent);
+            padding-right: 0.4rem;
+            border-right: 0.08em solid var(--darkNeutral);
+        }
+    }
+}
+
+@mixin greeting_responsive {
+    h1 {
+        text-align: left;
+        margin-bottom: 6rem;
+        font-size: 42px;
+
+        span {
+            font-size: 42px;
+        }
+    }
+}
