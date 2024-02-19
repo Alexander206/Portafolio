@@ -1,5 +1,5 @@
 // Components
-import SocialLink from "../header/components/atoms/SocialLink";
+import SocialLink from "../utils/SocialLink";
 
 // Styles
 import "./styles.scss";
@@ -14,7 +14,7 @@ import data from "../../_data/general.json";
 const Footer = () => {
     return (
         <footer className="footer">
-            <p className="footer_data"> © 2023 Jeisson Gavilán. Todos los derechos reservados. </p>
+            <p className="footer_data"> © 2024 Jeisson Gavilán. Todos los derechos reservados. </p>
             <ul className="footer_links">
                 <ul className="navbar_list social_icon">
                     <SocialLink icon={navIconLinkedin} link={data.linkedin} />

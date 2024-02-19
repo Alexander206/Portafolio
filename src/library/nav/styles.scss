@@ -1,0 +1,63 @@
+@import "./components/organisms/navbar.scss";
+
+.header {
+    position: fixed;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: calc(100% - 2rem);
+    max-width: 40rem;
+    border: 1px solid var(--darkLight);
+    border-radius: 5rem;
+    background: var(--darkTrasparent);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+
+    transition: 0.32s ease-in-out;
+    z-index: 999;
+
+    .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        max-width: 132rem;
+
+        padding: 2rem 2.5rem;
+        transition: 0.32s ease-in-out;
+
+        @include headerNavbar;
+    }
+}
+
+@media (min-width: 800px) {
+    .header {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 5rem;
+        width: auto;
+        bottom: auto;
+
+        .container {
+            padding: 3rem 2rem;
+
+            .close {
+                position: initial;
+                display: flex;
+                flex-direction: row;
+                background-color: transparent;
+                padding: 0;
+
+                .routes {
+                    flex-direction: row;
+                    gap: 2rem;
+                }
+            }
+        }
+    }
+}

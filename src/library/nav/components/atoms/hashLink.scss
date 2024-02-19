@@ -1,0 +1,64 @@
+@mixin hashLink {
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        font-size: 1.2rem;
+        color: var(--lightNeutral);
+        opacity: 0.75;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        ion-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+        }
+
+        span {
+            display: none;
+        }
+    }
+
+    .active {
+        transition: 0.3s;
+
+        a {
+            opacity: 1;
+            color: var(--primaryAccent);
+            font-weight: normal;
+            transition: 0.3s;
+        }
+    }
+
+    @media (min-width: 800px) {
+        a {
+            gap: 0.4rem;
+
+            ion-icon {
+                padding: 0;
+                border: none;
+            }
+
+            span {
+                display: flex;
+            }
+        }
+
+        .active {
+            a {
+                ion-icon {
+                    border: none;
+                }
+            }
+        }
+    }
+}

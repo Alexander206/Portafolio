@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 // Components
 import LoadingPage from "../../library/loadingPage";
-import Header from "../../library/header";
+import Nav from "../../library/nav";
 import Footer from "../../library/footer";
 import ProjectsTitle from "../../library/title";
 import CategoriesComponent from "./components/templates/CategoriesComponent";
@@ -71,7 +71,7 @@ const Proyects = () => {
     return (
         <ProjectsContext.Provider value={data.projects}>
             <LoadingPage />
-            <Header classPage={"header_projects"} />
+            <Nav classPage={"header_projects"} />
             <main className="main_projects">
                 <ProjectsTitle title={data.title} text1={data.text1} textSpan={data.textSpan} text2={data.text2} />
 

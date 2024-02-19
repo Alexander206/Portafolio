@@ -2,7 +2,7 @@
 import "./styles.scss";
 
 // Componets
-import Header from "../../library/header";
+import Nav from "../../library/nav";
 import Footer from "../../library/footer";
 import LoadingPage from "../../library/loadingPage";
 import ProjectsTitle from "../../library/title";
@@ -15,7 +15,7 @@ const Contact = () => {
     return (
         <>
             <LoadingPage />
-            <Header classPage={"header_contact"} />
+            <Nav classPage={"header_contact"} />
             <main className="main_contact">
                 <section className="contact" id="contact">
                     <ProjectsTitle title={data.title} text1={data.text1} textSpan={data.textSpan} text2={data.text2} />

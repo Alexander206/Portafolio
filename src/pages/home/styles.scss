@@ -1,6 +1,5 @@
 // Components
 @import "./components/templates/banner.scss";
-@import "./components/templates/skills.scss";
 
 .main_home {
     display: flex;
@@ -10,14 +9,10 @@
     height: 100%;
 
     @include banner;
-
-    @include skills;
 }
 
 @media (min-width: 800px) {
     .main_home {
         @include responsive-banner;
-
-        @include skills_responsive;
     }
 }

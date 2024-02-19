@@ -1,0 +1,31 @@
+@mixin logo {
+    .header_logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+        border-radius: 50%;
+        border: 1px solid var(--light);
+        width: 4rem;
+        height: 4rem;
+
+        margin: 0;
+        padding: 0rem;
+        transition: 0.2s;
+
+        img {
+            width: 90%;
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+
+        &:hover {
+            box-shadow: 0 0 5px var(--neutral);
+
+            img {
+                transition: 0.2s;
+            }
+        }
+    }
+}

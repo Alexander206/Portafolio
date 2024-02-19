@@ -7,9 +7,9 @@ const Banner = ({ imgProfile, title, description, btn }) => {
     return (
         <section className="banner">
             <article className="container">
-                <img className="banner_image" src={imgProfile} alt="Fotografia" />
-
                 <BannerText title={title} description={description} btn={btn} />
+
+                <img className="banner_image" src={imgProfile} alt="Fotografia" />
             </article>
 
             <Waves />
