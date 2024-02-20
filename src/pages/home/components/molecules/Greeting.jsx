@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-const Greeting = ({ title }) => {
+const Greeting = ({ greeting }) => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState("");
     const [delta, setDelta] = useState(200 - Math.random() * 50);
     const [index, setIndex] = useState(1);
-    const toRotate = title.profession;
-    const period = title.timer;
+    const toRotate = greeting.profession;
+    const period = greeting.timer;
 
     useEffect(() => {
         const ticker = setInterval(() => {
@@ -44,7 +44,7 @@ const Greeting = ({ title }) => {
 
     return (
         <h1>
-            {title.greeting}
+            {greeting.greeting}
             <br />
             <span className="txt-rotate" dataperiod="800" data-rotate={`${toRotate}`}>
                 <span className="wrap">{text}</span>

@@ -6,7 +6,6 @@
         color: var(--lightNeutral);
         letter-spacing: 0.8px;
         line-height: 1;
-        margin-bottom: 20px;
 
         span {
             display: inline;
@@ -24,7 +23,7 @@
         }
 
         .txt-rotate > .wrap {
-            color: var(--primaryAccent);
+            color: var(--primary);
             padding-right: 0.4rem;
             border-right: 0.08em solid var(--darkNeutral);
         }
@@ -34,7 +33,6 @@
 @mixin greeting_responsive {
     h1 {
         text-align: left;
-        margin-bottom: 6rem;
         font-size: 42px;
 
         span {

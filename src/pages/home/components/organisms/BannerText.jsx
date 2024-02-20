@@ -3,19 +3,23 @@ import { Link } from "react-router-dom";
 
 // Components
 import Greeting from "../molecules/Greeting";
+import Title from "../molecules/Title";
 
 // Principal component
-const BannerText = ({ title, description, btn }) => {
+const BannerText = ({ greeting, title, description, btn }) => {
     return (
         <>
             <article className="text">
-                <Greeting title={title} />
+                <Title title={title} />
 
-                <p>{description}</p>
+                <Greeting greeting={greeting} />
+
+                {/* <p>{description}</p> */}
 
                 <Link to="/projects" className="btn_curriculum btn_projetcs">
                     <button className="custom-btn">
                         <span>{btn}</span>
+                        <ion-icon name="code-slash"></ion-icon>
                     </button>
                 </Link>
             </article>

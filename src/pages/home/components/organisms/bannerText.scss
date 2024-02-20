@@ -1,19 +1,25 @@
 // Component
+@import "../molecules/title.scss";
 @import "../molecules/greeting.scss";
 @import "../../../../library/btns/btnCurriculum.scss";
 
 @mixin bannerText {
     .text {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        position: relative;
+        gap: 10rem;
+
         text-align: center;
         width: 100%;
+
         padding: 2rem 3rem;
         padding-top: 3rem;
         z-index: 2;
+
+        @include title;
 
         @include greeting;
 
@@ -27,7 +33,6 @@
             letter-spacing: 0.8px;
             line-height: 1.5em;
             width: 96%;
-            margin-bottom: 5rem;
         }
 
         @include btn_curriculum;
