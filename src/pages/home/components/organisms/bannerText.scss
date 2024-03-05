@@ -1,41 +1,26 @@
 // Component
 @import "../molecules/title.scss";
 @import "../molecules/greeting.scss";
-@import "../../../../library/btns/btnCurriculum.scss";
+@import "../molecules/buttons.scss";
 
 @mixin bannerText {
     .text {
-        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10rem;
+        gap: 30rem;
 
         text-align: center;
         width: 100%;
 
-        padding: 2rem 3rem;
-        padding-top: 3rem;
+        padding: 6rem 3rem;
+        padding-top: 4rem;
         z-index: 2;
 
         @include title;
-
         @include greeting;
-
-        p {
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-            opacity: 1;
-            transform-style: preserve-3d;
-            max-width: 90rem;
-            color: var(--neutral);
-            font-size: 16px;
-            letter-spacing: 0.8px;
-            line-height: 1.5em;
-            width: 96%;
-        }
-
-        @include btn_curriculum;
+        @include buttons;
     }
 }
 
@@ -43,8 +28,11 @@
     .text {
         align-items: start;
         justify-content: center;
+        gap: 10rem;
 
+        @include title-responsive;
         @include greeting_responsive;
+        @include buttons-responsive;
 
         p {
             text-align: left;

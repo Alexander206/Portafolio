@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 // Styles
 import "./styles.scss";
 
@@ -8,13 +10,16 @@ import Footer from "../../library/footer";
 
 import Skills from "./components/templates/Skills";
 
+// Context
+import GeneralContext from "../../context/GeneralContext";
+
 // Resourses
 import ilustrationMe from "../../assets/pages/home/me-ilustration.svg";
 import imgArrow from "../../assets/icon/arrow-right.svg";
 
-import { cv } from "../../_data/general.json";
-
 const About = () => {
+    const { social } = useContext(GeneralContext);
+
     return (
         <>
             <LoadingPage />
@@ -43,7 +48,7 @@ const About = () => {
                     imgMe={ilustrationMe}
                     arrow={imgArrow}
                     btnlink={{
-                        cvUrl: cv,
+                        cvUrl: social.cv,
                         text: "Hoja de vida",
                     }}
                 />

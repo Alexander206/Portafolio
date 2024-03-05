@@ -1,6 +1,5 @@
 // Dependencies
-import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 // Styles
 import "./styles.scss";
@@ -8,35 +7,39 @@ import "./styles.scss";
 // Components
 import Navbar from "./components/organisms/Navbar";
 
+// Context
+import GeneralContext from "../../context/GeneralContext";
+
 // Principal component
 const Nav = ({ classPage }) => {
     const searchParams = window.location.pathname;
     const [activeLink, setActiveLink] = useState(searchParams);
+    const { route } = useContext(GeneralContext);
 
     const navItems = [
         {
             icon: "home",
-            route: "/",
+            route: route.home,
             text: "Inicio",
         },
         {
             icon: "bulb",
-            route: "/about",
+            route: route.about,
             text: "Sobre mí",
         },
         {
             icon: "cube",
-            route: "/services",
+            route: route.services,
             text: "Servicios",
         },
         {
             icon: "code-slash",
-            route: "/projects",
+            route: route.projects,
             text: "Proyectos",
         },
         {
             icon: "call",
-            route: "/contact",
+            route: route.contact,
             text: "Contacto",
         },
     ];

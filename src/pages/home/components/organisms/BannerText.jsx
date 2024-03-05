@@ -1,12 +1,10 @@
-// Dependences
-import { Link } from "react-router-dom";
-
 // Components
 import Greeting from "../molecules/Greeting";
 import Title from "../molecules/Title";
+import Buttons from "../molecules/Buttons";
 
 // Principal component
-const BannerText = ({ greeting, title, description, btn }) => {
+const BannerText = ({ greeting, title, description, btns }) => {
     return (
         <>
             <article className="text">
@@ -16,12 +14,7 @@ const BannerText = ({ greeting, title, description, btn }) => {
 
                 {/* <p>{description}</p> */}
 
-                <Link to="/projects" className="btn_curriculum btn_projetcs">
-                    <button className="custom-btn">
-                        <span>{btn}</span>
-                        <ion-icon name="code-slash"></ion-icon>
-                    </button>
-                </Link>
+                <Buttons btns={btns} />
             </article>
         </>
     );

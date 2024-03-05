@@ -1,7 +1,7 @@
 @mixin greeting {
-    h1 {
+    h1:first-of-type {
         align-items: center;
-        font-size: 30px;
+        font-size: 2.6rem;
         font-weight: 700;
         color: var(--lightNeutral);
         letter-spacing: 0.8px;
@@ -13,7 +13,7 @@
             color: var(--black);
             border-radius: 0;
             border: none;
-            font-size: 30px;
+            font-size: 2.6rem;
             background: transparent;
             border-right: 0.08em solid var(--darkNeutral);
             border: none;
@@ -22,16 +22,22 @@
             margin-bottom: 16px;
         }
 
-        .txt-rotate > .wrap {
-            color: var(--primary);
-            padding-right: 0.4rem;
-            border-right: 0.08em solid var(--darkNeutral);
+        .txt-rotate {
+            display: block;
+            height: 7rem;
+            padding-top: 1rem;
+
+            & > .wrap {
+                color: var(--primary);
+                padding-right: 0.5rem;
+                border-right: 0.08em solid var(--darkNeutral);
+            }
         }
     }
 }
 
 @mixin greeting_responsive {
-    h1 {
+    h1:first-of-type {
         text-align: left;
         font-size: 42px;
 

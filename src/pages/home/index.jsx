@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 // Styles
 import "./styles.scss";
 
@@ -7,6 +9,10 @@ import Nav from "../../library/nav";
 import Footer from "../../library/footer";
 
 import Banner from "./components/templates/Banner";
+import Redirect from "./components/templates/Redirect";
+
+// Context
+import GeneralContext from "./../../context/GeneralContext";
 
 // Resourses
 import imgProfile from "../../assets/pages/home/me.png";
@@ -15,10 +21,10 @@ import linkedin from "../../assets/icon/linkedin.svg";
 import github from "../../assets/icon/github.svg";
 import instagram from "../../assets/icon/instagram.svg";
 
-import data from "../../_data/general.json";
-
 // Principal component
 const Home = () => {
+    const { route, social } = useContext(GeneralContext);
+
     return (
         <>
             <LoadingPage />
@@ -29,19 +35,24 @@ const Home = () => {
                     imgLogo={logo}
                     imgProfile={imgProfile}
                     imgSocial={[
-                        { icon: linkedin, url: data.linkedin },
-                        { icon: github, url: data.github },
-                        { icon: instagram, url: data.instagram },
+                        { icon: linkedin, url: social.linkedin },
+                        { icon: github, url: social.github },
+                        { icon: instagram, url: social.instagram },
                     ]}
                     title={["Jeisson Alexander Gavilán Murcia", "Software Developer"]}
                     greeting={{
-                        timer: 2000,
-                        greeting: "Hola!",
-                        profession: ["Una línea de código a la vez"],
+                        timer: 100,
+                        greeting: "¡Hola!, Bienvenidos,",
+                        profession: ['"Superando desafíos con determinación"'],
                     }}
                     description="Tengo experiencia en proyectos de desarrollo de software y diseño web. He trabajado en proyectos con instituciones de renombre como la Universidad Pedagógica Nacional."
-                    btn="Ver proyectos"
+                    btns={[
+                        { text: "Proyectos", url: route.projects, icon: "code-slash" },
+                        { text: "Servicios", url: route.services, icon: "cube" },
+                    ]}
                 />
+
+                <Redirect />
             </main>
 
             <Footer />

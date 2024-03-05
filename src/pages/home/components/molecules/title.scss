@@ -1,18 +1,55 @@
 @mixin title {
     .title {
+        position: absolute;
+        top: 2rem;
+        right: 4rem;
+
         display: flex;
         flex-direction: column;
-        align-items: start;
-        gap: 1rem;
-        width: 100%;
+        align-items: flex-end;
+        gap: 0rem;
+
+        width: 65vw;
+        margin-top: 1rem;
 
         h2 {
-            font-size: 2.4rem;
+            text-align: right;
+            font-size: 1.4rem;
             color: var(--textNeutral);
         }
 
         span {
             display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            color: var(--darkNeutral);
+            width: 100%;
+            font-size: 1.4rem;
+
+            div {
+                display: none;
+            }
+        }
+    }
+}
+
+@mixin title-responsive {
+    .title {
+        position: initial;
+        align-items: start;
+        gap: 1rem;
+        width: 100%;
+        margin: 1;
+
+        h2 {
+            text-align: left;
+            font-size: 2.4rem;
+            color: var(--textNeutral);
+        }
+
+        span {
+            flex-direction: row;
             align-items: center;
             gap: 2rem;
 

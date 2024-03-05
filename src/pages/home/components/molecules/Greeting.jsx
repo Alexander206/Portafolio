@@ -1,53 +1,50 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const Greeting = ({ greeting }) => {
-    const [loopNum, setLoopNum] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState("");
-    const [delta, setDelta] = useState(200 - Math.random() * 50);
-    const [index, setIndex] = useState(1);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isBlinking, setIsBlinking] = useState(false);
     const toRotate = greeting.profession;
-    const period = greeting.timer;
+    const fullText = toRotate[0];
 
     useEffect(() => {
-        const ticker = setInterval(() => {
-            tick();
-        }, delta);
+        const interval = setInterval(() => {
+            if (currentIndex < fullText.length) {
+                setText((prevText) => prevText + fullText[currentIndex]);
+                setCurrentIndex((prevIndex) => prevIndex + 1);
+            } else {
+                clearInterval(interval);
+                setIsBlinking(true);
+            }
+        }, greeting.timer);
 
-        return () => clearInterval(ticker);
-    }, [text, delta]);
+        return () => clearInterval(interval);
+    }, [currentIndex, fullText, greeting.timer]);
 
-    const tick = () => {
-        const i = loopNum % toRotate.length;
-        const fullText = toRotate[i];
-        const updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+    useEffect(() => {
+        let blinkingInterval;
 
-        setText(updatedText);
-
-        if (isDeleting) {
-            setDelta((prevDelta) => prevDelta / 2);
-        }
-
-        if (!isDeleting && updatedText === fullText) {
-            setIsDeleting(true);
-            setIndex((prevIndex) => prevIndex - 1);
-            setDelta(period);
-        } else if (isDeleting && updatedText === "") {
-            setIsDeleting(false);
-            setLoopNum(loopNum + 1);
-            setIndex(1);
-            setDelta(150);
+        if (isBlinking) {
+            blinkingInterval = setInterval(() => {
+                setIsBlinking(false);
+            }, 500);
         } else {
-            setIndex((prevIndex) => prevIndex + 1);
+            blinkingInterval = setInterval(() => {
+                setIsBlinking(true);
+            }, 500);
         }
-    };
+
+        return () => clearInterval(blinkingInterval);
+    }, [isBlinking]);
 
     return (
         <h1>
             {greeting.greeting}
             <br />
             <span className="txt-rotate" dataperiod="800" data-rotate={`${toRotate}`}>
-                <span className="wrap">{text}</span>
+                <span className="wrap" style={{ borderRight: isBlinking ? "0.08rem solid transparent" : "0.08rem solid var(--darkNeutral)" }}>
+                    {text}
+                </span>
             </span>
         </h1>
     );

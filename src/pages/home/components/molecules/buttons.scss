@@ -1,0 +1,20 @@
+@import "../../../../library/btns/btnCurriculum.scss";
+@import "../atoms/btn.scss";
+
+@mixin buttons {
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        @include btn_curriculum;
+        @include btn;
+    }
+}
+
+@mixin buttons-responsive {
+    .buttons {
+        @include btn-responsive;
+    }
+}
