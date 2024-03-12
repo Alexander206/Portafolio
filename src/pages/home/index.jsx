@@ -78,6 +78,28 @@ const Home = () => {
                         data.icons.react,
                         data.icons.sass,
                     ]}
+                    titleRols="¿En qué rol me puedo desempeñar?"
+                    btn={{ route: "/", text: "Concer más" }}
+                    cards={[
+                        {
+                            img: "",
+                            title: "Backend Developer",
+                            description: "esto es una descripción",
+                            tags: ["Patron1", "Patron1", "Patron1"],
+                        },
+                        {
+                            img: "",
+                            title: "FrontEnd Developer",
+                            description: "esto es una descripción",
+                            tags: ["Patron1", "Patron1", "Patron1"],
+                        },
+                        {
+                            img: "",
+                            title: "Fullstack Developer",
+                            description: "esto es una descripción",
+                            tags: ["Patron1", "Patron1", "Patron1"],
+                        },
+                    ]}
                 />
             </main>
 
