@@ -1,5 +1,6 @@
 // Components
 @import "./components/templates/banner.scss";
+@import "./components/templates/tecnology.scss";
 
 .main_home {
     display: flex;
@@ -9,6 +10,7 @@
     height: 100%;
 
     @include banner;
+    @include tecnology;
 }
 
 @media (min-width: 800px) {

@@ -5,7 +5,7 @@
         font-size: 1.6rem;
 
         &:first-of-type {
-            background-color: var(--lightPrimary);
+            background-color: var(--primaryLight);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.158);
 
             &:hover {
@@ -41,7 +41,7 @@
         height: 4.5rem;
 
         &:first-of-type {
-            background-color: var(--lightPrimary);
+            background-color: var(--primaryLight);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.158);
 
             &:hover {

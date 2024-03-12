@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const BannerImage = ({ imgProfile, imgSocial }) => {
     const socialElements = imgSocial.map((item, index) => {
@@ -24,6 +24,11 @@ const BannerImage = ({ imgProfile, imgSocial }) => {
             <ul className="banner_social">{socialElements}</ul>
         </figure>
     );
+};
+
+BannerImage.propTypes = {
+    imgProfile: PropTypes.string.isRequired,
+    imgSocial: PropTypes.array.isRequired,
 };
 
 export default BannerImage;

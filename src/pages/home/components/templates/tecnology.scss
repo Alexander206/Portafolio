@@ -1,0 +1,27 @@
+@import "../organisms/accordionTecnologies.scss";
+
+@mixin tecnology {
+    .tecnology {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        background-color: var(--primary);
+        overflow: hidden;
+
+        padding: 5rem 0;
+        padding-top: 8rem;
+
+        h3 {
+            color: var(--darkNeutral);
+            font-size: 1.6rem;
+            font-weight: normal;
+
+            margin-bottom: 4rem;
+        }
+
+        @include accordionTecnologies;
+    }
+}

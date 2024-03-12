@@ -1,0 +1,27 @@
+{
+    "icons": {
+        "logo": "logo.svg",
+        "linkedin": "linkedin.svg",
+        "github": "github.svg",
+        "instagram": "instagram.svg",
+
+        "adobe": "adobe.svg",
+        "express": "express.svg",
+        "figma": "figma.svg",
+        "git": "git.svg",
+        "java": "java.svg",
+        "javascript": "javascript.svg",
+        "mongodb": "mongodb.svg",
+        "moodle": "moodle.svg",
+        "mysql": "mysql.svg",
+        "nodejs": "nodejs.svg",
+        "notion": "notion.svg",
+        "office": "office.svg",
+        "php": "php.svg",
+        "postman": "postman.svg",
+        "react": "react.svg",
+        "sass": "sass.svg",
+        "visual": "visual-studio.svg",
+        "wordpress": "wordpress.svg"
+    }
+}

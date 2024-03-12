@@ -47,7 +47,7 @@
                 content: "";
                 right: 0;
                 bottom: 0;
-                background: var(--darkPrimary);
+                background: var(--primaryDark);
                 transition: all 0.3s ease;
             }
 
@@ -92,7 +92,7 @@
                     content: "";
                     left: 0;
                     top: 0;
-                    background: var(--darkPrimary);
+                    background: var(--primaryDark);
                     transition: all 0.3s ease;
                 }
 
@@ -119,7 +119,7 @@
 
     .btn_projetcs {
         background-color: var(--darkTrasparent);
-        border: 1px solid var(--darkPrimary);
+        border: 1px solid var(--primaryDark);
         border-radius: 5rem;
         color: var(--primary);
         width: 20rem;

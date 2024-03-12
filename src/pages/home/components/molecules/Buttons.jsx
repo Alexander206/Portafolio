@@ -1,6 +1,6 @@
-// Dependences
 import PropTypes from "prop-types";
 
+// Components
 import Btn from "../atoms/Btn";
 
 const Buttons = ({ btns }) => {
@@ -9,6 +9,8 @@ const Buttons = ({ btns }) => {
     return <article className="buttons">{listButtons}</article>;
 };
 
-Buttons.propTypes = {};
+Buttons.propTypes = {
+    btns: PropTypes.array.isRequired,
+};
 
 export default Buttons;

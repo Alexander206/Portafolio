@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const Greeting = ({ greeting }) => {
     const [text, setText] = useState("");
@@ -42,12 +43,19 @@ const Greeting = ({ greeting }) => {
             {greeting.greeting}
             <br />
             <span className="txt-rotate" dataperiod="800" data-rotate={`${toRotate}`}>
-                <span className="wrap" style={{ borderRight: isBlinking ? "0.08rem solid transparent" : "0.08rem solid var(--darkNeutral)" }}>
+                <span
+                    className="wrap"
+                    style={{ borderRight: isBlinking ? "0.08rem solid transparent" : "0.08rem solid var(--darkNeutral)" }}
+                >
                     {text}
                 </span>
             </span>
         </h1>
     );
+};
+
+Greeting.propTypes = {
+    greeting: PropTypes.object.isRequired,
 };
 
 export default Greeting;

@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const Title = ({ title }) => {
     return (
@@ -10,6 +10,10 @@ const Title = ({ title }) => {
             </span>
         </article>
     );
+};
+
+Title.propTypes = {
+    title: PropTypes.array.isRequired,
 };
 
 export default Title;

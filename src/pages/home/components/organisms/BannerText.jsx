@@ -1,10 +1,12 @@
+import PropTypes from "prop-types";
+
 // Components
 import Greeting from "../molecules/Greeting";
 import Title from "../molecules/Title";
 import Buttons from "../molecules/Buttons";
 
 // Principal component
-const BannerText = ({ greeting, title, description, btns }) => {
+const BannerText = ({ title, greeting, btns }) => {
     return (
         <>
             <article className="text">
@@ -12,12 +14,16 @@ const BannerText = ({ greeting, title, description, btns }) => {
 
                 <Greeting greeting={greeting} />
 
-                {/* <p>{description}</p> */}
-
                 <Buttons btns={btns} />
             </article>
         </>
     );
+};
+
+BannerText.propTypes = {
+    title: PropTypes.array.isRequired,
+    greeting: PropTypes.object.isRequired,
+    btns: PropTypes.array.isRequired,
 };
 
 export default BannerText;
