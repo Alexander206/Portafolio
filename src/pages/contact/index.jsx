@@ -2,7 +2,7 @@
 import "./styles.scss";
 
 // Componets
-import Nav from "../../library/nav/";
+import Nav from "../../library/nav/Nav.jsx";
 import Footer from "../../library/footer/";
 import LoadingPage from "../../library/loadingPage/";
 import ProjectsTitle from "../../library/title/";

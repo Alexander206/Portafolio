@@ -1,62 +1,107 @@
 @mixin hashLink {
-    a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
+    li {
+        margin: 0.5rem;
 
-        font-size: 1.2rem;
-        color: var(--lightNeutral);
-        opacity: 0.75;
-        transition: 0.3s;
-
-        &:hover {
-            opacity: 1;
+        &.active {
+            background-color: var(--primary);
+            border-radius: 50%;
             transition: 0.3s;
-        }
 
-        ion-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.4rem;
+            a {
+                opacity: 1;
+                color: var(--dark);
+                font-weight: normal;
+                transition: 0.3s;
+            }
         }
-
-        span {
-            display: none;
-        }
-    }
-
-    .active {
-        transition: 0.3s;
 
         a {
-            opacity: 1;
-            color: var(--primaryAccent);
-            font-weight: normal;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            width: 100%;
+            height: 100%;
+            font-size: 1.2rem;
+            color: var(--lightNeutral);
+            opacity: 0.75;
             transition: 0.3s;
+
+            padding: 1.5rem;
+
+            &:hover {
+                opacity: 1;
+                transition: 0.3s;
+            }
+
+            ion-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2.4rem;
+            }
+
+            span {
+                display: none;
+            }
         }
     }
 
     @media (min-width: 800px) {
-        a {
-            gap: 0.4rem;
+        li {
+            position: relative;
 
-            ion-icon {
-                padding: 0;
-                border: none;
+            &.active:hover a span {
+                border: 1px solid var(--darkLight);
+                background: var(--primary);
+                backdrop-filter: blur(7.6px);
+
+                padding-left: 6rem;
+                padding-right: 2rem;
+                transition: 0.3s;
+                z-index: -1;
             }
 
-            span {
+            &:hover a span {
+                opacity: 1;
+                position: absolute;
+                left: 0;
+
                 display: flex;
-            }
-        }
+                align-items: center;
+                justify-content: flex-start;
 
-        .active {
+                border: 1px solid var(--darkLight);
+                background: var(--dark);
+                backdrop-filter: blur(7.6px);
+                width: 14rem;
+                height: calc(100% + 2px);
+                border-radius: 6rem;
+
+                padding-left: 6rem;
+                padding-right: 2rem;
+                transition: 0.3s;
+                z-index: -1;
+            }
+
             a {
+                flex-direction: row;
+                gap: 0;
+
                 ion-icon {
-                    border: none;
+                    padding: 0;
+                }
+
+                span {
+                    position: absolute;
+                    width: 0;
+                    opacity: 0;
+                    display: flex;
+                    border: 1px solid transparent;
+                    margin: 0;
+                    padding: 0;
                 }
             }
         }

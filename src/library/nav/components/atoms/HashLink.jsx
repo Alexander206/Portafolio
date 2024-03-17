@@ -18,9 +18,11 @@ const HashLink = ({ icon, text, route, setActiveLink, activeLink }) => {
     };
 
     return (
-        <li onClick={() => onUpdateActiveLink(text)} className={classState}>
-            <Link className="clickable" to={route}>
+        <li onClick={() => onUpdateActiveLink(text)} className={`${classState} clickable`}>
+            <Link to={route}>
                 <ion-icon name={icon}></ion-icon>
+
+                <span>{text}</span>
             </Link>
         </li>
     );

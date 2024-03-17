@@ -2,7 +2,7 @@
 import { useState, useContext } from "react";
 
 // Styles
-import "./styles.scss";
+import "./nav.scss";
 
 // Components
 import Navbar from "./components/organisms/Navbar";

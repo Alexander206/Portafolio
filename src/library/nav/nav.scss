@@ -28,7 +28,7 @@
         width: 100%;
         max-width: 132rem;
 
-        padding: 2rem 2.5rem;
+        padding: 0;
         transition: 0.32s ease-in-out;
 
         @include headerNavbar;
@@ -43,20 +43,16 @@
         width: auto;
         bottom: auto;
 
-        .container {
-            padding: 3rem 2rem;
+        .container .close {
+            position: initial;
+            display: flex;
+            flex-direction: row;
+            background-color: transparent;
+            padding: 0;
 
-            .close {
-                position: initial;
-                display: flex;
+            .routes {
                 flex-direction: row;
-                background-color: transparent;
-                padding: 0;
-
-                .routes {
-                    flex-direction: row;
-                    gap: 2rem;
-                }
+                gap: 2rem;
             }
         }
     }

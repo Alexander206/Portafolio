@@ -1,6 +1,7 @@
 @mixin buttons {
     .buttons {
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
         gap: 2rem;
@@ -73,36 +74,40 @@
 }
 
 @mixin buttons-responsive {
-    .buttons .btn_projetcs {
-        width: 16rem;
-        height: 4.5rem;
+    .buttons {
+        flex-direction: row;
 
-        &:first-of-type {
-            background-color: var(--primaryLight);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.158);
+        .btn_projetcs {
+            width: 16rem;
+            height: 4.5rem;
 
-            &:hover {
-                background-color: var(--primaryHover);
-                border: 1px solid var(--primary);
+            &:first-of-type {
+                background-color: var(--primaryLight);
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.158);
+
+                &:hover {
+                    background-color: var(--primaryHover);
+                    border: 1px solid var(--primary);
+
+                    .custom-btn {
+                        color: var(--black);
+                    }
+                }
 
                 .custom-btn {
-                    color: var(--black);
+                    color: var(--dark);
                 }
             }
 
-            .custom-btn {
-                color: var(--dark);
-            }
-        }
+            &:last-child {
+                border: 1px solid var(--darkLight);
+                background: var(--darkTrasparent);
+                backdrop-filter: blur(7.6px);
+                -webkit-backdrop-filter: blur(7.6px);
 
-        &:last-child {
-            border: 1px solid var(--darkLight);
-            background: var(--darkTrasparent);
-            backdrop-filter: blur(7.6px);
-            -webkit-backdrop-filter: blur(7.6px);
-
-            &:hover {
-                background-color: var(--primaryHover);
+                &:hover {
+                    background-color: var(--primaryHover);
+                }
             }
         }
     }
