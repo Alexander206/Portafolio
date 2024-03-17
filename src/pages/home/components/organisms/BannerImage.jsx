@@ -1,14 +1,9 @@
 import PropTypes from "prop-types";
+import SocialLink from "../../../../library/utils/SocialLink";
 
 const BannerImage = ({ imgProfile, imgSocial }) => {
     const socialElements = imgSocial.map((item, index) => {
-        return (
-            <li key={index}>
-                <a href={item.url} target="_blank">
-                    <img src={item.icon} alt="social icon" />
-                </a>
-            </li>
-        );
+        return <SocialLink key={index} icon={item.icon} link={item.url} />;
     });
 
     return (

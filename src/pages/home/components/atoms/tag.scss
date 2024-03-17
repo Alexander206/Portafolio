@@ -1,0 +1,10 @@
+@mixin tag {
+    span {
+        border: 1px solid var(--darkLight);
+        background-color: var(--darkTrasparent);
+        color: var(--primary);
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+    }
+}

@@ -4,9 +4,9 @@ import { useContext } from "react";
 import "./styles.scss";
 
 // Componets
-import LoadingPage from "../../library/loadingPage";
-import Nav from "../../library/nav";
-import Footer from "../../library/footer";
+import LoadingPage from "../../library/loadingPage/";
+import Nav from "../../library/nav/";
+import Footer from "../../library/footer/";
 
 import Skills from "./components/templates/Skills";
 

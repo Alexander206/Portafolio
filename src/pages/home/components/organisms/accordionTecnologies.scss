@@ -2,20 +2,24 @@
 
 @mixin accordionTecnologies {
     .slider {
-        height: 100px;
-        margin: auto;
         overflow: hidden;
         position: relative;
-        width: 100%;
+
+        height: 2.8rem;
+        width: calc(100% - 6rem);
         max-width: 127rem;
+
+        margin: auto;
+        margin-bottom: 2rem;
 
         &::before,
         &::after {
             content: "";
-            background: linear-gradient(to right, var(--primary) 0%, transparent 100%);
-            height: 100px;
             position: absolute;
-            width: 200px;
+            background: linear-gradient(to right, var(--primary) 0%, transparent 100%);
+            height: 2.8rem;
+            width: 12rem;
+
             z-index: 2;
         }
 
@@ -31,5 +35,22 @@
         }
 
         @include listTecnologies;
+    }
+}
+
+@mixin responsive-accordionTecnologies {
+    .slider {
+        width: calc(100% - 22rem);
+        height: 10rem;
+        margin-bottom: 0;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 10rem;
+            width: 18rem;
+        }
+
+        @include responsive-listTecnologies;
     }
 }

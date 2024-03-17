@@ -1,4 +1,5 @@
 @import "../organisms/accordionTecnologies.scss";
+@import "../organisms//rols.scss";
 
 @mixin tecnology {
     .tecnology {
@@ -15,13 +16,28 @@
         padding-top: 8rem;
 
         h3 {
+            text-align: center;
             color: var(--darkNeutral);
             font-size: 1.6rem;
             font-weight: normal;
 
+            padding: 0 3rem;
             margin-bottom: 4rem;
         }
 
         @include accordionTecnologies;
+        @include rols;
+    }
+}
+
+@mixin responsive-tecnology {
+    .tecnology {
+        h3 {
+            width: calc(100% - 17rem);
+            font-size: 1.6rem;
+        }
+
+        @include responsive-accordionTecnologies;
+        @include responsive-rols;
     }
 }

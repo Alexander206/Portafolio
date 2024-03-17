@@ -1,5 +1,4 @@
 @import "../organisms/skillsAboutContainer.scss";
-@import "../../../../library/btns/btnCurriculum.scss";
 
 @mixin skills {
     .about {
@@ -27,8 +26,6 @@
             z-index: 2;
 
             @include SkillsAboutContainer;
-
-            @include btn_curriculum;
         }
     }
 }

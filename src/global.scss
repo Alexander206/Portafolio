@@ -18,6 +18,12 @@
 }
 
 /************ Default Css ************/
+
+::selection {
+    background-color: var(--primaryDark);
+    color: var(--dark);
+}
+
 * {
     margin: 0;
     padding: 0;

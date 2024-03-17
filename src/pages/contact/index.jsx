@@ -2,10 +2,10 @@
 import "./styles.scss";
 
 // Componets
-import Nav from "../../library/nav";
-import Footer from "../../library/footer";
-import LoadingPage from "../../library/loadingPage";
-import ProjectsTitle from "../../library/title";
+import Nav from "../../library/nav/";
+import Footer from "../../library/footer/";
+import LoadingPage from "../../library/loadingPage/";
+import ProjectsTitle from "../../library/title/Index";
 
 // Resources
 import data from "./data.json";
@@ -68,7 +68,7 @@ const Contact = () => {
                                 ></textarea>
                             </label>
 
-                            <button type="submit" className="btn_curriculum">
+                            <button type="submit" className="btn_generic">
                                 <div className="custom-btn btn-8">
                                     <span>Enviar</span>
                                 </div>

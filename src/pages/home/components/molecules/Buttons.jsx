@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
+import BtnGeneric from "../../../../library/btns/BtnGeneric";
 
 // Components
-import Btn from "../atoms/Btn";
 
 const Buttons = ({ btns }) => {
-    const listButtons = btns.map((item, index) => <Btn key={index} text={item.text} url={item.url} icon={item.icon} />);
+    const listButtons = btns.map((item, index) => (
+        <BtnGeneric key={index} text={item.text} route={item.url} className="btn_projetcs" icon={item.icon} />
+    ));
 
     return <article className="buttons">{listButtons}</article>;
 };

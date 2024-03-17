@@ -5,6 +5,10 @@
         "github": "github.svg",
         "instagram": "instagram.svg",
 
+        "software": "software.png",
+        "backend": "back_end.png",
+        "frontend": "front_end.png",
+
         "adobe": "adobe.svg",
         "express": "express.svg",
         "figma": "figma.svg",

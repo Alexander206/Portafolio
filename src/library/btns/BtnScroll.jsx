@@ -43,7 +43,7 @@ const BtnScroll = ({ href }) => {
         };
     }, [isVisible, isAnimationEnd]);
 
-    return <a ref={btnRef} href={href} className={`mouse ${elementClass}`} />;
+    return <a ref={btnRef} href={href} className={`mouse ${elementClass} clickable`} />;
 };
 
 export default BtnScroll;

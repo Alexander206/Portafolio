@@ -10,6 +10,7 @@
     border-top: 1px solid var(--dark);
 
     padding: 1rem;
+    padding-bottom: 10rem;
     z-index: 2;
 
     .footer_data {
@@ -38,5 +39,11 @@
     .footer_links_item:hover ion-icon {
         color: var(--green);
         transition: 0.2s;
+    }
+}
+
+@media (min-width: 800px) {
+    .footer {
+        padding-bottom: 2rem;
     }
 }

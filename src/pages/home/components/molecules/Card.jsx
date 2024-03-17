@@ -8,11 +8,16 @@ const Card = ({ img, title, description, tags }) => {
 
     return (
         <div className="card_contend">
-            <img src={img} alt="Rol image" />
-            <h4>{title}</h4>
-            <p>{description}</p>
+            <figure className="card_image">
+                <img src={img} alt="Rol image" />
+            </figure>
 
-            <div className="tags">{listTags}</div>
+            <div className="card_body">
+                <h4>{title}</h4>
+                <p>{description}</p>
+
+                <div className="tags">{listTags}</div>
+            </div>
         </div>
     );
 };

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import Card from "../molecules/Card";
+import BtnGeneric from "../../../../library/btns/BtnGeneric";
 
 const Rols = ({ titleRols, btn, cards }) => {
     const cardList = cards.map((item, index) => (
@@ -10,10 +11,10 @@ const Rols = ({ titleRols, btn, cards }) => {
     ));
 
     return (
-        <article className="rols">
+        <article className="rols" id="rols">
             <article className="role_header">
                 <h2>{titleRols}</h2>
-                <Link to={btn.route}>{btn.text}</Link>
+                <BtnGeneric route={btn.route} text={btn.text} icon="chevron-forward-outline" />
             </article>
 
             <article className="role_cards">{cardList}</article>

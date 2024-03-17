@@ -7,7 +7,7 @@ import "./styles.scss";
 import SocialLink from "../utils/SocialLink";
 
 // Context
-import GeneralContext from "./../../context/GeneralContext";
+import GeneralContext from "../../context/GeneralContext";
 
 // Resources
 import navIconLinkedin from "../../assets/icon/linkedin.svg";

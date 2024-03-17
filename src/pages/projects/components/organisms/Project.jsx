@@ -3,7 +3,7 @@ import React, { useState, useContext } from "react";
 
 // Components
 import GrabZone from "../atoms/GrabZone";
-import ModalProject from "../../../../library/modalProject";
+import ModalProject from "../../../../library/modalProject/Index";
 
 // Resourses
 import ProjectsContext from "../../../../context/ProjectsContext";

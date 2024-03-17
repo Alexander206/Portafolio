@@ -1,5 +1,4 @@
 @import "../../library/title/styles.scss";
-@import "../../library/btns/btnCurriculum.scss";
 
 .main_contact {
     display: flex;
@@ -134,9 +133,7 @@
                 }
             }
 
-            @include btn_curriculum;
-
-            .btn_curriculum {
+            .btn_generic {
                 width: 100%;
                 max-width: 40rem;
                 margin: 2rem auto;

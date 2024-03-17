@@ -2,10 +2,10 @@
 import { useState, useEffect } from "react";
 
 // Components
-import LoadingPage from "../../library/loadingPage";
-import Nav from "../../library/nav";
-import Footer from "../../library/footer";
-import ProjectsTitle from "../../library/title";
+import LoadingPage from "../../library/loadingPage/";
+import Nav from "../../library/nav/";
+import Footer from "../../library/footer/";
+import ProjectsTitle from "../../library/title/";
 import CategoriesComponent from "./components/templates/CategoriesComponent";
 import Project from "./components/organisms/Project";
 

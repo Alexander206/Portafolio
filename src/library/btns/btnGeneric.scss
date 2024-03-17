@@ -1,0 +1,141 @@
+.btn_generic {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: 3.8rem;
+    border: 1px solid var(--darkLight);
+    border-radius: 5rem;
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.8px;
+    padding: 10px 25px;
+
+    transition: 0.3s;
+
+    &:hover {
+        background-color: var(--dark);
+        border: 1px solid var(--dark);
+
+        .custom-btn {
+            color: var(--primary);
+        }
+    }
+
+    &.variant {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .custom-btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        width: 100%;
+        height: 5rem;
+        color: var(--dark);
+        border-radius: 5px;
+
+        font-weight: 500;
+        background: transparent;
+        outline: none;
+
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.variant {
+            background-color: transparent;
+            line-height: 42px;
+            border: 1px solid var(--dark);
+            border-radius: 0px;
+
+            &:before,
+            &:after {
+                position: absolute;
+                content: "";
+                right: 0;
+                bottom: 0;
+                background: var(--primaryDark);
+                transition: all 0.3s ease;
+            }
+
+            &::before {
+                height: 0%;
+                width: 2px;
+            }
+
+            &:after {
+                width: 0%;
+                height: 2px;
+            }
+
+            &:hover:before {
+                height: 100%;
+            }
+
+            &:hover:after {
+                width: 100%;
+            }
+
+            &:hover {
+                border: none;
+                background: var(--dark);
+            }
+
+            span {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                padding: 10px 25px;
+
+                &:hover {
+                    color: var(--light);
+                }
+
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    background: var(--primaryDark);
+                    transition: all 0.3s ease;
+                }
+
+                &:before {
+                    width: 2px;
+                    height: 0%;
+                }
+
+                &:after {
+                    height: 2px;
+                    width: 0%;
+                }
+
+                &:hover:before {
+                    height: 100%;
+                }
+
+                &:hover:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .btn_generic {
+        height: 4.5rem;
+    }
+}
