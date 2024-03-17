@@ -5,7 +5,7 @@ import "./styles.scss";
 import Nav from "../../library/nav/";
 import Footer from "../../library/footer/";
 import LoadingPage from "../../library/loadingPage/";
-import ProjectsTitle from "../../library/title/Index";
+import ProjectsTitle from "../../library/title/";
 
 // Resources
 import data from "./data.json";
