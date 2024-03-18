@@ -53,7 +53,7 @@ const Cursor = ({ cursorActive, setCursorActive }) => {
 
             setTimeout(() => {
                 setCursorTwoPosition({ x: e.clientX, y: e.clientY });
-            }, 60);
+            }, 65);
         };
 
         window.addEventListener("popstate", handleLocationChange);
