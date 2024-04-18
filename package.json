@@ -13,6 +13,7 @@
     "dependencies": {
         "@nextui-org/react": "^2.3.2",
         "@picocss/pico": "^1.5.7",
+        "autoprefixer": "^10.4.19",
         "bootstrap": "^5.2.3",
         "dat.gui": "^0.7.9",
         "framer-motion": "^11.1.3",
@@ -32,8 +33,8 @@
         "eslint-plugin-react": "^7.34.1",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.6",
-        "postcss": "^8.4.38",
         "gh-pages": "^5.0.0",
+        "postcss": "^8.4.38",
         "tailwindcss": "^3.4.3",
         "vite": "^4.2.0"
     }
