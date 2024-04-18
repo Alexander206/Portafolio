@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const HeaderCenterBtn = ({ handlerMenu, setHandlerMenu }) => {
     return (
@@ -6,6 +6,11 @@ const HeaderCenterBtn = ({ handlerMenu, setHandlerMenu }) => {
             <ion-icon name="reorder-three"></ion-icon>
         </button>
     );
+};
+
+HeaderCenterBtn.propTypes = {
+    handlerMenu: PropTypes.bool.isRequired,
+    setHandlerMenu: PropTypes.func.isRequired,
 };
 
 export default HeaderCenterBtn;

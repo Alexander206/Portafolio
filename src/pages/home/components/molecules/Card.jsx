@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 import Tag from "../atoms/Tag";
@@ -22,6 +21,11 @@ const Card = ({ img, title, description, tags }) => {
     );
 };
 
-Card.propTypes = {};
+Card.propTypes = {
+    img: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    tags: PropTypes.array.isRequired,
+};
 
 export default Card;

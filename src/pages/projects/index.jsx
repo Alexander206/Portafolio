@@ -66,7 +66,7 @@ const Proyects = () => {
                 setStateProjects(AllProjects);
             }
         });
-    }, [itemSelect]);
+    }, [itemSelect, Projects, AllProjects]);
 
     return (
         <ProjectsContext.Provider value={data.projects}>

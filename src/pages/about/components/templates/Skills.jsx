@@ -1,5 +1,5 @@
 // Dependences
-import React from "react";
+import PropTypes from "prop-types";
 
 // Components
 import SkillsAboutContainer from "../organisms/SkillsAboutContainer";
@@ -18,6 +18,15 @@ const Skills = ({ text, ability, images, imgMe, arrow, btnlink }) => {
             </section>
         </>
     );
+};
+
+Skills.propTypes = {
+    text: PropTypes.array.isRequired,
+    ability: PropTypes.array.isRequired,
+    images: PropTypes.array.isRequired,
+    imgMe: PropTypes.string.isRequired,
+    arrow: PropTypes.string.isRequired,
+    btnlink: PropTypes.object.isRequired,
 };
 
 export default Skills;

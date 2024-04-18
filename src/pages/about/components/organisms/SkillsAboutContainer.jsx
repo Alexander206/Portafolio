@@ -1,5 +1,5 @@
 // Dependences
-import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 // Components
@@ -15,7 +15,14 @@ const SkillsAboutContainer = ({ text, ability, images, imgMe, arrow }) => {
     // Lista de imagenes de tecnologías
     const componentImages = images.map((item, index) => {
         const img = new URL(`../../../../assets/pages/home/skills/${item.img}`, import.meta.url).pathname;
-        return <img key={index} className={`${item.id}_img animate__animated animate__zoomIn`} src={img} alt="Programing image" />;
+        return (
+            <img
+                key={index}
+                className={`${item.id}_img animate__animated animate__zoomIn`}
+                src={img}
+                alt="Programing image"
+            />
+        );
     });
 
     return (
@@ -47,6 +54,14 @@ const SkillsAboutContainer = ({ text, ability, images, imgMe, arrow }) => {
             </article>
         </article>
     );
+};
+
+SkillsAboutContainer.propTypes = {
+    text: PropTypes.array.isRequired,
+    ability: PropTypes.array.isRequired,
+    images: PropTypes.array.isRequired,
+    imgMe: PropTypes.string.isRequired,
+    arrow: PropTypes.string.isRequired,
 };
 
 export default SkillsAboutContainer;

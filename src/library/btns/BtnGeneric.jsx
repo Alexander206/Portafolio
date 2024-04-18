@@ -6,22 +6,22 @@ import "./btnGeneric.scss";
 const BodyBtn = ({ variant, icon, text }) => {
     return (
         <button className={`custom-btn ${variant ? "variant" : ""} clickable`}>
-            {!!icon ? <ion-icon name={icon}></ion-icon> : false}
+            {!icon ? <ion-icon name={icon}></ion-icon> : false}
             <span>{text}</span>
         </button>
     );
 };
 
 const BtnGeneric = ({ route, url, className, variant, icon, text }) => {
-    const classCondition = `btn_generic ${!!className ? className : ""} ${!!variant ? "variant" : ""} clickable`;
+    const classCondition = `btn_generic ${!className ? className : ""} ${!variant ? "variant" : ""} clickable`;
 
-    if (!!route) {
+    if (!route) {
         return (
             <Link to={route} className={classCondition}>
                 <BodyBtn variant={variant} icon={icon} text={text} />
             </Link>
         );
-    } else if (!!url) {
+    } else if (!url) {
         return (
             <a href={url} className={classCondition} target="_blank">
                 <BodyBtn variant={variant} icon={icon} text={text} />

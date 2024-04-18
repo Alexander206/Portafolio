@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import PropTypes from "prop-types";
 
 import Modal from "react-bootstrap/Modal";
 import Carousel from "react-bootstrap/Carousel";
@@ -115,6 +116,11 @@ const ModalProject = (props) => {
             </section>
         </Modal>
     );
+};
+
+ModalProject.propTypes = {
+    id: PropTypes.string.isRequired,
+    onHide: PropTypes.func.isRequired,
 };
 
 export default ModalProject;

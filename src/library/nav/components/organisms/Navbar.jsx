@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 // Components
 import HashLink from "../atoms/HashLink.jsx";
@@ -22,6 +22,12 @@ const Navbar = ({ navItems, activeLink, setActiveLink }) => {
             <ul className="navbar_list routes">{navItemsElements}</ul>
         </nav>
     );
+};
+
+Navbar.propTypes = {
+    navItems: PropTypes.array.isRequired,
+    activeLink: PropTypes.string.isRequired,
+    setActiveLink: PropTypes.func.isRequired,
 };
 
 export default Navbar;

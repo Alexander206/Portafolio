@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import PropTypes from "prop-types";
 import "./btnScroll.scss";
 
 const BtnScroll = ({ href }) => {
@@ -27,23 +28,33 @@ const BtnScroll = ({ href }) => {
 
         window.addEventListener("scroll", handleScroll);
 
-        if (!isVisible && isAnimationEnd) {
-            setElementClass("hidden");
-        } else if (!isVisible) {
-            setElementClass("fade-out");
-        } else {
-            setElementClass("");
-        }
+        let currentBtnRef = btnRef.current;
+
+        const updateElementState = () => {
+            if (!isVisible && isAnimationEnd) {
+                setElementClass("hidden");
+            } else if (!isVisible) {
+                setElementClass("fade-out");
+            } else {
+                setElementClass("");
+            }
+        };
+
+        updateElementState();
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            if (btnRef.current) {
-                btnRef.current.removeEventListener("animationend", onAnimationEnd);
+            if (currentBtnRef) {
+                currentBtnRef.removeEventListener("animationend", onAnimationEnd);
             }
         };
     }, [isVisible, isAnimationEnd]);
 
     return <a ref={btnRef} href={href} className={`mouse ${elementClass} clickable`} />;
+};
+
+BtnScroll.propTypes = {
+    href: PropTypes.string.isRequired,
 };
 
 export default BtnScroll;

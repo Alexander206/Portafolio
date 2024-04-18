@@ -1,5 +1,6 @@
 // Dependencies
 import { useState, useContext } from "react";
+import PropTypes from "prop-types";
 
 // Styles
 import "./nav.scss";
@@ -51,6 +52,10 @@ const Nav = ({ classPage }) => {
             </article>
         </nav>
     );
+};
+
+Nav.propTypes = {
+    classPage: PropTypes.string.isRequired,
 };
 
 export default Nav;

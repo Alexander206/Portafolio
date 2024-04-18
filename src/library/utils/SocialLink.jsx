@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const SocialLink = ({ icon, link }) => {
     return (
@@ -8,6 +8,11 @@ const SocialLink = ({ icon, link }) => {
             </a>
         </li>
     );
+};
+
+SocialLink.propTypes = {
+    icon: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
 };
 
 export default SocialLink;

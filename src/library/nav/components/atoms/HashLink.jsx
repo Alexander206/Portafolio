@@ -1,5 +1,7 @@
 // Dependencies
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+
 import { Link } from "react-router-dom";
 
 const HashLink = ({ icon, text, route, setActiveLink, activeLink }) => {
@@ -11,7 +13,7 @@ const HashLink = ({ icon, text, route, setActiveLink, activeLink }) => {
         } else {
             setClassState("");
         }
-    }, []);
+    }, [activeLink, route]);
 
     const onUpdateActiveLink = (data) => {
         setActiveLink(data);
@@ -26,6 +28,14 @@ const HashLink = ({ icon, text, route, setActiveLink, activeLink }) => {
             </Link>
         </li>
     );
+};
+
+HashLink.propTypes = {
+    icon: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    route: PropTypes.string.isRequired,
+    setActiveLink: PropTypes.func.isRequired,
+    activeLink: PropTypes.string.isRequired,
 };
 
 export default HashLink;

@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const SkillsItem = ({ icon, text }) => {
     return (
@@ -7,6 +7,11 @@ const SkillsItem = ({ icon, text }) => {
             <span>{text}</span>
         </article>
     );
+};
+
+SkillsItem.propTypes = {
+    icon: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
 };
 
 export default SkillsItem;

@@ -1,5 +1,6 @@
 // Dependences
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
+import PropTypes from "prop-types";
 
 // Components
 import GrabZone from "../atoms/GrabZone";
@@ -11,15 +12,12 @@ import ProjectsContext from "../../../../context/ProjectsContext";
 const Project = ({ id }) => {
     let imgLink;
 
-    // Estados para el modal y el "juego"
     const [cursorGrabbed, setCursorGrabbed] = useState(false);
-    const [gameOver, setGameOver] = useState(false);
-    const [modalShow, setModalShow] = React.useState(false);
+    const [modalShow, setModalShow] = useState(false);
+    const gameOver = false;
 
-    // Contexto de los proyectos
     const projectData = useContext(ProjectsContext)[id];
 
-    // Enrutamiento de las imagenes
     const img = new URL(`../../assets/proyects/${projectData.img}`, import.meta.url).pathname;
 
     const handleCursorGrabbed = () => {
@@ -30,8 +28,6 @@ const Project = ({ id }) => {
     };
 
     const screenStyle = cursorGrabbed ? { cursor: "none" } : {};
-
-    // Creación de categorias
 
     const formattedCategories = projectData.category.map((item, index) => {
         return index !== projectData.category.length - 1 ? `${item} - ` : item;
@@ -45,7 +41,6 @@ const Project = ({ id }) => {
         );
     });
 
-    // Validacin si tiene o no link para hacer el "Juego"
     if (projectData.link.length < 1) {
         imgLink = (
             <div className="container_game">
@@ -66,7 +61,6 @@ const Project = ({ id }) => {
         );
     }
 
-    // Validación para los links
     const iconLink = projectData.link ? (
         <a href={projectData.link} target="_blank">
             <ion-icon name="earth-outline"></ion-icon>
@@ -75,7 +69,6 @@ const Project = ({ id }) => {
         <span className="upss">Aún está en construcción</span>
     );
 
-    // Validación para el repositorio
     const iconRepo = projectData.repo ? (
         <a href={projectData.repo} target="_blank">
             <ion-icon name="logo-github"></ion-icon>
@@ -106,6 +99,10 @@ const Project = ({ id }) => {
             <ModalProject id={id} show={modalShow} onHide={() => setModalShow(false)} />
         </article>
     );
+};
+
+Project.propTypes = {
+    id: PropTypes.number.isRequired,
 };
 
 export default Project;

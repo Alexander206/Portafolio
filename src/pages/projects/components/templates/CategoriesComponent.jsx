@@ -1,6 +1,14 @@
-import React from "react";
+import PropTypes from "prop-types";
 
-const CategoriesComponent = ({ id, category, componentClass, selectCategory, setSelectCategory, itemSelect, setItemSelect }) => {
+const CategoriesComponent = ({
+    id,
+    category,
+    componentClass,
+    selectCategory,
+    setSelectCategory,
+    itemSelect,
+    setItemSelect,
+}) => {
     const handlerCategory = (event) => {
         itemSelect == event.target.value ? setSelectCategory(!selectCategory) : setSelectCategory(true);
         setItemSelect(event.target.value);
@@ -13,6 +21,16 @@ const CategoriesComponent = ({ id, category, componentClass, selectCategory, set
             </button>
         </li>
     );
+};
+
+CategoriesComponent.propTypes = {
+    id: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
+    componentClass: PropTypes.string.isRequired,
+    selectCategory: PropTypes.bool.isRequired,
+    setSelectCategory: PropTypes.func.isRequired,
+    itemSelect: PropTypes.number.isRequired,
+    setItemSelect: PropTypes.func.isRequired,
 };
 
 export default CategoriesComponent;

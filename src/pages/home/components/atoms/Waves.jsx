@@ -1,5 +1,5 @@
 // components
-import React from "react";
+import PropTypes from "prop-types";
 
 // Principal component
 const Waves = () => {
@@ -14,7 +14,10 @@ const Waves = () => {
                 shapeRendering="auto"
             >
                 <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    <path
+                        id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+                    />
                 </defs>
                 <g className="parallax">
                     <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(213,205,192,0.7" />
@@ -25,6 +28,12 @@ const Waves = () => {
             </svg>
         </div>
     );
+};
+
+Waves.propTypes = {
+    title: PropTypes.array.isRequired,
+    greeting: PropTypes.object.isRequired,
+    btns: PropTypes.array.isRequired,
 };
 
 export default Waves;

@@ -1,9 +1,5 @@
-import React from "react";
-const { useState, useRef, useEffect, useLayoutEffect, createContext } = React;
-
-/**
- * Globals
- */
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import PropTypes from "prop-types";
 
 const CONSTANTS = {
     assetPath: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/184729",
@@ -18,13 +14,11 @@ const ASSETS = {
     shaka: `${CONSTANTS.assetPath}/hand-surfs-up.svg`,
 };
 
-// Preload images
 Object.keys(ASSETS).forEach((key) => {
     const img = new Image();
     img.src = ASSETS[key];
 });
 
-// Hover state - https://dev.to/spaciecat/hover-states-with-react-hooks-4023
 const useHover = () => {
     const ref = useRef();
     const [hovered, setHovered] = useState(false);
@@ -40,7 +34,6 @@ const useHover = () => {
     return [ref, hovered];
 };
 
-// Mouse position
 const useMousePosition = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -56,7 +49,6 @@ const useMousePosition = () => {
     return position;
 };
 
-// Element position
 const usePosition = () => {
     const ref = useRef();
     const [position, setPosition] = useState({});
@@ -72,16 +64,14 @@ const usePosition = () => {
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, [ref.current]);
+    }, []);
 
     return [ref, position];
 };
 
-// Grabber (The graphic)
 const Grabber = ({ state, gameOver, extended, onCursorGrabbed }) => {
     const mousePos = useMousePosition();
     const [ref, position] = usePosition();
-    const hasCursor = false;
 
     // Calculate rotation of armWrapper
     const x = position.left + position.width * 0.5;
@@ -109,7 +99,13 @@ const Grabber = ({ state, gameOver, extended, onCursorGrabbed }) => {
     );
 };
 
-// GrabZone (The hover trigger zone)
+Grabber.propTypes = {
+    state: PropTypes.string.isRequired,
+    gameOver: PropTypes.bool.isRequired,
+    extended: PropTypes.bool.isRequired,
+    onCursorGrabbed: PropTypes.func.isRequired,
+};
+
 const GrabZone = ({ cursorGrabbed, gameOver, onCursorGrabbed }) => {
     const [outerRef, outerHovered] = useHover();
     const [innerRef, innerHovered] = useHover();
@@ -129,12 +125,10 @@ const GrabZone = ({ cursorGrabbed, gameOver, onCursorGrabbed }) => {
         state = "shaka";
     }
 
-    // If state is grabbing for a long time, they're being clever!
     useEffect(() => {
         let timer;
         if (state === "grabbing") {
             timer = setTimeout(() => {
-                // Not so clever now, are they?
                 setExtendedArm(true);
                 timer = null;
             }, 2000);
@@ -159,6 +153,12 @@ const GrabZone = ({ cursorGrabbed, gameOver, onCursorGrabbed }) => {
             </div>
         </div>
     );
+};
+
+GrabZone.propTypes = {
+    cursorGrabbed: PropTypes.bool.isRequired,
+    gameOver: PropTypes.bool.isRequired,
+    onCursorGrabbed: PropTypes.func.isRequired,
 };
 
 export default GrabZone;

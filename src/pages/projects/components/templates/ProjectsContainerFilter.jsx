@@ -1,5 +1,9 @@
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+
 // components
 import Project from "./organims/Project";
+import CategoriesComponent from "./CategoriesComponent";
 
 // Resourses
 import data from "../_data/projects.json";
@@ -81,7 +85,7 @@ const ProjectsContainerFilter = ({ categoryText }) => {
                 setStateProjects(AllProjects);
             }
         });
-    }, [itemSelect]);
+    }, [itemSelect, Projects, AllProjects]);
 
     return (
         <section className="container_filter">
@@ -93,6 +97,10 @@ const ProjectsContainerFilter = ({ categoryText }) => {
             <article className="projects_container">{stateProjects}</article>
         </section>
     );
+};
+
+ProjectsContainerFilter.propTypes = {
+    categoryText: PropTypes.string.isRequired,
 };
 
 export default ProjectsContainerFilter;

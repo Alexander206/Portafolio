@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import ScrollAnimationWrapper from "../../../../library/utils/ScrollAnimationWrapper";
+
 // Components
 import BannerText from "../organisms/BannerText";
 import BannerImage from "../organisms/BannerImage";
@@ -7,7 +9,7 @@ import Waves from "../atoms/Waves";
 
 const Banner = ({ imgLogo, imgProfile, imgSocial, title, greeting, btns }) => {
     return (
-        <section className="banner">
+        <ScrollAnimationWrapper className="banner">
             <article className="container">
                 <img className="banner_logo" src={imgLogo} alt="Logo" />
 
@@ -17,7 +19,7 @@ const Banner = ({ imgLogo, imgProfile, imgSocial, title, greeting, btns }) => {
             </article>
 
             <Waves />
-        </section>
+        </ScrollAnimationWrapper>
     );
 };
 

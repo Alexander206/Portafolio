@@ -1,7 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
+import getScrollAnimation from "../../../../library/utils/GetScrollAnimation.jsx";
+
 const Greeting = ({ greeting }) => {
+    const scrollAnimation = useMemo(() => getScrollAnimation(), []);
     const [text, setText] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isBlinking, setIsBlinking] = useState(false);
@@ -39,18 +43,20 @@ const Greeting = ({ greeting }) => {
     }, [isBlinking]);
 
     return (
-        <h1>
+        <motion.h1 variants={scrollAnimation} custom={{ duration: 2 }}>
             {greeting.greeting}
             <br />
-            <span className="txt-rotate" dataperiod="800" data-rotate={`${toRotate}`}>
+            <span className="txt-rotate" data-rotate={`${toRotate}`}>
                 <span
                     className="wrap"
-                    style={{ borderRight: isBlinking ? "0.08rem solid transparent" : "0.08rem solid var(--darkNeutral)" }}
+                    style={{
+                        borderRight: isBlinking ? "0.08rem solid transparent" : "0.08rem solid var(--darkNeutral)",
+                    }}
                 >
                     {text}
                 </span>
             </span>
-        </h1>
+        </motion.h1>
     );
 };
 

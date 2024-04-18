@@ -1,14 +1,20 @@
+import { useMemo } from "react";
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
+import getScrollAnimation from "../../../../library/utils/GetScrollAnimation.jsx";
+
 const Title = ({ title }) => {
+    const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+
     return (
-        <article className="title">
+        <motion.article variants={scrollAnimation} className="title">
             <h2>{title[0]}</h2>
 
             <span>
                 {title[1]} <div className="separator" />
             </span>
-        </article>
+        </motion.article>
     );
 };
 

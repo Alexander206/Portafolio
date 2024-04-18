@@ -1,10 +1,11 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 const Tag = ({ text }) => {
     return <span>{text}</span>;
 };
 
-Tag.propTypes = {};
+Tag.propTypes = {
+    text: PropTypes.string.isRequired,
+};
 
 export default Tag;
