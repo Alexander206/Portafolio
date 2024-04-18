@@ -1,10 +1,8 @@
-// Styles
-import "./styles.scss";
+import "./services.scss";
 
-// Componets
-import LoadingPage from "../../library/loadingPage/";
+import LoadingPage from "../../library/loadingPage/LoadingPage.jsx";
 import Nav from "../../library/nav/Nav.jsx";
-import Footer from "../../library/footer/";
+import Footer from "../../library/footer/Footer.jsx";
 
 const Services = () => {
     return (

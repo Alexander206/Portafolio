@@ -1,6 +1,3 @@
-// components
-import PropTypes from "prop-types";
-
 // Principal component
 const Waves = () => {
     return (
@@ -28,12 +25,6 @@ const Waves = () => {
             </svg>
         </div>
     );
-};
-
-Waves.propTypes = {
-    title: PropTypes.array.isRequired,
-    greeting: PropTypes.object.isRequired,
-    btns: PropTypes.array.isRequired,
 };
 
 export default Waves;

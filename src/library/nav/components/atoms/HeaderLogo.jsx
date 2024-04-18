@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 
-// Resources
 import logo from "../../assets/me.webp";
 
 const HeaderLogo = () => {

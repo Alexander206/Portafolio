@@ -1,21 +1,16 @@
 // Dependences
 import { useState, useEffect } from "react";
 
-// Styles
-import "./styles.scss";
+import "./loadingPage.scss";
 
-// Principal component
 const LoadingPage = () => {
-    // Estado para cambiar las clases del componente
     const [stateID, setStateID] = useState("");
     const [stateClass, setStateClass] = useState("Loading__Page");
 
-    // Hook cuando cargue la página
     useEffect(() => {
         setStateID("pagina__cargada");
     }, []);
 
-    // Función para la animación del componente
     const handlerAnimation = () => {
         setStateClass("Loading__Page off");
     };

@@ -1,17 +1,12 @@
-// Dependencies
 import { useState, useContext } from "react";
 import PropTypes from "prop-types";
 
-// Styles
 import "./nav.scss";
 
-// Components
 import Navbar from "./components/organisms/Navbar";
 
-// Context
 import GeneralContext from "../../context/GeneralContext";
 
-// Principal component
 const Nav = ({ classPage }) => {
     const searchParams = window.location.pathname;
     const [activeLink, setActiveLink] = useState(searchParams);

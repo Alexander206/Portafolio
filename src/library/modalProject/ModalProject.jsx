@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import PropTypes from "prop-types";
 
+import "./modalProject.scss";
+
 import Modal from "react-bootstrap/Modal";
 import Carousel from "react-bootstrap/Carousel";
 
 import ProjectsContext from "../../context/ProjectsContext";
-
-import "./styles.scss";
 
 const ModalProject = (props) => {
     // Contexto del modal

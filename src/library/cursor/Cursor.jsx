@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import "./cursor.scss";
 
@@ -8,14 +9,6 @@ const Cursor = ({ cursorActive, setCursorActive }) => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [cursorTwoPosition, setCursorTwoPosition] = useState({ x: 0, y: 0 });
     let location = useLocation();
-
-    const handleMouseDown = () => {
-        setCursorActive(true);
-    };
-
-    const handleMouseUp = () => {
-        setCursorActive(false);
-    };
 
     useEffect(() => {
         const clickableElements = document.querySelectorAll(".clickable");
@@ -40,6 +33,14 @@ const Cursor = ({ cursorActive, setCursorActive }) => {
     }, [location]);
 
     useEffect(() => {
+        const handleMouseDown = () => {
+            setCursorActive(true);
+        };
+
+        const handleMouseUp = () => {
+            setCursorActive(false);
+        };
+
         if (isClickableHovered) {
             setIsClickableHovered(false);
         }
@@ -69,17 +70,22 @@ const Cursor = ({ cursorActive, setCursorActive }) => {
         };
     }, [location]);
 
-    const classNameCorsor = `cursor ${cursorActive ? "active" : ""} ${isClickableHovered ? "pointer" : ""}`.trim();
-    const icon = `${isClickableHovered ? "paper-plane" : "ellipse"}`;
+    const classNameCursor = `cursor ${cursorActive ? "active" : ""} ${isClickableHovered ? "pointer" : ""}`.trim();
+    const icon = `${isClickableHovered ? "ellipse" : "ellipse"}`;
 
     return (
         <>
-            <div className={classNameCorsor} style={{ left: cursorPosition.x, top: cursorPosition.y }}>
+            <div className={classNameCursor} style={{ left: cursorPosition.x, top: cursorPosition.y }}>
                 <ion-icon name={icon}></ion-icon>
             </div>
-            <div className={classNameCorsor} style={{ left: cursorTwoPosition.x, top: cursorTwoPosition.y }}></div>
+            <div className={classNameCursor} style={{ left: cursorTwoPosition.x, top: cursorTwoPosition.y }}></div>
         </>
     );
+};
+
+Cursor.propTypes = {
+    cursorActive: PropTypes.bool.isRequired,
+    setCursorActive: PropTypes.func.isRequired,
 };
 
 export default Cursor;

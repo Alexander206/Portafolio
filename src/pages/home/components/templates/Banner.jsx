@@ -5,7 +5,6 @@ import ScrollAnimationWrapper from "../../../../library/utils/ScrollAnimationWra
 // Components
 import BannerText from "../organisms/BannerText";
 import BannerImage from "../organisms/BannerImage";
-import Waves from "../atoms/Waves";
 
 const Banner = ({ imgLogo, imgProfile, imgSocial, title, greeting, btns }) => {
     return (
@@ -17,8 +16,6 @@ const Banner = ({ imgLogo, imgProfile, imgSocial, title, greeting, btns }) => {
 
                 <BannerImage imgProfile={imgProfile} imgSocial={imgSocial} />
             </article>
-
-            <Waves />
         </ScrollAnimationWrapper>
     );
 };

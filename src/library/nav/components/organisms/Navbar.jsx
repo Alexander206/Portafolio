@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 
-// Components
 import HashLink from "../atoms/HashLink.jsx";
 
 const Navbar = ({ navItems, activeLink, setActiveLink }) => {

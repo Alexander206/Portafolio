@@ -31,8 +31,10 @@ body {
         }
 
         &.pointer ion-icon {
-            font-size: 2.6rem;
-            transform: translate(50%, 50%) scaleX(-1);
+            font-size: 0.6rem;
+            background-color: var(--darkLight);
+            border-radius: 50%;
+            padding: 0.4rem;
         }
     }
 

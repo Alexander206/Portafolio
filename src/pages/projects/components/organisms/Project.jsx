@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 // Components
 import GrabZone from "../atoms/GrabZone";
-import ModalProject from "../../../../library/modalProject/";
+import ModalProject from "../../../../library/modalProject/ModalProject";
 
 // Resourses
 import ProjectsContext from "../../../../context/ProjectsContext";

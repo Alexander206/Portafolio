@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import "./styles.scss";
+import "./title.scss";
 
 const Title = ({ title, text1, textSpan, text2 }) => {
     return (

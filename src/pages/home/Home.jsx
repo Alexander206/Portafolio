@@ -1,25 +1,20 @@
 import { useContext } from "react";
 
-// Styles
 import "./home.scss";
 
-// Componets
-import LoadingPage from "../../library/loadingPage";
+import LoadingPage from "../../library/loadingPage/LoadingPage.jsx";
 import Nav from "../../library/nav/Nav.jsx";
-import Footer from "../../library/footer";
-import BtnScroll from "../../library/btns/BtnScroll";
+import Footer from "../../library/footer/Footer.jsx";
+import BtnScroll from "../../library/btns/BtnScroll.jsx";
 
 import Banner from "./components/templates/Banner";
 import Tecnology from "./components/templates/Tecnology";
 
-// Context
 import GeneralContext from "../../context/GeneralContext";
 
-// Resourses
 import imgProfile from "../../assets/pages/home/me.png";
 import data from "./data.json";
 
-// Principal component
 const Home = () => {
     const { route, social } = useContext(GeneralContext);
 

@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
+
 import "./btnScroll.scss";
 
 const BtnScroll = ({ href }) => {

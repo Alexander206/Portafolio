@@ -9,11 +9,11 @@ import GeneralContext from "../context/GeneralContext";
 import Cursor from "../library/cursor/Cursor.jsx";
 
 import Home from "../pages/home/Home.jsx";
-import About from "../pages/about";
-import Proyects from "../pages/projects";
-import Services from "../pages/services";
-import Contact from "../pages/contact";
-import NotFound from "../pages/not_found";
+import About from "../pages/about/About.jsx";
+import Proyects from "../pages/projects/Projects.jsx";
+import Services from "../pages/services/Services.jsx";
+import Contact from "../pages/contact/Contact.jsx";
+import NotFound from "../pages/not_found/NotFound.jsx";
 
 // Data
 import data from "../_data/general.json";

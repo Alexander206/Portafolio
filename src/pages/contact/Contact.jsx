@@ -1,16 +1,12 @@
-// Styles
-import "./styles.scss";
+import "./contact.scss";
 
-// Componets
 import Nav from "../../library/nav/Nav.jsx";
-import Footer from "../../library/footer/";
-import LoadingPage from "../../library/loadingPage/";
-import ProjectsTitle from "../../library/title/";
+import Footer from "../../library/footer/Footer.jsx";
+import LoadingPage from "../../library/loadingPage/LoadingPage.jsx";
+import ProjectsTitle from "../../library/title/Title.jsx";
 
-// Resources
 import data from "./data.json";
 
-// Principal component
 const Contact = () => {
     return (
         <>

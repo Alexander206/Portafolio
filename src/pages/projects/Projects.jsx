@@ -1,32 +1,23 @@
-// Dependences
 import { useState, useEffect } from "react";
 
-// Components
-import LoadingPage from "../../library/loadingPage/";
-import Nav from "../../library/nav/Nav.jsx";
-import Footer from "../../library/footer/";
-import ProjectsTitle from "../../library/title/";
-import CategoriesComponent from "./components/templates/CategoriesComponent";
-import Project from "./components/organisms/Project";
-
-// Styles
-import "./styles.scss";
+import "./projects.scss";
 import "./components/templates/game.scss";
 
-// Resourses
-import ProjectsContext from "../../context/ProjectsContext";
+import LoadingPage from "../../library/loadingPage/LoadingPage.jsx";
+import Nav from "../../library/nav/Nav.jsx";
+import Footer from "../../library/footer/Footer.jsx";
+import ProjectsTitle from "../../library/title/Title.jsx";
+import CategoriesComponent from "./components/templates/CategoriesComponent.jsx";
+import Project from "./components/organisms/Project.jsx";
+
+import ProjectsContext from "../../context/ProjectsContext.jsx";
 import data from "./data.json";
 
-// Principal component
 const Proyects = () => {
-    // Estado para selecionar cateogiras
     const [selectCategory, setSelectCategory] = useState(true);
-    // Estado para la categoria seleccionada
     const [itemSelect, setItemSelect] = useState("Todos");
-    // Estado para actualizar los proyectos
     const [stateProjects, setStateProjects] = useState();
 
-    // Mapeo de categorias
     const Categories = data.categories.map((item, index) => {
         return (
             <CategoriesComponent
@@ -42,22 +33,18 @@ const Proyects = () => {
         );
     });
 
-    // Filtro de proyectos con diferentes categorias
     const FilterProjects = data.projects.filter((item) => {
         return item.category.some((elemento) => elemento.toUpperCase().includes(itemSelect.toUpperCase()));
     });
 
-    // proyectos filtrados
     const Projects = FilterProjects.map((item, index) => {
         return <Project key={index} id={item.id} />;
     });
 
-    // Proyectos completos
     const AllProjects = data.projects.map((item, index) => {
         return <Project key={index} id={index} />;
     });
 
-    // Siclo de vida del componente
     useEffect(() => {
         data.categories.forEach((item) => {
             if (itemSelect === item) {

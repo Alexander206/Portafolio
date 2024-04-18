@@ -1,15 +1,11 @@
 import { useContext } from "react";
 
-// Styles
-import "./styles.scss";
+import "./footer.scss";
 
-// Components
 import SocialLink from "../utils/SocialLink";
 
-// Context
 import GeneralContext from "../../context/GeneralContext";
 
-// Resources
 import navIconLinkedin from "../../assets/icon/linkedin.svg";
 import navIconGithub from "../../assets/icon/github.svg";
 import navIconInstagram from "../../assets/icon/instagram.svg";

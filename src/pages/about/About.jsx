@@ -1,17 +1,17 @@
 import { useContext } from "react";
 
 // Styles
-import "./styles.scss";
+import "./about.scss";
 
 // Componets
-import LoadingPage from "../../library/loadingPage/";
+import LoadingPage from "../../library/loadingPage/LoadingPage.jsx";
 import Nav from "../../library/nav/Nav.jsx";
-import Footer from "../../library/footer/";
+import Footer from "../../library/footer/Footer.jsx";
 
-import Skills from "./components/templates/Skills";
+import Skills from "./components/templates/Skills.jsx";
 
 // Context
-import GeneralContext from "../../context/GeneralContext";
+import GeneralContext from "../../context/GeneralContext.jsx";
 
 // Resourses
 import ilustrationMe from "../../assets/pages/home/me-ilustration.svg";
