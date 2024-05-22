@@ -3,8 +3,7 @@ body {
     cursor: none !important;
 
     * {
-        cursor: none !important
-        ;
+        cursor: none !important;
     }
 }
 
@@ -41,13 +40,13 @@ body {
     &:nth-child(2) {
         opacity: 0.8;
         background-color: var(--darkTrasparent);
-        width: 4.2rem;
-        height: 4.2rem;
+        width: 3.4rem;
+        height: 3.4rem;
         z-index: 998;
 
         &.active {
-            width: 5rem;
-            height: 5rem;
+            width: 4rem;
+            height: 4rem;
         }
 
         &.pointer {
@@ -69,6 +68,10 @@ body {
                 opacity: 0;
             }
         }
+    }
+
+    &.no-visible {
+        display: none;
     }
 }
 

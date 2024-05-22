@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import "./cursor.scss";
 
 const Cursor = ({ cursorActive, setCursorActive }) => {
+    const [isCursorShow, setIsCursorShow] = useState(false);
     const [isClickableHovered, setIsClickableHovered] = useState(false);
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [cursorTwoPosition, setCursorTwoPosition] = useState({ x: 0, y: 0 });
@@ -50,17 +51,34 @@ const Cursor = ({ cursorActive, setCursorActive }) => {
         };
 
         const handleMouseMove = (e) => {
-            setCursorPosition({ x: e.clientX, y: e.clientY });
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            const mouseOutsideWindow = mouseX < 0 || mouseY < 0 || mouseX > windowWidth || mouseY > windowHeight;
+
+            if (!mouseOutsideWindow) {
+                setIsCursorShow(true);
+            }
+
+            setCursorPosition({ x: mouseX, y: mouseY });
 
             setTimeout(() => {
-                setCursorTwoPosition({ x: e.clientX, y: e.clientY });
-            }, 65);
+                setCursorTwoPosition({ x: mouseX, y: mouseY });
+            }, 40);
+        };
+
+        const handleMouseLeave = () => {
+            setIsCursorShow(false);
         };
 
         window.addEventListener("popstate", handleLocationChange);
         document.addEventListener("mousemove", handleMouseMove);
         document.addEventListener("mousedown", handleMouseDown);
         document.addEventListener("mouseup", handleMouseUp);
+        document.addEventListener("mouseleave", handleMouseLeave);
 
         return () => {
             window.addEventListener("popstate", handleLocationChange);
@@ -70,7 +88,9 @@ const Cursor = ({ cursorActive, setCursorActive }) => {
         };
     }, [location]);
 
-    const classNameCursor = `cursor ${cursorActive ? "active" : ""} ${isClickableHovered ? "pointer" : ""}`.trim();
+    const classNameCursor = `cursor ${cursorActive ? "active" : ""} ${isClickableHovered ? "pointer" : ""} ${
+        isCursorShow ? "" : "no-visible"
+    }`.trim();
     const icon = `${isClickableHovered ? "ellipse" : "ellipse"}`;
 
     return (

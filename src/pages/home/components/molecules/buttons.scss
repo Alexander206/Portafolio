@@ -80,35 +80,6 @@
         .btn_projetcs {
             width: 16rem;
             height: 4.5rem;
-
-            &:first-of-type {
-                background-color: var(--primaryLight);
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.158);
-
-                &:hover {
-                    background-color: var(--primaryHover);
-                    border: 1px solid var(--primary);
-
-                    .custom-btn {
-                        color: var(--black);
-                    }
-                }
-
-                .custom-btn {
-                    color: var(--dark);
-                }
-            }
-
-            &:last-child {
-                border: 1px solid var(--darkLight);
-                background: var(--darkTrasparent);
-                backdrop-filter: blur(7.6px);
-                -webkit-backdrop-filter: blur(7.6px);
-
-                &:hover {
-                    background-color: var(--primaryHover);
-                }
-            }
         }
     }
 }

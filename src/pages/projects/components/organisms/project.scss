@@ -123,18 +123,18 @@
             .upss {
                 width: 100%;
                 text-align: center;
-                color: var(--secundary);
+                color: var(--secondary);
                 font-size: 1.4rem;
             }
 
             a ion-icon {
-                color: var(--secundary);
+                color: var(--secondary);
                 font-size: 2.8rem;
                 transition: 0.3s;
             }
 
             a ion-icon:hover {
-                color: var(--secundaryHover);
+                color: var(--secondaryHover);
                 transition: 0.3s;
             }
         }

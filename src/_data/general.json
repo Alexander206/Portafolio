@@ -10,7 +10,7 @@
     "route": {
         "home": "/",
         "about": "/about",
-        "projects": "/projects",
+        "projects": "/project",
         "services": "/services",
         "contact": "/contact",
         "notFound": "/*"
