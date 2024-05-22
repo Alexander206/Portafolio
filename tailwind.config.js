@@ -10,27 +10,7 @@ export default {
     ],
     theme: {
         extend: {
-            colors: {
-                primary: "#00549b",
-                primaryHover: "#0a8fed",
-                darkPrimary: "#0a3f70",
-
-                secondary: "#FCB900",
-                secondaryHover: "#d19500",
-
-                highLight: "#ffffff",
-                light: "#f0f0f2",
-                darkLight: "#4c4e59",
-
-                dark: "#2f3238",
-                black: "#26292e",
-
-                lightNeutral: "#e2e8f0",
-                neutral: "#c1c5cc",
-                darkNeutral: "#7f8289",
-
-                textNeutral: "#b8b8b8",
-            },
+            colors: {},
         },
     },
     darkMode: "class",

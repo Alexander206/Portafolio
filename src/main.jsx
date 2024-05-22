@@ -5,7 +5,7 @@ import App from "./routes/App.jsx";
 
 // * Styles * //
 // General
-import "./global.scss";
+import "./styles/global.scss";
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 

@@ -17,8 +17,8 @@
         background-position: right top;
         background-size: 45%;
 
-        background: rgb(2, 0, 36);
-        background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
+        background: $dark-color;
+        background: $dark-gradient-dark;
 
         padding: 8rem 0rem;
         padding-top: 6rem;

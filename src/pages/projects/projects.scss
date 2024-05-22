@@ -1,3 +1,5 @@
+@import "@styles/autoload.scss";
+
 // Components
 @import "../../library/title/title.scss";
 @import "./components/templates/categoriesComponent.scss";
@@ -22,7 +24,7 @@
         width: 100%;
         max-width: 142rem;
 
-        margin-bottom: 7rem;
+        margin-bottom: rem(70px);
 
         .filtrer {
             position: sticky;

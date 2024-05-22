@@ -1,0 +1,43 @@
+//  Fonts
+
+@font-face {
+    font-family: Centra;
+    src: url("./assets/fonts/CentraNo2-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: Centra;
+    src: url("./assets/fonts/CentraNo2-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: Centra;
+    src: url("./assets/fonts/CentraNo2-Book.ttf");
+    font-weight: 400;
+}
+
+$font-family: "Centra", sans-serif;
+
+// Icon size
+$icon-size-xs: rem(12px);
+$icon-size-sm: rem(16px);
+$icon-size-md: rem(24px);
+$icon-size-lg: rem(32px);
+$icon-size-xl: rem(48px);
+$icon-size-xxl: rem(64px);
+
+// Font size
+$font-size-xs: rem(12px);
+$font-size-sm: rem(14px);
+$font-size-md: rem(16px);
+$font-size-lg: rem(18px);
+$font-size-xl: rem(22px);
+$font-size-xxl: rem(26px);
+$font-size-xxxl: rem(32px);
+$font-size-xxxxl: rem(46px);
+
+// Font weight
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
