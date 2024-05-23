@@ -96,7 +96,7 @@ const Cursor = ({ cursorActive, setCursorActive }) => {
     return (
         <>
             <div className={classNameCursor} style={{ left: cursorPosition.x, top: cursorPosition.y }}>
-                <ion-icon name={icon}></ion-icon>
+                {/* <ion-icon name={icon}></ion-icon> */}
             </div>
             <div className={classNameCursor} style={{ left: cursorTwoPosition.x, top: cursorTwoPosition.y }}></div>
         </>

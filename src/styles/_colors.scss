@@ -14,7 +14,7 @@ $primary-color-700: #7a6254;
 $primary-color-800: #645148;
 $primary-color-900: #52443c;
 $primary-color-950: #2b231f;
-$primary-color-transparent: #2b231fa2;
+$primary-color-transparent: #d5cdc0a2;
 
 // Temporal primary colors
 $primaryLight: #e3dbd0;
@@ -76,7 +76,8 @@ $dark-color-700: #464d58;
 $dark-color-800: #3e424c;
 $dark-color-900: $dark-color;
 $dark-color-950: #22252a;
-$dark-color-transparent: #22252aa2;
+$dark-color-transparent: #22252ada;
+$dark-color-transparent-low: #22252a36;
 
 // CONTRAST
 $contrast-color: #c1c5cc;
@@ -199,3 +200,7 @@ $dark-gradient-light-hover: radial-gradient(circle, $dark-color-100, $dark-color
 $contrast-gradient-hover: radial-gradient(circle, $contrast-color-200, $contrast-color-300);
 $contrast-gradient-dark-hover: radial-gradient(circle, $contrast-color-400, $contrast-color-700);
 $contrast-gradient-light-hover: radial-gradient(circle, $contrast-color-100, $contrast-color);
+
+// ---------- Boxshadow -----------
+
+$box-shadow: 0 rem(4px) rem(30px) $contrast-color-transparent;

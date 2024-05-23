@@ -12,7 +12,7 @@
     justify-content: center;
     width: 100%;
 
-    padding-top: 10rem;
+    padding-top: rem(100px);
 
     @include projectsTitle;
 
@@ -22,26 +22,26 @@
         align-items: start;
         justify-content: center;
         width: 100%;
-        max-width: 142rem;
+        max-width: rem(1420px);
 
         margin-bottom: rem(70px);
 
         .filtrer {
             position: sticky;
-            top: 8rem;
+            top: rem(80px);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
-            background-color: var(--black);
-            padding: 0 2rem;
-            padding-top: 2rem;
+            background-color: $dark-color-950;
+            padding: 0 rem(20px);
+            padding-top: rem(20px);
 
             z-index: 1;
 
             h2 {
-                font-size: 2rem;
+                font-size: rem(20px);
                 display: none;
             }
 
@@ -51,7 +51,7 @@
                 justify-content: space-between;
                 width: 100%;
 
-                margin-bottom: 2rem;
+                margin-bottom: rem(20px);
 
                 @include categoriesComponent;
             }
@@ -63,42 +63,40 @@
             flex-wrap: wrap;
             align-items: stretch;
             justify-content: space-evenly;
-            gap: 2rem;
+            gap: rem(20px);
             width: 100%;
-            padding: 0 2rem;
-            margin-top: 4rem;
+            padding: 0 rem(20px);
+            margin-top: rem(40px);
 
             @include project;
         }
     }
 }
 
-@media (min-width: 800px) {
+@include responsive {
     .main_projects {
         .container_filter {
             flex-direction: row;
 
             .filtrer {
-                top: 12rem;
+                top: rem(120px);
                 align-items: flex-end;
-                max-width: 24rem;
-                border-right: 1px solid var(--darkNeutral);
-                padding-right: 2rem;
+                max-width: rem(240px);
+                border-right: rem(1px) solid $contrast-color-700;
+                padding-right: rem(20px);
                 padding-left: 0;
-                margin-right: 2rem;
+                margin-right: rem(20px);
 
                 h2 {
                     display: initial;
                     text-align: right;
-                    color: var(--light);
-                    margin-bottom: 2rem;
+                    color: $light-color;
+                    margin-bottom: rem(20px);
                 }
 
                 ul {
                     flex-direction: column;
                     align-items: flex-end;
-
-                    @include categoriescomponent_responsive;
                 }
             }
 

@@ -4,25 +4,25 @@
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: rem(20px);
 
         .btn_projetcs {
-            width: 14rem;
-            height: 3.8rem;
-            font-size: 1.6rem;
-            background-color: var(--darkTrasparent);
-            border: 1px solid var(--primaryDark);
-            border-radius: 5rem;
-            color: var(--primary);
-            padding: 0.4rem;
+            width: rem(140px);
+            height: rem(38px);
+            font-size: $icon-size-sm;
+            background-color: $dark-color-transparent;
+            border: rem(1px) solid $primary-color-700;
+            border-radius: rem(50px);
+            color: $primary-color;
+            padding: rem(4px);
 
             &:hover {
-                background-color: var(--primary);
-                color: var(--black);
-                border: 1px solid var(--dark);
+                background-color: $primary-color;
+                color: $dark-color-950;
+                border: rem(1px) solid $dark-color;
 
                 .custom-btn {
-                    color: var(--black);
+                    color: $dark-color-950;
                 }
             }
 
@@ -30,56 +30,56 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 1rem;
+                gap: rem(10px);
 
-                color: var(--primary);
-                padding: 0.5rem;
-                height: 4rem;
+                color: $primary-color;
+                padding: rem(5px);
+                height: rem(40px);
 
                 ion-icon {
-                    font-size: 2.4rem;
+                    font-size: $icon-size-md;
                 }
             }
 
             &:first-of-type {
-                background-color: var(--primaryLight);
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.158);
+                background-color: $primary-color-300;
+                box-shadow: $box-shadow;
 
                 &:hover {
-                    background-color: var(--primaryHover);
-                    border: 1px solid var(--primary);
+                    background-color: $primary-color-600;
+                    border: rem(1px) solid $primary-color;
 
                     .custom-btn {
-                        color: var(--black);
+                        color: $dark-color-950;
                     }
                 }
 
                 .custom-btn {
-                    color: var(--dark);
+                    color: $dark-color;
                 }
             }
 
             &:last-child {
-                border: 1px solid var(--darkLight);
-                background: var(--darkTrasparent);
-                backdrop-filter: blur(7.6px);
-                -webkit-backdrop-filter: blur(7.6px);
+                border: rem(1px) solid $dark-color-700;
+                background: $dark-color-transparent;
+                backdrop-filter: blur(rem(7.6px));
+                -webkit-backdrop-filter: blur(rem(7.6px));
 
                 &:hover {
-                    background-color: var(--primaryHover);
+                    background-color: $primary-color-600;
                 }
             }
         }
     }
-}
 
-@mixin buttons-responsive {
-    .buttons {
-        flex-direction: row;
+    @include responsive {
+        .buttons {
+            flex-direction: row;
 
-        .btn_projetcs {
-            width: 16rem;
-            height: 4.5rem;
+            .btn_projetcs {
+                width: rem(160px);
+                height: rem(45px);
+            }
         }
     }
 }

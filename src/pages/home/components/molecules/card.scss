@@ -6,7 +6,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: rem(20px);
         width: 100%;
         max-width: 34rem;
 
@@ -14,10 +14,10 @@
             opacity: 0.8;
             width: 9rem;
             height: 9rem;
-            background-color: var(--primaryTrasparent);
-            border: 1px solid var(--primaryTrasparent);
+            background-color: $primary-color-transparent;
+            border: rem(1px) solid $primary-color-transparent;
             border-radius: 50%;
-            padding: 1.5rem;
+            padding: rem(15px);
             margin: 0;
 
             img {
@@ -30,50 +30,50 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 1rem;
+            gap: rem(10px);
 
             text-align: center;
-            color: var(--dark);
+            color: $dark-color;
 
             h4 {
-                font-size: 1.8rem;
+                font-size: $font-size-lg;
             }
 
             p {
-                font-size: 1.4rem;
-                color: var(--darkNeutral);
+                font-size: $font-size-sm;
+                color: $contrast-color-800;
             }
 
             .tags {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 1rem;
+                gap: rem(10px);
 
                 width: 100%;
-                margin: 1rem 0;
+                margin: rem(10px) 0;
 
                 @include tag;
             }
         }
     }
-}
 
-@mixin responsive-card {
-    .card_contend {
-        align-items: start;
-        justify-content: start;
-        width: auto;
-
-        .card_image {
-            width: 7rem;
-            height: 7rem;
-            padding: 0.8rem;
-        }
-
-        .card_body {
+    @include responsive {
+        .card_contend {
             align-items: start;
-            text-align: left;
+            justify-content: start;
+            width: auto;
+
+            .card_image {
+                width: rem(70px);
+                height: rem(70px);
+                padding: rem(8px);
+            }
+
+            .card_body {
+                align-items: start;
+                text-align: left;
+            }
         }
     }
 }

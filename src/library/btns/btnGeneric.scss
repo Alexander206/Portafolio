@@ -1,3 +1,5 @@
+@import "@styles/autoload.scss";
+
 .btn_generic {
     position: relative;
     display: flex;
@@ -5,23 +7,23 @@
     justify-content: center;
 
     width: auto;
-    height: 3.8rem;
-    border: 1px solid var(--darkLight);
-    border-radius: 5rem;
-    color: var(--dark);
-    font-weight: 700;
-    font-size: 1.6rem;
-    letter-spacing: 0.8px;
-    padding: 10px 25px;
+    height: rem(38px);
+    border: rem(1px) solid $dark-color-700;
+    border-radius: rem(50px);
+    color: $dark-color;
+    font-weight: $font-weight-bold;
+    font-size: $icon-size-sm;
+    letter-spacing: rem(0.8px);
+    padding: rem(10px) rem(25px);
 
-    transition: 0.3s;
+    transition: $transition;
 
     &:hover {
-        background-color: var(--dark);
-        border: 1px solid var(--dark);
+        background-color: $dark-color;
+        border: rem(1px) solid $dark-color;
 
         .custom-btn {
-            color: var(--primary);
+            color: $primary-color;
         }
     }
 
@@ -36,25 +38,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: rem(10px);
 
         width: 100%;
-        height: 5rem;
-        color: var(--dark);
-        border-radius: 5px;
+        height: rem(50px);
+        color: $dark-color;
+        border-radius: rem(5px);
 
-        font-weight: 500;
+        font-weight: $font-weight-medium;
         background: transparent;
         outline: none;
 
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all $transition ease;
 
         &.variant {
             background-color: transparent;
-            line-height: 42px;
-            border: 1px solid var(--dark);
-            border-radius: 0px;
+            line-height: rem(42px);
+            border: rem(1px) solid $dark-color;
+            border-radius: rem(0px);
 
             &:before,
             &:after {
@@ -62,18 +64,18 @@
                 content: "";
                 right: 0;
                 bottom: 0;
-                background: var(--primaryDark);
-                transition: all 0.3s ease;
+                background: $primary-color-600;
+                transition: all $transition ease;
             }
 
             &::before {
                 height: 0%;
-                width: 2px;
+                width: rem(2px);
             }
 
             &:after {
                 width: 0%;
-                height: 2px;
+                height: rem(2px);
             }
 
             &:hover:before {
@@ -86,7 +88,7 @@
 
             &:hover {
                 border: none;
-                background: var(--dark);
+                background: $dark-color;
             }
 
             span {
@@ -96,10 +98,10 @@
                 justify-content: center;
                 width: 100%;
                 height: 100%;
-                padding: 10px 25px;
+                padding: rem(10px) rem(25px);
 
                 &:hover {
-                    color: var(--light);
+                    color: $light-color;
                 }
 
                 &:before,
@@ -108,17 +110,17 @@
                     content: "";
                     left: 0;
                     top: 0;
-                    background: var(--primaryDark);
-                    transition: all 0.3s ease;
+                    background: $primary-color-600;
+                    transition: all $transition ease;
                 }
 
                 &:before {
-                    width: 2px;
+                    width: rem(2px);
                     height: 0%;
                 }
 
                 &:after {
-                    height: 2px;
+                    height: rem(2px);
                     width: 0%;
                 }
 
@@ -134,8 +136,8 @@
     }
 }
 
-@media (min-width: 800px) {
+@include responsive {
     .btn_generic {
-        height: 4.5rem;
+        height: rem(45px);
     }
 }

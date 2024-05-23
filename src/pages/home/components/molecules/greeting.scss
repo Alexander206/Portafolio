@@ -1,48 +1,56 @@
 @mixin greeting {
     h1:first-of-type {
         align-items: center;
-        font-size: 2.6rem;
-        font-weight: 700;
-        color: var(--lightNeutral);
-        letter-spacing: 0.8px;
+        font-size: rem(26px);
+        font-weight: $font-weight-bold;
+        color: $contrast-color-100;
+        letter-spacing: rem(0.8px);
         line-height: 1;
 
         span {
             display: inline;
 
-            color: var(--black);
+            color: $dark-color-950;
             border-radius: 0;
             border: none;
-            font-size: 2.6rem;
+            font-size: rem(26px);
             background: transparent;
-            border-right: 0.08em solid var(--darkNeutral);
+            border-right: rem(2px) solid $contrast-color-700;
             border: none;
 
             padding: 0;
-            margin-bottom: 16px;
+            margin-bottom: rem(16px);
         }
 
         .txt-rotate {
             display: block;
-            height: 7rem;
-            padding-top: 1rem;
+            height: rem(70px);
+            padding-top: rem(10px);
 
             & > .wrap {
-                color: var(--primary);
-                padding-right: 0.5rem;
-                border-right: 0.08em solid var(--darkNeutral);
+                color: $primary-color;
+                padding-right: rem(5px);
+                border-right: rem(2px) solid $contrast-color-700;
+
+                &.true {
+                    border-right: rem(2px) solid transparent;
+                }
+
+                &.false {
+                    border-right: rem(2px) solid $contrast-color-700;
+                }
             }
         }
     }
-}
 
-@mixin greeting_responsive {
-    h1:first-of-type {
-        text-align: left;
-        font-size: 42px;
+    @include responsive {
+        h1:first-of-type {
+            text-align: left;
+            font-size: rem(42px);
 
-        span {
-            font-size: 42px;
+            span {
+                font-size: rem(42px);
+            }
         }
     }
 }

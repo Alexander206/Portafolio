@@ -3,67 +3,67 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 37rem;
-        height: 54rem;
+        max-width: rem(370px);
+        height: rem(540px);
         border-radius: 50%;
 
         &__danger {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 400px;
-            height: 54rem;
+            width: rem(400px);
+            height: rem(540px);
             border-radius: 50%;
 
             .grabber {
                 position: relative;
-                width: 100px;
-                height: 100px;
+                width: rem(100px);
+                height: rem(100px);
 
                 &__arm-wrapper {
                     position: absolute;
-                    top: -90px;
-                    width: 24px;
-                    height: 260px;
+                    top: rem(-90px);
+                    width: rem(24px);
+                    height: rem(260px);
                 }
 
                 &__arm {
                     position: relative;
-                    width: 24px;
-                    height: 200px;
+                    width: rem(24px);
+                    height: rem(200px);
                     background: #7d9a9e;
-                    border-radius: 20px;
+                    border-radius: rem(20px);
                     overflow: visible;
                     transform: translateY(100%);
-                    transition: transform 0.2s ease;
+                    transition: transform$transition ease;
                 }
 
                 &__hand {
                     display: block;
                     position: absolute;
-                    top: -12px;
+                    top: rem(-12px);
                     transform: scale(1.4) rotate(-10deg) translateY(100%);
                     transform-origin: bottom center;
-                    transition: transform 0.3s ease;
+                    transition: transform $transition ease;
                 }
 
                 &__face {
                     position: absolute;
-                    width: 75px;
-                    height: 84px;
+                    width: rem(75px);
+                    height: rem(84px);
                     right: 5%;
-                    transition: transform 0.3s ease;
+                    transition: transform $transition ease;
                 }
 
                 &__body {
                     position: absolute;
                     top: 50%;
                     left: 0%;
-                    width: 110px;
-                    height: 95px;
+                    width: rem(110px);
+                    height: rem(95px);
                     border-radius: 50%;
                     background: #7d9a9e;
-                    transition: transform 0.3s ease;
+                    transition: transform $transition ease;
                 }
 
                 // Modifiers
@@ -169,9 +169,9 @@
         &__debug {
             display: none;
             position: absolute;
-            width: 300px;
-            top: -100px;
-            font-size: 14px;
+            width: rem(300px);
+            top: rem(-100px);
+            font-size: $font-size-sm;
             text-align: center;
             text-transform: uppercase;
         }

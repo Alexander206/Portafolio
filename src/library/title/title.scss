@@ -5,43 +5,44 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        max-width: 132rem;
+        max-width: rem(1320px);
 
-        padding: 0 3rem;
-        margin-bottom: 7rem;
+        padding: 0 rem(30px);
+        margin-bottom: rem(70px);
 
         h1 {
             text-align: center;
-            color: var(--light);
-            font-size: 40px;
-            padding-top: 7rem;
-            padding-bottom: 0rem;
+            color: $light-color;
+            font-size: rem(40px);
+            padding-top: rem(70px);
+            padding-bottom: rem(0px);
         }
 
         .separator {
             width: 30%;
-            height: 2px;
-            background-color: var(--neutral);
-            margin: 4rem;
+            height: rem(2px);
+            background-color: $contrast-color;
+            margin: rem(40px);
         }
 
         p {
             text-align: center;
             width: 100%;
-            max-width: 90rem;
+            max-width: rem(900px);
 
-            color: var(--lightNeutral);
-            font-size: 16px;
-            letter-spacing: 0.8px;
-            line-height: 1.5em;
+            color: $contrast-color-100;
+            font-size: $font-size-md;
+            letter-spacing: rem(0.8px);
+            line-height: 1.5;
 
-            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+                skew(0deg, 0deg);
             opacity: 1;
             transform-style: preserve-3d;
         }
 
         span {
-            color: var(--primary);
+            color: $primary-color;
         }
     }
 }

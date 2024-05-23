@@ -1,17 +1,17 @@
 @mixin hashLink {
     li {
-        margin: 0.5rem;
+        margin: rem(5px);
 
         &.active {
-            background-color: var(--primary);
+            background-color: $primary-color;
             border-radius: 50%;
-            transition: 0.3s;
+            transition: $transition;
 
             a {
                 opacity: 1;
-                color: var(--dark);
-                font-weight: normal;
-                transition: 0.3s;
+                color: $dark-color;
+                font-weight: $font-weight-regular;
+                transition: $transition;
             }
         }
 
@@ -20,27 +20,27 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 1rem;
+            gap: rem(10px);
 
             width: 100%;
             height: 100%;
-            font-size: 1.2rem;
-            color: var(--lightNeutral);
+            font-size: $font-size-xs;
+            color: $contrast-color-100;
             opacity: 0.75;
-            transition: 0.3s;
+            transition: $transition;
 
-            padding: 1.5rem;
+            padding: rem(15px);
 
             &:hover {
                 opacity: 1;
-                transition: 0.3s;
+                transition: $transition;
             }
 
             ion-icon {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 2.4rem;
+                font-size: $icon-size-md;
             }
 
             span {
@@ -49,18 +49,18 @@
         }
     }
 
-    @media (min-width: 800px) {
+    @include responsive {
         li {
             position: relative;
 
             &.active:hover a span {
-                border: 1px solid var(--darkLight);
-                background: var(--primary);
-                backdrop-filter: blur(7.6px);
+                border: rem(1px) solid $dark-color-700;
+                background: $primary-color;
+                backdrop-filter: blur(rem(7.6px));
 
-                padding-left: 6rem;
-                padding-right: 2rem;
-                transition: 0.3s;
+                padding-left: rem(60px);
+                padding-right: rem(20px);
+                transition: $transition;
                 z-index: -1;
             }
 
@@ -73,16 +73,16 @@
                 align-items: center;
                 justify-content: flex-start;
 
-                border: 1px solid var(--darkLight);
-                background: var(--dark);
-                backdrop-filter: blur(7.6px);
-                width: 14rem;
-                height: calc(100% + 2px);
-                border-radius: 6rem;
+                border: rem(1px) solid $dark-color-700;
+                background: $dark-color;
+                backdrop-filter: blur(rem(7.6px));
+                width: rem(140px);
+                height: calc(100% + rem(2px));
+                border-radius: rem(60px);
 
-                padding-left: 6rem;
-                padding-right: 2rem;
-                transition: 0.3s;
+                padding-left: rem(60px);
+                padding-right: rem(20px);
+                transition: $transition;
                 z-index: -1;
             }
 
@@ -99,9 +99,9 @@
                     width: 0;
                     opacity: 0;
                     display: flex;
-                    font-size: 1.4rem;
+                    font-size: $font-size-sm;
                     white-space: nowrap;
-                    border: 1px solid transparent;
+                    border: rem(1px) solid transparent;
                     margin: 0;
                     padding: 0;
                 }

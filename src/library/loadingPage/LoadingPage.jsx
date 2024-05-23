@@ -7,7 +7,7 @@ import "./loadingPage.scss";
 
 const LoadingPage = ({ onFinish }) => {
     const [stateID, setStateID] = useState("");
-    const [stateClass, setStateClass] = useState("Loading__Page");
+    const [stateClass, setStateClass] = useState("loading_page");
     const { pathname } = useLocation();
 
     useEffect(() => {
@@ -15,11 +15,11 @@ const LoadingPage = ({ onFinish }) => {
     }, [pathname]);
 
     useEffect(() => {
-        setStateID("pagina__cargada");
+        setStateID("page_loaded");
     }, []);
 
     const handlerAnimation = () => {
-        setStateClass("Loading__Page off");
+        setStateClass("loading_page off");
         onFinish();
     };
 

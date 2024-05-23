@@ -2,7 +2,6 @@ import "./contact.scss";
 
 import Nav from "../../library/nav/Nav.jsx";
 import Footer from "../../library/footer/Footer.jsx";
-import LoadingPage from "../../library/loadingPage/LoadingPage.jsx";
 import ProjectsTitle from "../../library/title/Title.jsx";
 
 import data from "./data.json";
@@ -10,7 +9,6 @@ import data from "./data.json";
 const Contact = () => {
     return (
         <>
-            <LoadingPage />
             <Nav classPage={"header_contact"} />
             <main className="main_contact">
                 <section className="contact" id="contact">

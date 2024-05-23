@@ -42,7 +42,6 @@ function Routes({ route }) {
 
 Routes.propTypes = {
     route: PropTypes.object.isRequired,
-    url: PropTypes.string.isRequired,
 };
 
 export default Routes;

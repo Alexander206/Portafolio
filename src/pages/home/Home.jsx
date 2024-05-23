@@ -2,7 +2,6 @@ import { useContext } from "react";
 
 import "./home.scss";
 
-import LoadingPage from "../../library/loadingPage/LoadingPage.jsx";
 import Nav from "../../library/nav/Nav.jsx";
 import Footer from "../../library/footer/Footer.jsx";
 import BtnScroll from "../../library/btns/BtnScroll.jsx";
@@ -22,7 +21,6 @@ const Home = () => {
 
     return (
         <>
-            <LoadingPage />
             <Nav classPage={"header_home"} />
             <BtnScroll href="#rols" />
 

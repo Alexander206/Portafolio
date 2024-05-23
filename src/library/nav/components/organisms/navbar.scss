@@ -23,7 +23,7 @@
         }
     }
 
-    @media (min-width: 800px) {
+    @include responsive {
         .header_navbar {
             .navbar_list {
                 flex-direction: column;

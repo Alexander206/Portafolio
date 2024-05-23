@@ -1,22 +1,24 @@
+@import "@styles/autoload.scss";
+
 @import "./components/organisms/navbar.scss";
 
 .header {
     position: fixed;
-    bottom: 1.5rem;
+    bottom: rem(15px);
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: calc(100% - 2rem);
-    max-width: 40rem;
-    border: 1px solid var(--darkLight);
-    border-radius: 5rem;
-    background: var(--darkTrasparent);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.295);
-    backdrop-filter: blur(7.6px);
-    -webkit-backdrop-filter: blur(7.6px);
+    width: calc(100% - rem(20px));
+    max-width: rem(400px);
+    border: rem(1px) solid $dark-color-700;
+    border-radius: rem(50px);
+    background: $dark-color-transparent;
+    box-shadow: $box-shadow;
+    backdrop-filter: blur(rem(7.6px));
+    -webkit-backdrop-filter: blur(rem(7.6px));
 
-    transition: 0.32s ease-in-out;
+    transition: $transition ease-in-out;
     z-index: 899;
 
     .container {
@@ -26,20 +28,20 @@
         justify-content: space-between;
 
         width: 100%;
-        max-width: 132rem;
+        max-width: rem(1320px);
 
         padding: 0;
-        transition: 0.32s ease-in-out;
+        transition: $transition ease-in-out;
 
         @include headerNavbar;
     }
 }
 
-@media (min-width: 800px) {
+@include responsive {
     .header {
         top: 50%;
         transform: translate(-50%, -50%);
-        left: 5rem;
+        left: rem(50px);
         width: auto;
         bottom: auto;
 
@@ -52,7 +54,7 @@
 
             .routes {
                 flex-direction: row;
-                gap: 2rem;
+                gap: rem(20px);
             }
         }
     }

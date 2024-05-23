@@ -4,7 +4,6 @@ import { useContext } from "react";
 import "./about.scss";
 
 // Componets
-import LoadingPage from "../../library/loadingPage/LoadingPage.jsx";
 import Nav from "../../library/nav/Nav.jsx";
 import Footer from "../../library/footer/Footer.jsx";
 
@@ -22,7 +21,6 @@ const About = () => {
 
     return (
         <>
-            <LoadingPage />
             <Nav classPage={"header_home"} />
 
             <main className="main_home">

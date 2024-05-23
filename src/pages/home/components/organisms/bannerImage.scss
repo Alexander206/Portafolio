@@ -6,13 +6,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 4.2rem;
+        gap: rem(42px);
 
-        max-width: 20rem;
-        max-height: 20rem;
+        max-width: rem(200px);
+        max-height: rem(200px);
         margin: 0;
-        margin-bottom: 7rem;
-        margin-top: 3rem;
+        margin-bottom: rem(70px);
+        margin-top: rem(30px);
         z-index: 1;
 
         &::after {
@@ -26,7 +26,7 @@
             height: 85%;
             border-radius: 18% 18% 18% 60%;
 
-            border: 1px solid var(--darkLight);
+            border: rem(1px) solid $dark-color-700;
 
             z-index: -1;
         }
@@ -39,7 +39,7 @@
 
             width: 85%;
             height: 85%;
-            background-color: var(--darkTrasparent);
+            background-color: $dark-color-transparent;
             border-radius: 18% 18% 18% 65%;
             z-index: -1;
             animation: alter 16s infinite alternate ease-in-out;
@@ -65,64 +65,62 @@
 
         .decoration {
             position: absolute;
-            top: -3rem;
-            right: 2rem;
+            top: rem(-30px);
+            right: rem(20px);
             list-style: none;
             display: none;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: rem(20px);
 
             div {
-                width: 1rem;
-                height: 1rem;
+                width: rem(10px);
+                height: rem(10px);
                 border-radius: 50%;
-                background-color: var(--primaryDark);
+                background-color: $primary-color-600;
             }
         }
 
         .picture {
             border-radius: 50%;
-            border: 1px solid var(--darkLight);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.171);
+            border: rem(1px) solid $dark-color-700;
+            box-shadow: $box-shadow;
         }
 
         .banner_social {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: rem(20px);
             list-style: none;
             z-index: 5;
 
             @include socialIcon;
         }
     }
-}
 
-@mixin responsive-bannerImage {
-    .banner_image {
-        position: relative;
-        flex-direction: row;
-        align-items: flex-end;
-        gap: 0;
-        width: 40%;
-        max-width: 45rem;
-        max-height: 45rem;
-        margin: 0;
-
-        .decoration {
-            display: flex;
-        }
-
-        .banner_social {
+    @include responsive {
+        .banner_image {
             position: relative;
-            right: 5rem;
-            bottom: -5rem;
-            flex-direction: column;
-            gap: 1rem;
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 0;
+            width: 40%;
+            max-width: rem(450px);
+            max-height: rem(450px);
+            margin: 0;
 
-            @include responsive-socialIcon;
+            .decoration {
+                display: flex;
+            }
+
+            .banner_social {
+                position: relative;
+                right: rem(50px);
+                bottom: rem(-50px);
+                flex-direction: column;
+                gap: rem(10px);
+            }
         }
     }
 }

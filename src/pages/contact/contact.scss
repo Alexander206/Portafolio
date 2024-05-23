@@ -9,7 +9,7 @@
     justify-content: center;
     width: 100%;
 
-    padding-top: 10rem;
+    padding-top: rem(100px);
 
     /*  * Contact */
 
@@ -18,21 +18,21 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: calc(100% - 2rem);
+        width: calc(100% - rem(20px));
 
-        padding: 1rem;
+        padding: rem(10px);
 
         @include projectsTitle;
 
         .title {
             p {
-                max-width: 60rem;
+                max-width: rem(600px);
             }
         }
 
         .contact_links_container {
-            min-width: 20rem;
-            margin-bottom: 14rem;
+            min-width: rem(200px);
+            margin-bottom: rem(140px);
 
             .contact_links_list {
                 display: flex;
@@ -45,18 +45,18 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 8rem;
-                    height: 4rem;
+                    width: rem(80px);
+                    height: rem(40px);
 
                     a {
-                        font-size: 3.4rem;
-                        color: var(--neutral);
-                        transition: 0.3s;
+                        font-size: $font-size-xxxl;
+                        color: $contrast-color;
+                        transition: $transition;
 
                         &:hover ion-icon {
-                            color: var(--primary);
-                            font-size: 3.8rem;
-                            transition: 0.3s;
+                            color: $primary-color;
+                            font-size: $icon-size-xl;
+                            transition: $transition;
                         }
                     }
                 }
@@ -72,24 +72,24 @@
             justify-content: center;
 
             width: 100%;
-            max-width: 75rem;
-            margin-bottom: 4rem;
+            max-width: rem(750px);
+            margin-bottom: rem(40px);
 
             .form_title {
                 text-align: center;
-                color: var(--light);
-                font-size: 3rem;
-                margin-bottom: 2rem;
+                color: $light-color;
+                font-size: $font-size-xxxl;
+                margin-bottom: rem(20px);
             }
 
             .form_text {
                 text-align: center;
                 width: 100%;
-                max-width: 50rem;
-                color: var(--lightNeutral);
-                font-size: 16px;
-                letter-spacing: 0.8px;
-                line-height: 1.5em;
+                max-width: rem(500px);
+                color: $contrast-color-100;
+                font-size: $font-size-md;
+                letter-spacing: rem(0.8px);
+                line-height: 1.5;
                 transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
                     skew(0deg, 0deg);
                 opacity: 1;
@@ -105,47 +105,47 @@
                 align-items: center;
                 justify-content: center;
 
-                margin: 2rem auto;
+                margin: rem(20px) auto;
 
                 label {
-                    margin: 10px 0;
+                    margin: rem(10px) 0;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     width: 100%;
 
                     input {
-                        background-color: var(--dark);
+                        background-color: $dark-color;
                         width: 100%;
-                        border-radius: 2rem;
-                        border: 1px solid var(--darkNeutral);
-                        font-size: 1.6rem;
-                        padding: 1rem 2rem;
+                        border-radius: rem(20px);
+                        border: rem(1px) solid $contrast-color-700;
+                        font-size: $icon-size-sm;
+                        padding: rem(10px) rem(20px);
                     }
 
                     .mensajeTextArea {
-                        margin-top: 7px;
-                        background-color: var(--dark);
+                        margin-top: rem(7px);
+                        background-color: $dark-color;
                         width: 100%;
                         height: 15rem;
-                        font-size: 1.6rem;
-                        border-radius: 2rem;
-                        border: 1px solid var(--darkNeutral);
-                        padding: 1rem;
+                        font-size: $icon-size-sm;
+                        border-radius: rem(20px);
+                        border: rem(1px) solid $contrast-color-700;
+                        padding: rem(10px);
                     }
                 }
             }
 
             .btn_generic {
                 width: 100%;
-                max-width: 40rem;
-                margin: 2rem auto;
+                max-width: rem(400px);
+                margin: rem(20px) auto;
             }
         }
     }
 }
 
-@media (min-width: 800px) {
+@include responsive {
     .main_contact .contact .contact_form .enviarMensaje {
         text-align: start;
 

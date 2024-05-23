@@ -6,35 +6,35 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: rem(20px);
 
         width: calc(100% - 6rem);
         max-width: 127rem;
-        background-color: var(--primaryTrasparent);
-        border-radius: 3rem;
-        box-shadow: 0 4px 30px rgba(153, 144, 134, 0.342);
+        background-color: $primary-color-transparent;
+        border-radius: rem(30px);
+        box-shadow: 0 rem(4px) rem(30px) rgba(153, 144, 134, 0.342);
 
-        padding: 2rem;
-        margin: 3rem;
-        margin-top: 4rem;
+        padding: rem(20px);
+        margin: rem(30px);
+        margin-top: rem(40px);
 
         .role_header {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            gap: 2rem;
+            gap: rem(20px);
 
             width: 90%;
-            border-bottom: 1px solid var(--primaryTrasparent);
+            border-bottom: rem(1px) solid $primary-color-transparent;
 
-            padding: 2rem 0;
-            padding-bottom: 4rem;
+            padding: rem(20px) 0;
+            padding-bottom: rem(40px);
 
             h2 {
-                color: var(--black);
+                color: $dark-color-950;
                 text-align: center;
-                font-size: 2rem;
+                font-size: rem(20px);
             }
 
             .btn_generic .custom-btn {
@@ -47,45 +47,43 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: rem(20px);
             width: 100%;
 
             @include card;
         }
     }
-}
 
-@mixin responsive-rols {
-    .rols {
-        width: calc(100% - 22rem);
-        padding: 4rem;
+    @include responsive {
+        .rols {
+            width: calc(100% - 22rem);
+            padding: rem(40px);
 
-        .role_header {
-            width: 100%;
-            align-items: start;
-            flex-direction: row;
-            border-bottom: none;
+            .role_header {
+                width: 100%;
+                align-items: start;
+                flex-direction: row;
+                border-bottom: none;
 
-            padding: 0;
-            margin-bottom: 4rem;
+                padding: 0;
+                margin-bottom: rem(40px);
 
-            h2 {
-                text-align: left;
-                font-size: 3.2rem;
-                max-width: 40rem;
+                h2 {
+                    text-align: left;
+                    font-size: 3.2rem;
+                    max-width: rem(400px);
+                }
             }
-        }
 
-        .role_cards {
-            align-items: stretch;
-            justify-content: space-evenly;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 4rem;
+            .role_cards {
+                align-items: stretch;
+                justify-content: space-evenly;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: rem(40px);
 
-            padding: 0;
-
-            @include responsive-card;
+                padding: 0;
+            }
         }
     }
 }

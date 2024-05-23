@@ -1,3 +1,5 @@
+@import "@styles/autoload.scss";
+
 $widthMouse: 40px;
 $heightMouse: 64px;
 $borderMouse: 2px;
@@ -19,17 +21,18 @@ $animDuration: 6s;
     width: $widthMouse;
     height: $heightMouse;
 
-    background: var(--primaryTrasparent) linear-gradient(transparent 0%, transparent 50%, var(--darkLight) 50%, var(--darkLight) 100%);
-    border-radius: 100px;
+    background: $primary-color-transparent
+        linear-gradient(transparent 0%, transparent 50%, $light-color-800 50%, $light-color-800 100%);
+    border-radius: rem(100px);
     background-size: 100% 200%;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.171);
+    box-shadow: $box-shadow;
     animation: colorSlide $animDuration linear infinite, nudgeMouse $animDuration ease-out infinite;
     z-index: 100;
 
     &.fade-out {
-        animation: opacityBtn 0.2s ease-out;
+        animation: opacityBtn$transition ease-out;
         opacity: 0;
-        transition: 0.2s;
+        transition: $transition;
     }
 
     &.hidden {
@@ -51,12 +54,12 @@ $animDuration: 6s;
     &:before {
         width: $widthMouse - $borderMouse;
         height: $heightMouse - $borderMouse;
-        background-color: var(--darkTrasparent);
-        border-radius: 100px;
+        background-color: $dark-color-transparent;
+        border-radius: rem(100px);
     }
 
     &:after {
-        background-color: var(--primaryTrasparent);
+        background-color: $primary-color-transparent;
         width: $sizeTrackball;
         height: $sizeTrackball;
         border-radius: 100%;
@@ -64,7 +67,7 @@ $animDuration: 6s;
     }
 }
 
-@media (min-width: 800px) {
+@include responsive {
     .mouse {
         display: block;
     }
@@ -88,39 +91,39 @@ $animDuration: 6s;
         background-position: 0% 0%;
     }
     21% {
-        background-color: var(--primaryTrasparent);
+        background-color: $primary-color-transparent;
     }
     29.99% {
-        background-color: var(--darkLight);
+        background-color: $dark-color-700;
         background-position: 0% 0%;
     }
     30% {
-        background-color: var(--primaryTrasparent);
+        background-color: $primary-color-transparent;
         background-position: 0% 100%;
     }
     50% {
         background-position: 0% 0%;
     }
     51% {
-        background-color: var(--primaryTrasparent);
+        background-color: $primary-color-transparent;
     }
     59% {
-        background-color: var(--darkLight);
+        background-color: $dark-color-700;
         background-position: 0% 0%;
     }
     60% {
-        background-color: var(--primaryTrasparent);
+        background-color: $primary-color-transparent;
         background-position: 0% 100%;
     }
     80% {
         background-position: 0% 0%;
     }
     81% {
-        background-color: var(--primaryTrasparent);
+        background-color: $primary-color-transparent;
     }
     90%,
     100% {
-        background-color: var(--darkLight);
+        background-color: $dark-color-700;
     }
 }
 
@@ -243,21 +246,21 @@ $animDuration: 6s;
 
 @keyframes colorText {
     21% {
-        color: var(--primaryTrasparent);
+        color: $primary-color-transparent;
     }
     30% {
-        color: var(--darkLight);
+        color: $dark-color-700;
     }
     51% {
-        color: var(--primaryTrasparent);
+        color: $primary-color-transparent;
     }
     60% {
-        color: var(--darkLight);
+        color: $dark-color-700;
     }
     81% {
-        color: var(--primaryTrasparent);
+        color: $primary-color-transparent;
     }
     90% {
-        color: var(--darkLight);
+        color: $dark-color-700;
     }
 }

@@ -1,3 +1,4 @@
+@import "@styles/autoload.scss";
 @import "../icons/socialIcon.scss";
 
 .footer {
@@ -6,18 +7,18 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: var(--black);
-    border-top: 1px solid var(--dark);
+    background-color: $dark-color-950;
+    border-top: rem(1px) solid $dark-color;
 
-    padding: 1rem;
-    padding-bottom: 10rem;
+    padding: rem(10px);
+    padding-bottom: rem(100px);
     z-index: 2;
 
     .footer_data {
         text-align: center;
-        color: var(--neutral);
-        font-size: 1.6rem;
-        margin: 1rem;
+        color: $contrast-color;
+        font-size: $icon-size-sm;
+        margin: rem(10px);
     }
 
     .footer_links {
@@ -30,20 +31,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
+            gap: rem(5px);
 
             @include socialIcon;
         }
     }
-
-    .footer_links_item:hover ion-icon {
-        color: var(--green);
-        transition: 0.2s;
-    }
 }
 
-@media (min-width: 800px) {
+@include responsive {
     .footer {
-        padding-bottom: 2rem;
+        padding-bottom: rem(20px);
     }
 }

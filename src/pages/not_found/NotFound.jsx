@@ -7,7 +7,6 @@ import Footer from "../../library/footer/Footer.jsx";
 const NotFound = () => {
     return (
         <>
-            <LoadingPage />
             <Nav classPage={"header_home"} />
             Services
             <Footer />

@@ -12,9 +12,3 @@
 
     @include skills;
 }
-
-@media (min-width: 800px) {
-    .main_home {
-        @include skills_responsive;
-    }
-}

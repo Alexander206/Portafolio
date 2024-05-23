@@ -9,34 +9,30 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 30rem;
+        gap: rem(300px);
 
         text-align: center;
         width: 100%;
 
-        padding: 6rem 3rem;
-        padding-top: 4rem;
+        padding: rem(60px) rem(30px);
+        padding-top: rem(40px);
 
         @include title;
         @include greeting;
         @include buttons;
     }
-}
 
-@mixin responsive-bannerText {
-    .text {
-        align-items: start;
-        justify-content: center;
-        gap: 10rem;
-        width: 60%;
+    @include responsive {
+        .text {
+            align-items: start;
+            justify-content: center;
+            gap: rem(100px);
+            width: 60%;
 
-        @include title-responsive;
-        @include greeting_responsive;
-        @include buttons-responsive;
-
-        p {
-            text-align: left;
-            max-width: 64rem;
+            p {
+                text-align: left;
+                max-width: rem(640px);
+            }
         }
     }
 }

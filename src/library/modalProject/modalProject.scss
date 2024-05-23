@@ -1,29 +1,31 @@
+@import "@styles/autoload.scss";
+
 .modal_personalized .modal-dialog {
-    max-width: 122rem;
+    max-width: rem(1220px);
 
     .modal-content {
-        background-color: var(--dark);
-        border-radius: 2rem;
+        background-color: $dark-color;
+        border-radius: rem(20px);
 
         .modal_header {
             display: flex;
             align-items: center;
             justify-content: right;
-            padding: 2rem;
+            padding: rem(20px);
 
             button {
-                width: 3rem;
-                height: 3rem;
+                width: rem(30px);
+                height: rem(30px);
 
                 ion-icon {
-                    font-size: 3rem;
-                    color: var(--light);
-                    transition: 0.3s;
+                    font-size: $font-size-xxxl;
+                    color: $light-color;
+                    transition: $transition;
                 }
 
                 ion-icon:hover {
-                    color: var(--neutral);
-                    transition: 0.3s;
+                    color: $contrast-color;
+                    transition: $transition;
                 }
             }
         }
@@ -39,17 +41,17 @@
                 display: flex;
                 align-items: center;
                 width: 100%;
-                max-height: 60rem;
+                max-height: rem(600px);
                 overflow: hidden;
 
                 .carousel-indicators button {
-                    width: 1rem;
-                    height: 1rem;
+                    width: rem(10px);
+                    height: rem(10px);
                     border-radius: 50%;
                 }
 
                 .carousel-inner .carousel-item {
-                    max-height: 60rem;
+                    max-height: rem(600px);
 
                     img {
                         width: 100%;
@@ -75,31 +77,31 @@
                 align-items: center;
                 justify-content: center;
                 width: 100%;
-                padding: 3rem;
-                padding-bottom: 5rem;
+                padding: rem(30px);
+                padding-bottom: rem(50px);
 
                 .slider {
                     width: 90%;
                     height: auto;
                     margin: auto;
                     overflow: hidden;
-                    margin-bottom: 3rem;
+                    margin-bottom: rem(30px);
 
                     .slide-track {
                         display: flex;
                         align-items: center;
                         justify-content: space-around;
                         flex-wrap: wrap;
-                        gap: 2rem;
+                        gap: rem(20px);
                         width: 100%;
                     }
 
                     .slide {
-                        border: 1px solid var(--darkLight);
-                        border-radius: 5rem;
-                        font-size: 1.8rem;
-                        color: var(--darkNeutral);
-                        padding: 0.5rem 2rem;
+                        border: rem(1px) solid $dark-color-700;
+                        border-radius: rem(50px);
+                        font-size: $font-size-lg;
+                        color: $contrast-color-800;
+                        padding: rem(5px) rem(20px);
                     }
                 }
 
@@ -108,7 +110,7 @@
                     flex-direction: column;
                     align-items: start;
                     justify-content: space-between;
-                    gap: 2rem;
+                    gap: rem(20px);
                     width: 90%;
 
                     ul {
@@ -116,74 +118,74 @@
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                        padding-left: 4rem;
+                        padding-left: rem(40px);
                     }
 
                     h4 {
                         position: relative;
-                        color: var(--neutral);
-                        font-size: 1.8rem;
-                        left: -4rem;
-                        margin-bottom: 1rem;
+                        color: $contrast-color;
+                        font-size: $font-size-lg;
+                        left: rem(-40px);
+                        margin-bottom: rem(10px);
                     }
 
                     .separator {
                         width: 100%;
-                        min-width: 10rem;
-                        height: 2px;
-                        background-color: var(--darkLight);
+                        min-width: rem(100px);
+                        height: rem(2px);
+                        background-color: $dark-color-700;
                     }
 
                     .links {
                         display: flex;
                         flex-direction: column;
                         align-items: start;
-                        gap: 1rem;
+                        gap: rem(10px);
 
                         padding: 0;
 
                         .upss {
                             width: 100%;
                             text-align: center;
-                            color: var(--secondary);
-                            font-size: 1.4rem;
+                            color: $secondary-color;
+                            font-size: $font-size-sm;
                         }
 
                         a {
                             display: flex;
                             align-items: center;
                             justify-content: start;
-                            gap: 1rem;
-                            min-width: 16rem;
+                            gap: rem(10px);
+                            min-width: rem(160px);
 
-                            font-size: 1.6rem;
-                            font-weight: 700;
-                            color: var(--neutral);
+                            font-size: $icon-size-sm;
+                            font-weight: $font-weight-bold;
+                            color: $contrast-color;
                             background-color: transparent;
-                            border: 1px solid var(--neutral);
-                            border-radius: 1.5rem;
+                            border: rem(1px) solid var(--neutral);
+                            border-radius: rem(15px);
 
-                            padding: 1rem 1.5rem;
+                            padding: rem(10px) rem(15px);
 
-                            transition: 0.3s ease-in-out;
+                            transition: $transition ease-in-out;
 
                             /* ---------------- */
 
                             &:hover {
-                                background-color: var(--lightNeutral);
-                                color: var(--dark);
-                                transition: 0.3s;
+                                background-color: $contrast-color-100;
+                                color: $dark-color;
+                                transition: $transition;
                             }
 
                             &:hover ion-icon {
-                                color: var(--primary);
-                                transition: 0.3s;
+                                color: $primary-color;
+                                transition: $transition;
                             }
 
                             ion-icon {
-                                color: var(--neutral);
-                                font-size: 2.4rem;
-                                transition: 0.3s;
+                                color: $contrast-color;
+                                font-size: $icon-size-md;
+                                transition: $transition;
                             }
                         }
                     }
@@ -191,23 +193,23 @@
                     .author {
                         list-style: none;
                         align-items: start;
-                        gap: 1rem;
+                        gap: rem(10px);
 
                         li {
                             position: relative;
-                            left: -2rem;
-                            font-size: 1.6rem;
-                            color: var(--neutral);
+                            left: rem(-20px);
+                            font-size: $icon-size-sm;
+                            color: $contrast-color;
                         }
                     }
 
                     .achievements {
                         align-items: start;
-                        gap: 1rem;
+                        gap: rem(10px);
 
-                        font-size: 1.4rem;
-                        font-weight: normal;
-                        color: var(--neutral);
+                        font-size: $font-size-sm;
+                        font-weight: $font-weight-regular;
+                        color: $contrast-color;
                         max-width: 100%;
                     }
                 }
@@ -216,7 +218,7 @@
     }
 }
 
-@media (min-width: 800px) {
+@include responsive {
     .modal_personalized .modal-dialog .modal-content .modal_body {
         .carousel {
             .carousel-inner .carousel-item {
@@ -257,23 +259,23 @@
                 }
 
                 h4 {
-                    left: -2rem;
+                    left: rem(-20px);
                 }
 
                 .separator {
-                    width: 2px;
+                    width: rem(2px);
                     min-width: auto;
                     height: 100%;
-                    min-height: 10rem;
+                    min-height: rem(100px);
                 }
 
                 .achievements {
                     align-items: start;
-                    gap: 1rem;
+                    gap: rem(10px);
 
-                    font-size: 1.4rem;
-                    font-weight: normal;
-                    color: var(--neutral);
+                    font-size: $font-size-sm;
+                    font-weight: $font-weight-regular;
+                    color: $contrast-color;
                     max-width: 55%;
                 }
             }

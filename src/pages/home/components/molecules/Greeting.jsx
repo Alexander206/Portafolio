@@ -47,14 +47,7 @@ const Greeting = ({ greeting }) => {
             {greeting.greeting}
             <br />
             <span className="txt-rotate" data-rotate={`${toRotate}`}>
-                <span
-                    className="wrap"
-                    style={{
-                        borderRight: isBlinking ? "0.08rem solid transparent" : "0.08rem solid var(--darkNeutral)",
-                    }}
-                >
-                    {text}
-                </span>
+                <span className={`wrap ${isBlinking}`}>{text}</span>
             </span>
         </motion.h1>
     );

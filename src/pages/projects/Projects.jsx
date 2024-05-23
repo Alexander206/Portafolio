@@ -57,7 +57,6 @@ const Proyects = () => {
 
     return (
         <ProjectsContext.Provider value={data.projects}>
-            <LoadingPage />
             <Nav classPage={"header_projects"} />
             <main className="main_projects">
                 <ProjectsTitle title={data.title} text1={data.text1} textSpan={data.textSpan} text2={data.text2} />

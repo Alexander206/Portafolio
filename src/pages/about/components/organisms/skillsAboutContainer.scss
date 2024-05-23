@@ -8,21 +8,21 @@
         justify-content: center;
         width: 100%;
 
-        padding: 1rem;
-        padding-top: 4rem;
+        padding: rem(10px);
+        padding-top: rem(40px);
 
         h2 {
-            color: var(--dark);
-            font-weight: bold;
+            color: $dark-color;
+            font-weight: $font-weight-bold;
             text-align: center;
-            font-size: 40px;
+            font-size: rem(40px);
         }
 
         .separator {
             width: 30%;
-            height: 2px;
-            background-color: var(--darkLight);
-            margin: 4rem;
+            height: rem(2px);
+            background-color: $dark-color-700;
+            margin: rem(40px);
         }
 
         .text {
@@ -30,14 +30,14 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            gap: 2rem;
+            gap: rem(20px);
 
             background: transparent;
             width: 100%;
             text-align: center;
 
-            padding: 2rem;
-            padding-bottom: 3rem;
+            padding: rem(20px);
+            padding-bottom: rem(30px);
 
             article {
                 display: flex;
@@ -46,74 +46,74 @@
 
                 h2 {
                     text-align: start;
-                    color: var(--dark);
-                    font-size: 3rem;
-                    font-weight: bold;
+                    color: $dark-color;
+                    font-size: $font-size-xxxl;
+                    font-weight: $font-weight-bold;
                     margin: 0;
-                    margin-bottom: 4rem;
+                    margin-bottom: rem(40px);
 
                     span {
-                        font-weight: bold;
+                        font-weight: $font-weight-bold;
                     }
                 }
 
                 p {
                     text-align: left;
-                    max-width: 73rem;
-                    color: var(--darkTrasparent);
-                    font-size: 16px;
-                    letter-spacing: 0.8px;
-                    line-height: 1.5em;
+                    max-width: rem(730px);
+                    color: $dark-color-transparent;
+                    font-size: $font-size-md;
+                    letter-spacing: rem(0.8px);
+                    line-height: 1.5;
 
                     span {
-                        font-weight: bold;
-                        color: var(--black);
+                        font-weight: $font-weight-bold;
+                        color: $dark-color-950;
                     }
                 }
 
                 .skills {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
-                    gap: 2rem;
+                    gap: rem(20px);
                     align-items: center;
                     justify-content: center;
 
                     width: 100%;
-                    margin: 2rem 0;
-                    margin-top: 4rem;
+                    margin: rem(20px) 0;
+                    margin-top: rem(40px);
                     order: 1;
 
                     @include skillItem;
                 }
 
                 a {
-                    width: 25rem;
-                    color: var(--light);
-                    font-weight: 700;
-                    font-size: 18px;
-                    margin-top: 40px;
-                    letter-spacing: 0.8px;
+                    width: rem(250px);
+                    color: $light-color;
+                    font-weight: $font-weight-bold;
+                    font-size: $font-size-lg;
+                    margin-top: rem(40px);
+                    letter-spacing: rem(0.8px);
                     display: flex;
                     align-items: center;
-                    margin-bottom: 2rem;
+                    margin-bottom: rem(20px);
                     order: 2;
-                    transition: 0.3s;
+                    transition: $transition;
 
                     img {
-                        width: 2.6rem;
-                        color: var(--light);
-                        margin-left: 1rem;
-                        transition: 0.3s;
+                        width: rem(26px);
+                        color: $light-color;
+                        margin-left: rem(10px);
+                        transition: $transition;
                     }
                 }
 
                 a:hover {
-                    color: var(--primary);
-                    transition: 0.3s;
+                    color: $primary-color;
+                    transition: $transition;
 
                     img {
-                        margin-left: 25px;
-                        transition: 0.3s;
+                        margin-left: rem(25px);
+                        transition: $transition;
                     }
                 }
             }
@@ -126,7 +126,7 @@
                 justify-content: center;
                 width: 90%;
                 height: 100%;
-                padding: 0 2rem;
+                padding: 0 rem(20px);
                 margin: 0;
 
                 .principal_img {
@@ -172,38 +172,38 @@
 
                 @keyframes updown {
                     0% {
-                        transform: translateY(-10px);
+                        transform: translateY(rem(-10px));
                     }
                     50% {
-                        transform: translateY(10px);
+                        transform: translateY(rem(10px));
                     }
                     100% {
-                        transform: translateY(-10px);
+                        transform: translateY(rem(-10px));
                     }
                 }
             }
         }
     }
-}
 
-@mixin skillsAboutContainer_responsive {
-    .about_container {
-        padding: 4rem 0;
+    @include responsive {
+        .about_container {
+            padding: rem(40px) 0;
 
-        .text {
-            flex-direction: row;
+            .text {
+                flex-direction: row;
 
-            article {
-                width: 60%;
+                article {
+                    width: 60%;
 
-                .skills {
-                    flex-direction: row;
-                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    .skills {
+                        flex-direction: row;
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                    }
                 }
-            }
 
-            .img {
-                width: 35%;
+                .img {
+                    width: 35%;
+                }
             }
         }
     }

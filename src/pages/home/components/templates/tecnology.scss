@@ -9,35 +9,32 @@
         justify-content: center;
 
         width: 100%;
-        background-color: var(--primary);
+        background-color: $primary-color;
         overflow: hidden;
 
-        padding: 5rem 0;
-        padding-top: 8rem;
+        padding: rem(50px) 0;
+        padding-top: rem(80px);
 
         h3 {
             text-align: center;
-            color: var(--darkNeutral);
-            font-size: 1.6rem;
-            font-weight: normal;
+            color: $contrast-color-800;
+            font-size: $icon-size-sm;
+            font-weight: $font-weight-regular;
 
-            padding: 0 3rem;
-            margin-bottom: 4rem;
+            padding: 0 rem(30px);
+            margin-bottom: rem(40px);
         }
 
         @include accordionTecnologies;
         @include rols;
     }
-}
 
-@mixin responsive-tecnology {
-    .tecnology {
-        h3 {
-            width: calc(100% - 17rem);
-            font-size: 1.6rem;
+    @include responsive {
+        .tecnology {
+            h3 {
+                width: calc(100% - 17rem);
+                font-size: $icon-size-sm;
+            }
         }
-
-        @include responsive-accordionTecnologies;
-        @include responsive-rols;
     }
 }

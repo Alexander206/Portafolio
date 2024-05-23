@@ -14,10 +14,3 @@
     @include banner;
     @include tecnology;
 }
-
-@media (min-width: 800px) {
-    .main_home {
-        @include responsive-banner;
-        @include responsive-tecnology;
-    }
-}
