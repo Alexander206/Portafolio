@@ -7,6 +7,9 @@ import SkillsItem from "../atoms/SkillsItem";
 
 // Principal component
 const SkillsAboutContainer = ({ text, ability, images, imgMe, arrow }) => {
+    // Texto de presentación
+    const paragraphs = text.map((item, index) => <p key={index} dangerouslySetInnerHTML={{ __html: item }}></p>);
+
     // Lista de componentes de habilidades blandas
     const componentSkills = ability.map((item, index) => {
         return <SkillsItem key={index} icon={item.icon} text={item.text} />;
@@ -14,7 +17,8 @@ const SkillsAboutContainer = ({ text, ability, images, imgMe, arrow }) => {
 
     // Lista de imagenes de tecnologías
     const componentImages = images.map((item, index) => {
-        const img = new URL(`../../../../assets/pages/home/skills/${item.img}`, import.meta.url).pathname;
+        const img = new URL(`../../../../assets/icon/${item.img}`, import.meta.url).pathname;
+
         return (
             <img
                 key={index}
@@ -26,31 +30,19 @@ const SkillsAboutContainer = ({ text, ability, images, imgMe, arrow }) => {
     });
 
     return (
-        <article className="about_container">
-            <h2>Habilidades</h2>
+        <article className="text">
+            <figure className="img">
+                <img className="principal_img" src={imgMe} alt="Programing image" />
+                {componentImages}
+            </figure>
 
-            <div className="separator"></div>
+            <article>
+                <article className="paragraphs">{paragraphs}</article>
+                <article className="skills_items">{componentSkills}</article>
 
-            <article className="text">
-                <article>
-                    <h2>Sobre mi</h2>
-
-                    <p>
-                        {text[0]} <span>{text[1]}</span> {text[2]}
-                    </p>
-
-                    <article className="skills">{componentSkills}</article>
-
-                    <Link to="/contact">
-                        Contácta conmigo <img src={arrow} alt="contact img" />
-                    </Link>
-                </article>
-
-                <figure className="img">
-                    <img className="principal_img" src={imgMe} alt="Programing image" />
-
-                    {componentImages}
-                </figure>
+                <Link to="/contact" className="clickable">
+                    Contácta conmigo <img src={arrow} alt="contact img" />
+                </Link>
             </article>
         </article>
     );

@@ -1,12 +1,13 @@
 // components
 @import "../organisms/bannerImage.scss";
 @import "../organisms/bannerText.scss";
-@import "../atoms/waves.scss";
+@import "../organisms/tecnology.scss";
 
 @mixin banner {
     .banner {
         position: relative;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-around;
 
@@ -16,12 +17,10 @@
         background-repeat: no-repeat;
         background-position: right top;
         background-size: 45%;
-
         background: $dark-color;
         background: $dark-gradient-dark;
 
-        padding: rem(80px) rem(0px);
-        padding-top: rem(60px);
+        padding: rem(60px) rem(0px);
 
         .container {
             display: flex;
@@ -35,33 +34,35 @@
             padding: 0;
             z-index: 2;
 
-            .banner_logo {
+            & > a {
                 position: absolute;
                 top: rem(30px);
                 left: rem(30px);
-                width: rem(40px);
-                height: rem(40px);
-                border-radius: 50%;
-                border: rem(1px) solid $primary-color-700;
+
+                .banner_logo {
+                    width: rem(40px);
+                    height: rem(40px);
+                    border-radius: 50%;
+                    border: rem(1px) solid $primary-color-700;
+                }
             }
 
             @include bannerImage;
-
             @include bannerText;
         }
 
-        @include waves;
+        @include tecnology;
     }
 
     @include responsive {
         .banner {
-            padding: rem(50px) rem(0px) rem(110px) rem(0px);
+            padding: rem(50px) rem(0px);
 
             .container {
                 align-items: center;
                 justify-content: space-between;
                 flex-direction: row;
-                padding: rem(100px) rem(85px) rem(50px) rem(85px);
+                padding: rem(50px) rem(85px);
             }
         }
     }

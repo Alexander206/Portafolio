@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import styled, { keyframes } from "styled-components";
 
 // Components
-import ListTecnologies from "../molecules/ListTecnologies";
+import ListTecnologies from "../atoms/ListTecnologies";
 
 const TECHNOLOGY_WIDTH = 180;
 const ANIMATION_DURATION = 4;
@@ -24,18 +24,17 @@ const SlideTrack = styled.ul`
         ${(props) => props.$tecnologies.length * ANIMATION_DURATION}s linear infinite;
 `;
 
-const AccordionTecnologies = ({ pathImage, tecnologies }) => {
+const AccordionTecnologies = ({ tecnologies }) => {
     return (
         <article className="slider">
             <SlideTrack $tecnologies={tecnologies}>
-                <ListTecnologies pathImage={pathImage} tecnologies={tecnologies} />
+                <ListTecnologies tecnologies={tecnologies} />
             </SlideTrack>
         </article>
     );
 };
 
 AccordionTecnologies.propTypes = {
-    pathImage: PropTypes.func.isRequired,
     tecnologies: PropTypes.array.isRequired,
 };
 

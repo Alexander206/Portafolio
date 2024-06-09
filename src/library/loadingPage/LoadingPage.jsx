@@ -12,24 +12,16 @@ const LoadingPage = ({ onFinish }) => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        setStateID("page_loaded");
+        setStateClass("loading_page");
     }, [pathname]);
 
-    useEffect(() => {
-        setStateID("page_loaded");
-    }, []);
-
     const handlerAnimation = () => {
-        setStateClass("loading_page off");
         onFinish();
+        setStateClass("loading_page off");
     };
 
-    return (
-        <section className={stateClass} id={stateID} onAnimationEnd={handlerAnimation}>
-            <article className="spinner-grow text-light" role="status">
-                <span className="visually-hidden"></span>
-            </article>
-        </section>
-    );
+    return <section className={stateClass} id={stateID} onAnimationEnd={handlerAnimation}></section>;
 };
 
 LoadingPage.propTypes = {

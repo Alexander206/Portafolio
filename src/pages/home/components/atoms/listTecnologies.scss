@@ -6,7 +6,7 @@
         justify-content: center;
 
         width: rem(120px);
-        height: 2.8rem;
+        height: rem(28px);
 
         &::after {
             content: "";
@@ -22,13 +22,13 @@
         img {
             width: auto;
             max-width: rem(50px);
-            height: 2.8rem;
+            height: rem(28px);
         }
     }
 
     @include responsive {
         .slide {
-            width: 18rem;
+            width: rem(180px);
             height: rem(40px);
 
             img {

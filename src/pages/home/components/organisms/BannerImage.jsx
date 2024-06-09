@@ -5,11 +5,12 @@ import SocialLink from "../../../../library/utils/SocialLink";
 
 import getScrollAnimation from "../../../../library/utils/GetScrollAnimation.jsx";
 
-const BannerImage = ({ imgProfile, imgSocial }) => {
+const BannerImage = ({ data }) => {
     const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
-    const socialElements = imgSocial.map((item, index) => {
-        return <SocialLink key={index} icon={item.icon} link={item.url} />;
+    const socialElements = data.social.map((item, index) => {
+        const icon = new URL(`../../../../assets/icon/${item.icon}`, import.meta.url).pathname;
+        return <SocialLink key={index} icon={icon} link={item.url} />;
     });
 
     return (
@@ -20,7 +21,7 @@ const BannerImage = ({ imgProfile, imgSocial }) => {
                 <div></div>
             </ul>
 
-            <img className="picture" src={imgProfile} alt="Fotografia Jeisson Alexander" />
+            <img className="picture" src={data.profile} alt="Fotografia Jeisson Alexander" />
 
             <ul className="banner_social">{socialElements}</ul>
         </motion.figure>
@@ -28,8 +29,7 @@ const BannerImage = ({ imgProfile, imgSocial }) => {
 };
 
 BannerImage.propTypes = {
-    imgProfile: PropTypes.string.isRequired,
-    imgSocial: PropTypes.array.isRequired,
+    data: PropTypes.object.isRequired,
 };
 
 export default BannerImage;

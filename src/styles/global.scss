@@ -11,6 +11,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $font-family;
+    font-weight: $font-weight-medium;
 }
 
 code {
@@ -31,7 +33,7 @@ html {
         font-family: $font-family !important;
         font-weight: 400;
 
-        background-color: $dark-color-950;
+        background: $dark-gradient-dark;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 

@@ -12,6 +12,7 @@ import navIconInstagram from "../../assets/icon/instagram.svg";
 
 const Footer = () => {
     const { social } = useContext(GeneralContext);
+    
     return (
         <footer className="footer">
             <p className="footer_data"> © 2024 Jeisson Gavilán. Todos los derechos reservados. </p>

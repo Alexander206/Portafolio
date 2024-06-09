@@ -34,8 +34,7 @@ function Splash({ onFinish }) {
                 </article>
             </article>
 
-            <div className="splash_screen-circle"></div>
-            <p className="splash_screen-logo-text">Alexander Gavilán</p>
+            <p className="splash_screen-logo-text">Jeisson Alexander</p>
         </section>
     );
 }

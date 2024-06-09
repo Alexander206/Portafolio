@@ -46,7 +46,7 @@
                 box-shadow: $box-shadow;
 
                 &:hover {
-                    background-color: $primary-color-600;
+                    background-color: $primary-color-400;
                     border: rem(1px) solid $primary-color;
 
                     .custom-btn {
@@ -66,7 +66,7 @@
                 -webkit-backdrop-filter: blur(rem(7.6px));
 
                 &:hover {
-                    background-color: $primary-color-600;
+                    background-color: $primary-color-400;
                 }
             }
         }

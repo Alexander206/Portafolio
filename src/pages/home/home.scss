@@ -2,7 +2,7 @@
 
 // Components
 @import "./components/templates/banner.scss";
-@import "./components/templates/tecnology.scss";
+@import "./components/templates/skills.scss";
 
 .main_home {
     display: flex;
@@ -12,5 +12,5 @@
     height: 100%;
 
     @include banner;
-    @include tecnology;
+    @include skills;
 }

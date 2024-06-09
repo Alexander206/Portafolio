@@ -40,22 +40,22 @@ body {
     } */
 
     &:nth-child(2) {
-        opacity: 0.6;
-        background-color: $dark-color-transparent;
-        width: rem(44px);
-        height: rem(44px);
+        opacity: 0.2;
+        background-color: $secondary-color-transparent;
+        width: rem(50px);
+        height: rem(50px);
         z-index: 998;
 
         &.active {
-            width: rem(40px);
-            height: rem(40px);
+            width: rem(55px);
+            height: rem(55px);
         }
 
         &.pointer {
             background-color: $primary-color-600;
             border: rem(1px) solid $primary-color-600;
-            width: rem(40px);
-            height: rem(40px);
+            width: rem(50px);
+            height: rem(50px);
             animation: rippleAnimation 1.5s ease-out infinite;
             animation-fill-mode: forwards;
         }

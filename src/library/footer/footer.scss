@@ -7,7 +7,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: $dark-color-950;
+    backdrop-filter: blur(rem(7.6px));
+    -webkit-backdrop-filter: blur(rem(7.6px));
     border-top: rem(1px) solid $dark-color;
 
     padding: rem(10px);

@@ -1,32 +1,38 @@
+import { useContext } from "react";
 import PropTypes from "prop-types";
 
+import GeneralContext from "../../../../context/GeneralContext";
+import Tecnology from "../organisms/Tecnology";
 import ScrollAnimationWrapper from "../../../../library/utils/ScrollAnimationWrapper";
 
 // Components
 import BannerText from "../organisms/BannerText";
 import BannerImage from "../organisms/BannerImage";
 
-const Banner = ({ imgLogo, imgProfile, imgSocial, title, greeting, btns }) => {
+const Banner = ({ text, image, tectonologies }) => {
+    const { route } = useContext(GeneralContext);
+    const logo = new URL(`../../../../assets/icon/${image.logo}`, import.meta.url).pathname;
+
     return (
         <ScrollAnimationWrapper className="banner">
             <article className="container">
-                <img className="banner_logo" src={imgLogo} alt="Logo" />
+                <a href={route.home}>
+                    <img className="banner_logo" src={logo} alt="Logo" />
+                </a>
 
-                <BannerText title={title} greeting={greeting} btns={btns} />
-
-                <BannerImage imgProfile={imgProfile} imgSocial={imgSocial} />
+                <BannerText data={text} />
+                <BannerImage data={image} />
             </article>
+
+            <Tecnology data={tectonologies} />
         </ScrollAnimationWrapper>
     );
 };
 
 Banner.propTypes = {
-    imgLogo: PropTypes.string.isRequired,
-    imgProfile: PropTypes.string.isRequired,
-    imgSocial: PropTypes.array.isRequired,
-    title: PropTypes.array.isRequired,
-    greeting: PropTypes.object.isRequired,
-    btns: PropTypes.array.isRequired,
+    text: PropTypes.object.isRequired,
+    image: PropTypes.object.isRequired,
+    tectonologies: PropTypes.object.isRequired,
 };
 
 export default Banner;

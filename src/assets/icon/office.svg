@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.76 14.17"><defs><style>.cls-1{fill:#2f3238;}</style></defs><g id="Capa_2" data-name="Capa 2"><g id="PRINT"><path class="cls-1" d="M0,11.43V2.82L7.62,0l4.14,1.33V12.92L7.62,14.17,0,11.43l7.62.92v-10l-5,1.16v6.79L0,11.43Z"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.76 14.17">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #c1c5cc;
+            }
+        </style>
+    </defs>
+    <g id="Capa_2" data-name="Capa 2">
+        <g id="PRINT">
+            <path class="cls-1"
+                d="M0,11.43V2.82L7.62,0l4.14,1.33V12.92L7.62,14.17,0,11.43l7.62.92v-10l-5,1.16v6.79L0,11.43Z" />
+        </g>
+    </g>
+</svg>

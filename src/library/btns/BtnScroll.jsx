@@ -10,6 +10,17 @@ const BtnScroll = ({ href }) => {
 
     const btnRef = useRef(null);
 
+    const scrollMove = () => {
+        const element = document.querySelector(href);
+        
+        if (element) {
+            window.scrollTo({
+                top: element.offsetTop,
+                behavior: "smooth",
+            });
+        }
+    };
+
     useEffect(() => {
         const onAnimationEnd = () => {
             setAnimationEnd(true);
@@ -51,7 +62,7 @@ const BtnScroll = ({ href }) => {
         };
     }, [isVisible, isAnimationEnd]);
 
-    return <a ref={btnRef} href={href} className={`mouse ${elementClass} clickable`} />;
+    return <button ref={btnRef} onClick={scrollMove} className={`mouse ${elementClass} clickable`} />;
 };
 
 BtnScroll.propTypes = {

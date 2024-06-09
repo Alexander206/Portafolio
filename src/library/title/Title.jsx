@@ -2,19 +2,17 @@ import PropTypes from "prop-types";
 
 import "./title.scss";
 
-const Title = ({ title, text1, textSpan, text2 }) => {
-    return (
-        <section className="title">
-            <h1>{title}</h1>
+const Title = ({ title, text1, textSpan, text2 }) => (
+    <section className="title">
+        <h1>{title}</h1>
 
-            <div className="separator"></div>
+        <div className="separator"></div>
 
-            <p>
-                {text1} <span>{textSpan}</span> {text2}
-            </p>
-        </section>
-    );
-};
+        <p>
+            {text1} <span>{textSpan}</span> {text2}
+        </p>
+    </section>
+);
 
 Title.propTypes = {
     title: PropTypes.string.isRequired,

@@ -14,13 +14,8 @@ const Nav = ({ classPage }) => {
 
     const navItems = [
         {
-            icon: "home",
-            route: route.home,
-            text: "Inicio",
-        },
-        {
             icon: "bulb",
-            route: route.about,
+            route: route.home,
             text: "Sobre mí",
         },
         {
@@ -38,6 +33,11 @@ const Nav = ({ classPage }) => {
             route: route.contact,
             text: "Contacto",
         },
+        /* {
+            icon: "color-palette",
+            route: route.resume,
+            text: "Tema",
+        }, */
     ];
 
     return (

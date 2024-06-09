@@ -4,7 +4,6 @@ import { Routes as RoutesReact, Route, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import Home from "../pages/home/Home.jsx";
-import About from "../pages/about/About.jsx";
 import Proyects from "../pages/projects/Projects.jsx";
 import Services from "../pages/services/Services.jsx";
 import Contact from "../pages/contact/Contact.jsx";
@@ -30,7 +29,6 @@ function Routes({ route }) {
 
             <RoutesReact>
                 <Route path={route.home} element={<Home />} />
-                <Route path={route.about} element={<About />} />
                 <Route path={route.projects} element={<Proyects />} />
                 <Route path={route.services} element={<Services />} />
                 <Route path={route.contact} element={<Contact />} />

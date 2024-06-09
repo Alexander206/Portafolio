@@ -28,6 +28,7 @@ $animDuration: 6s;
     box-shadow: $box-shadow;
     animation: colorSlide $animDuration linear infinite, nudgeMouse $animDuration ease-out infinite;
     z-index: 100;
+    transition: $transition;
 
     &.fade-out {
         animation: opacityBtn$transition ease-out;
@@ -64,6 +65,21 @@ $animDuration: 6s;
         height: $sizeTrackball;
         border-radius: 100%;
         animation: trackBallSlide $animDuration linear infinite;
+    }
+
+    &:hover {
+        background-color: $primary-color-transparent;
+        transition: $transition;
+
+        &:before {
+            background-color: $dark-color-800;
+            transition: $transition;
+        }
+
+        &:after {
+            background-color: $primary-color-transparent;
+            transition: $transition;
+        }
     }
 }
 

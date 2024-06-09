@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 
 import "./modalProject.scss";
 
-import Modal from "react-bootstrap/Modal";
-import Carousel from "react-bootstrap/Carousel";
+/* import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react"; */
+/* 
+import Carousel from "react-bootstrap/Carousel"; */
 
 import ProjectsContext from "../../context/ProjectsContext";
 
@@ -18,12 +19,12 @@ const ModalProject = (props) => {
         const img = new URL(`../../assets/proyects/${item[0]}`, import.meta.url).pathname;
         const img2 = new URL(`../../assets/proyects/${item[1]}`, import.meta.url).pathname;
 
-        return (
+       /*  return (
             <Carousel.Item key={index}>
                 <img src={img} alt="First slide" />
                 <img src={img2} alt="First slide" />
             </Carousel.Item>
-        );
+        ); */
     });
 
     // tecnologias del modal
@@ -70,9 +71,9 @@ const ModalProject = (props) => {
     });
 
     return (
-        <Modal
+        <div
             {...props}
-            className="modal_personalized"
+            className="modal_personalized este debe ser un modal"
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
@@ -85,7 +86,7 @@ const ModalProject = (props) => {
             </section>
 
             <section className="modal_body">
-                <Carousel data-bs-theme="dark">{carouselImages}</Carousel>
+               {/*  <Carousel data-bs-theme="dark">{carouselImages}</Carousel> */}
 
                 <article className="text">
                     <article className="slider">
@@ -114,7 +115,7 @@ const ModalProject = (props) => {
                     </article>
                 </article>
             </section>
-        </Modal>
+        </div>
     );
 };
 

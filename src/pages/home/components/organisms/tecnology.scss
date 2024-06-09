@@ -1,5 +1,4 @@
-@import "../organisms/accordionTecnologies.scss";
-@import "../organisms//rols.scss";
+@import "../molecules/accordionTecnologies.scss";
 
 @mixin tecnology {
     .tecnology {
@@ -9,30 +8,29 @@
         justify-content: center;
 
         width: 100%;
-        background-color: $primary-color;
         overflow: hidden;
 
-        padding: rem(50px) 0;
-        padding-top: rem(80px);
+        padding-top: rem(20px);
 
         h3 {
             text-align: center;
-            color: $contrast-color-800;
+            color: $contrast-color-400;
             font-size: $icon-size-sm;
             font-weight: $font-weight-regular;
 
             padding: 0 rem(30px);
-            margin-bottom: rem(40px);
+            margin-bottom: rem(50px);
         }
 
         @include accordionTecnologies;
-        @include rols;
     }
 
     @include responsive {
         .tecnology {
+            padding-top: rem(70px);
+
             h3 {
-                width: calc(100% - 17rem);
+                width: calc(100% - rem(170px));
                 font-size: $icon-size-sm;
             }
         }
