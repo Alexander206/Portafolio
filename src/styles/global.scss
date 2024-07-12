@@ -95,6 +95,7 @@ html {
     /* * Scroll personalizado */
     body::-webkit-scrollbar {
         width: rem(7px);
+        background-color: $dark-color-900;
     }
 
     body::-webkit-scrollbar-thumb {

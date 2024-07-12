@@ -42,6 +42,15 @@
             }
 
             @include SkillsAboutContainer;
+
+            .custom-btn.variant.clickable {
+                &::before,
+                &::after,
+                span::after,
+                span::before {
+                    background-color: $secondary-color-500;
+                }
+            }
         }
     }
 

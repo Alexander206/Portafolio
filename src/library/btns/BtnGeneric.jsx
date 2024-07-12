@@ -1,5 +1,9 @@
+import { useMemo } from "react";
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+
+import getScrollAnimation from "../utils/GetScrollAnimation.jsx";
 
 import "./btnGeneric.scss";
 
@@ -11,7 +15,8 @@ const BodyBtn = ({ variant, icon, text }) => (
 );
 
 const BtnGeneric = ({ route, url, className, variant, icon, text }) => {
-    const classCondition = `btn_generic ${className ? className : ""} ${!variant ? "variant" : ""} clickable`;
+    const scrollAnimation = useMemo(() => getScrollAnimation(), []);
+    const classCondition = `btn_generic ${className ? className : ""} ${variant ? "variant" : ""} clickable`;
 
     if (route) {
         return (
@@ -21,9 +26,15 @@ const BtnGeneric = ({ route, url, className, variant, icon, text }) => {
         );
     } else if (url) {
         return (
-            <a href={url} className={classCondition} target="_blank">
+            <motion.a
+                variants={scrollAnimation}
+                custom={{ duration: 2 }}
+                href={url}
+                className={classCondition}
+                target="_blank"
+            >
                 <BodyBtn variant={variant} icon={icon} text={text} />
-            </a>
+            </motion.a>
         );
     } else {
         <span>Boton no disponible</span>;

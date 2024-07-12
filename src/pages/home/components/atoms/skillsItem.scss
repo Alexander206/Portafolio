@@ -25,7 +25,12 @@
 
         &:hover {
             ion-icon {
-                color: $contrast-color;
+                color: $secondary-color-500;
+                transition: $transition;
+            }
+
+            span {
+                color: $secondary-color-500;
                 transition: $transition;
             }
         }

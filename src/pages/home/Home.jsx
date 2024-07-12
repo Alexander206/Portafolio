@@ -56,7 +56,7 @@ const Home = () => {
 
                 <Skills
                     text={[
-                        "En mi trayectoria como <span>desarrollador de software</span> he colaborado en proyectos significativos, donde he tenido el privilegio de trabajar con instituciones destacadas como la <span>Pontificia Universidad Javeriana</span> y la <span>Universidad Pedagógica Nacional</span>. Mi formación como <span>Licenciado</span> ha sido esencial, permitiéndome combinar habilidades técnicas con capacidades comunicativas.",
+                        "En mi trayectoria como <span>desarrollador de software</span> he colaborado en proyectos significativos, donde he tenido el privilegio de trabajar con organizaciones destacadas como la <span>Pontificia Universidad Javeriana</span> y la <span>Universidad Pedagógica Nacional</span>. Mi formación como <span>Licenciado</span> ha sido esencial, permitiéndome combinar habilidades técnicas con capacidades comunicativas.",
                     ]}
                     ability={[
                         { icon: "people-circle", text: "COMUNICACIÓN" },
@@ -79,7 +79,7 @@ const Home = () => {
                 />
             </main>
 
-            <Footer />
+            <Footer theme="white"/>
         </>
     );
 };

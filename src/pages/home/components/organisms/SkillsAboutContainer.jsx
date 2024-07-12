@@ -1,18 +1,23 @@
 // Dependences
+import { useMemo } from "react";
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+
+import getScrollAnimation from "../../../../library/utils/GetScrollAnimation.jsx";
 
 // Components
 import SkillsItem from "../atoms/SkillsItem";
 
 // Principal component
 const SkillsAboutContainer = ({ text, ability, images, imgMe, arrow }) => {
+    const scrollAnimation = useMemo(() => getScrollAnimation(), []);
     // Texto de presentación
     const paragraphs = text.map((item, index) => <p key={index} dangerouslySetInnerHTML={{ __html: item }}></p>);
 
     // Lista de componentes de habilidades blandas
     const componentSkills = ability.map((item, index) => {
-        return <SkillsItem key={index} icon={item.icon} text={item.text} />;
+        return <SkillsItem key={index} index={index} icon={item.icon} text={item.text} />;
     });
 
     // Lista de imagenes de tecnologías
@@ -20,7 +25,9 @@ const SkillsAboutContainer = ({ text, ability, images, imgMe, arrow }) => {
         const img = new URL(`../../../../assets/icon/${item.img}`, import.meta.url).pathname;
 
         return (
-            <img
+            <motion.img
+                variants={scrollAnimation}
+                custom={{ duration: 2 }}
                 key={index}
                 className={`${item.id}_img animate__animated animate__zoomIn`}
                 src={img}
@@ -32,17 +39,28 @@ const SkillsAboutContainer = ({ text, ability, images, imgMe, arrow }) => {
     return (
         <article className="text">
             <figure className="img">
-                <img className="principal_img" src={imgMe} alt="Programing image" />
+                <motion.img
+                    variants={scrollAnimation}
+                    custom={{ duration: 2 }}
+                    className="principal_img"
+                    src={imgMe}
+                    alt="Programing image"
+                />
                 {componentImages}
             </figure>
 
             <article>
-                <article className="paragraphs">{paragraphs}</article>
+                <motion.article variants={scrollAnimation} custom={{ duration: 1 }} className="paragraphs">
+                    {paragraphs}
+                </motion.article>
+
                 <article className="skills_items">{componentSkills}</article>
 
-                <Link to="/contact" className="clickable">
-                    Contácta conmigo <img src={arrow} alt="contact img" />
-                </Link>
+                <motion.article variants={scrollAnimation} custom={{ duration: 2 }}>
+                    <Link to="/contact" className="clickable">
+                        Contácta conmigo <img src={arrow} alt="contact img" />
+                    </Link>
+                </motion.article>
             </article>
         </article>
     );

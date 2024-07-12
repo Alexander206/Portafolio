@@ -122,34 +122,37 @@
                 @include skillItem;
             }
 
-            & > a {
-                width: rem(250px);
-                color: $dark-color;
-                font-weight: $font-weight-bold;
-                font-size: $font-size-lg;
-                margin-top: rem(40px);
-                letter-spacing: rem(0.8px);
-                display: flex;
-                align-items: center;
-                margin-bottom: rem(20px);
+            & > article {
                 order: 2;
-                transition: $transition;
 
-                img {
-                    width: rem(26px);
+                a {
+                    width: rem(250px);
                     color: $dark-color;
-                    margin-left: rem(10px);
+                    font-weight: $font-weight-bold;
+                    font-size: $font-size-lg;
+                    margin-top: rem(40px);
+                    letter-spacing: rem(0.8px);
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: rem(20px);
                     transition: $transition;
-                }
-            }
 
-            a:hover {
-                color: $dark-color;
-                transition: $transition;
+                    &:hover {
+                        color: $secondary-color-500;
+                        transition: $transition;
 
-                img {
-                    margin-left: rem(25px);
-                    transition: $transition;
+                        img {
+                            margin-left: rem(25px);
+                            transition: $transition;
+                        }
+                    }
+
+                    img {
+                        width: rem(26px);
+                        color: $dark-color;
+                        margin-left: rem(10px);
+                        transition: $transition;
+                    }
                 }
             }
         }
