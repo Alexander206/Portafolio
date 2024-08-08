@@ -43,13 +43,13 @@ const Greeting = ({ greeting }) => {
     }, [isBlinking]);
 
     return (
-        <motion.h1 variants={scrollAnimation} custom={{ duration: 2 }}>
+        <motion.h2 variants={scrollAnimation} custom={{ duration: 2 }}>
             {greeting.greeting}
             <br />
             <span className="txt-rotate" data-rotate={`${toRotate}`}>
                 <span className={`wrap ${isBlinking}`}>{text}</span>
             </span>
-        </motion.h1>
+        </motion.h2>
     );
 };
 

@@ -1,5 +1,7 @@
-import { useContext } from "react";
+import { lazy, Suspense, useContext } from "react";
 import PropTypes from "prop-types";
+
+import { Skeleton } from "@nextui-org/react";
 
 import GeneralContext from "../../../../context/GeneralContext";
 import Tecnology from "../organisms/Tecnology";
@@ -8,6 +10,7 @@ import ScrollAnimationWrapper from "../../../../library/utils/ScrollAnimationWra
 // Components
 import BannerText from "../organisms/BannerText";
 import BannerImage from "../organisms/BannerImage";
+const Image = lazy(() => import("../../../../library/image/Image"));
 
 const Banner = ({ text, image, tectonologies }) => {
     const { route } = useContext(GeneralContext);
@@ -16,11 +19,14 @@ const Banner = ({ text, image, tectonologies }) => {
     return (
         <ScrollAnimationWrapper className="banner">
             <article className="container">
-                <a href={route.home}>
-                    <img className="banner_logo" src={logo} alt="Logo" />
-                </a>
+                <Suspense fallback={<Skeleton className="banner_logo" />}>
+                    <a href={route.home}>
+                        <Image className="banner_logo" src={logo} alt="Logo" />
+                    </a>
+                </Suspense>
 
                 <BannerText data={text} />
+
                 <BannerImage data={image} />
             </article>
 

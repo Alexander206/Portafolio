@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: space-between;
 
-    width: calc(100% - rem(20px));
+    width: calc(auto - rem(20px));
     max-width: rem(400px);
     border: rem(1px) solid $dark-color-700;
     border-radius: rem(50px);
@@ -27,7 +27,7 @@
         align-items: center;
         justify-content: space-between;
 
-        width: 100%;
+        width: auto;
         max-width: rem(1320px);
 
         padding: 0;

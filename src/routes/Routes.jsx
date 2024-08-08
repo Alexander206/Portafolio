@@ -1,13 +1,13 @@
 // Dependencias
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { Routes as RoutesReact, Route, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import Home from "../pages/home/Home.jsx";
-import Proyects from "../pages/projects/Projects.jsx";
-import Services from "../pages/services/Services.jsx";
-import Contact from "../pages/contact/Contact.jsx";
-import NotFound from "../pages/not_found/NotFound.jsx";
+const Home = lazy(() => import("../pages/home/Home.jsx"));
+const Projects = lazy(() => import("../pages/projects/Projects.jsx"));
+const Services = lazy(() => import("../pages/services/Services.jsx"));
+const Contact = lazy(() => import("../pages/contact/Contact.jsx"));
+const NotFound = lazy(() => import("../pages/not_found/NotFound.jsx"));
 
 import LoadingPage from "../library/loadingPage/LoadingPage.jsx";
 
@@ -26,14 +26,15 @@ function Routes({ route }) {
     return (
         <>
             {showLoad && <LoadingPage onFinish={handleLoadFinish} />}
-
-            <RoutesReact>
-                <Route path={route.home} element={<Home />} />
-                <Route path={route.projects} element={<Proyects />} />
-                <Route path={route.services} element={<Services />} />
-                <Route path={route.contact} element={<Contact />} />
-                <Route path={route.notFound} element={<NotFound />} />
-            </RoutesReact>
+            <Suspense fallback={<></>}>
+                <RoutesReact>
+                    <Route path={route.home} element={<Home />} />
+                    <Route path={route.projects} element={<Projects />} />
+                    <Route path={route.services} element={<Services />} />
+                    <Route path={route.contact} element={<Contact />} />
+                    <Route path={route.notFound} element={<NotFound />} />
+                </RoutesReact>
+            </Suspense>
         </>
     );
 }

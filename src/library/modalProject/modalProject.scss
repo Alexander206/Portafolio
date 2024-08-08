@@ -1,272 +1,147 @@
 @import "@styles/autoload.scss";
 
-.modal_personalized .modal-dialog {
-    max-width: rem(1220px);
+.modal_personalized {
+    border: 1px solid $dark-color-800;
+    background-color: $dark-color;
+    border-radius: rem(20px);
+    padding-top: rem(40px);
+    width: 100%;
+    margin: rem(10px);
+    margin-bottom: rem(100px);
+    z-index: 999 !important;
 
-    .modal-content {
-        background-color: $dark-color;
-        border-radius: rem(20px);
+    .modal_body {
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
 
-        .modal_header {
-            display: flex;
-            align-items: center;
-            justify-content: right;
-            padding: rem(20px);
-
-            button {
-                width: rem(30px);
-                height: rem(30px);
-
-                ion-icon {
-                    font-size: $font-size-xxxl;
-                    color: $light-color;
-                    transition: $transition;
-                }
-
-                ion-icon:hover {
-                    color: $contrast-color;
-                    transition: $transition;
-                }
-            }
-        }
-
-        .modal_body {
+        .text {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
+            padding: rem(20px);
+            padding-bottom: rem(50px);
 
-            .carousel {
-                display: flex;
-                align-items: center;
-                width: 100%;
-                max-height: rem(600px);
-                overflow: hidden;
-
-                .carousel-indicators button {
-                    width: rem(10px);
-                    height: rem(10px);
-                    border-radius: 50%;
-                }
-
-                .carousel-inner .carousel-item {
-                    max-height: rem(600px);
-
-                    img {
-                        width: 100%;
-                    }
-
-                    img:nth-child(1) {
-                        display: none;
-                    }
-                }
-
-                .carousel-inner .active {
-                    display: flex;
-
-                    img:nth-child(2) {
-                        display: initial;
-                    }
-                }
-            }
-
-            .text {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                padding: rem(30px);
-                padding-bottom: rem(50px);
-
-                .slider {
-                    width: 90%;
-                    height: auto;
-                    margin: auto;
-                    overflow: hidden;
-                    margin-bottom: rem(30px);
-
-                    .slide-track {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-around;
-                        flex-wrap: wrap;
-                        gap: rem(20px);
-                        width: 100%;
-                    }
-
-                    .slide {
-                        border: rem(1px) solid $dark-color-700;
-                        border-radius: rem(50px);
-                        font-size: $font-size-lg;
-                        color: $contrast-color-800;
-                        padding: rem(5px) rem(20px);
-                    }
-                }
-
-                .info {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: start;
-                    justify-content: space-between;
-                    gap: rem(20px);
-                    width: 90%;
-
-                    ul {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        padding-left: rem(40px);
-                    }
-
-                    h4 {
-                        position: relative;
-                        color: $contrast-color;
-                        font-size: $font-size-lg;
-                        left: rem(-40px);
-                        margin-bottom: rem(10px);
-                    }
-
-                    .separator {
-                        width: 100%;
-                        min-width: rem(100px);
-                        height: rem(2px);
-                        background-color: $dark-color-700;
-                    }
-
-                    .links {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: start;
-                        gap: rem(10px);
-
-                        padding: 0;
-
-                        .upss {
-                            width: 100%;
-                            text-align: center;
-                            color: $secondary-color;
-                            font-size: $font-size-sm;
-                        }
-
-                        a {
-                            display: flex;
-                            align-items: center;
-                            justify-content: start;
-                            gap: rem(10px);
-                            min-width: rem(160px);
-
-                            font-size: $icon-size-sm;
-                            font-weight: $font-weight-bold;
-                            color: $contrast-color;
-                            background-color: transparent;
-                            border: rem(1px) solid var(--neutral);
-                            border-radius: rem(15px);
-
-                            padding: rem(10px) rem(15px);
-
-                            transition: $transition ease-in-out;
-
-                            /* ---------------- */
-
-                            &:hover {
-                                background-color: $contrast-color-100;
-                                color: $dark-color;
-                                transition: $transition;
-                            }
-
-                            &:hover ion-icon {
-                                color: $primary-color;
-                                transition: $transition;
-                            }
-
-                            ion-icon {
-                                color: $contrast-color;
-                                font-size: $icon-size-md;
-                                transition: $transition;
-                            }
-                        }
-                    }
-
-                    .author {
-                        list-style: none;
-                        align-items: start;
-                        gap: rem(10px);
-
-                        li {
-                            position: relative;
-                            left: rem(-20px);
-                            font-size: $icon-size-sm;
-                            color: $contrast-color;
-                        }
-                    }
-
-                    .achievements {
-                        align-items: start;
-                        gap: rem(10px);
-
-                        font-size: $font-size-sm;
-                        font-weight: $font-weight-regular;
-                        color: $contrast-color;
-                        max-width: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@include responsive {
-    .modal_personalized .modal-dialog .modal-content .modal_body {
-        .carousel {
-            .carousel-inner .carousel-item {
-                img {
-                    width: 50%;
-                }
-
-                img:nth-child(1) {
-                    display: initial;
-                }
-            }
-
-            .carousel-inner .active {
-                display: flex;
-
-                img:nth-child(2) {
-                    display: initial;
-                }
-            }
-        }
-
-        .text {
             .slider {
-                width: 85%;
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+                margin: 0;
+                margin-bottom: rem(30px);
 
                 .slide-track {
-                    justify-content: space-evenly;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: rem(10px);
+                    width: 100%;
+                }
+
+                .slide {
+                    border: rem(1px) solid $primary-color-700;
+                    border-radius: rem(50px);
+                    font-size: $font-size-md;
+                    color: $contrast-color-800;
+                    padding: rem(5px) rem(15px);
                 }
             }
 
             .info {
-                flex-direction: row;
-
-                width: 85%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-between;
+                gap: rem(20px);
+                width: 100%;
+                padding: 0 rem(20px);
 
                 ul {
+                    display: flex;
+                    flex-direction: column;
                     align-items: center;
+                    justify-content: center;
                 }
 
                 h4 {
-                    left: rem(-20px);
+                    color: $primary-color;
+                    font-size: $font-size-lg;
+                    margin-bottom: rem(10px);
                 }
 
                 .separator {
-                    width: rem(2px);
-                    min-width: auto;
-                    height: 100%;
-                    min-height: rem(100px);
+                    width: 100%;
+                    min-width: rem(100px);
+                    height: rem(2px);
+                    background-color: $dark-color-700;
+                }
+
+                .links {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: rem(10px);
+
+                    padding: 0;
+
+                    .upss {
+                        width: 100%;
+                        text-align: center;
+                        color: $secondary-color;
+                        font-size: $font-size-sm;
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        gap: rem(10px);
+                        min-width: rem(160px);
+
+                        font-size: $icon-size-sm;
+                        font-weight: $font-weight-bold;
+                        color: $contrast-color;
+                        background-color: transparent;
+                        border: rem(1px) solid var(--neutral);
+                        border-radius: rem(15px);
+
+                        padding: rem(10px) 0;
+
+                        transition: $transition ease-in-out;
+
+                        /* ---------------- */
+
+                        &:hover {
+                            background-color: $contrast-color-100;
+                            color: $dark-color;
+                            transition: $transition;
+                        }
+
+                        &:hover ion-icon {
+                            color: $primary-color;
+                            transition: $transition;
+                        }
+
+                        ion-icon {
+                            color: $contrast-color;
+                            font-size: $icon-size-md;
+                            transition: $transition;
+                        }
+                    }
+                }
+
+                .author {
+                    list-style: none;
+                    align-items: start;
+                    gap: rem(10px);
+
+                    li {
+                        font-size: $icon-size-sm;
+                        color: $contrast-color;
+                    }
                 }
 
                 .achievements {
@@ -276,9 +151,12 @@
                     font-size: $font-size-sm;
                     font-weight: $font-weight-regular;
                     color: $contrast-color;
-                    max-width: 55%;
+                    max-width: 100%;
                 }
             }
         }
     }
+}
+
+@include responsive {
 }

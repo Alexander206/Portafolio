@@ -1,8 +1,12 @@
-import { useMemo } from "react";
+import { useMemo, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
-import SocialLink from "../../../../library/utils/SocialLink";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Skeleton } from "@nextui-org/react";
+
+import Image from "../../../../library/image/Image.jsx";
+import SocialLink from "../../../../library/utils/SocialLink";
 import getScrollAnimation from "../../../../library/utils/GetScrollAnimation.jsx";
 
 const BannerImage = ({ data }) => {
@@ -21,7 +25,7 @@ const BannerImage = ({ data }) => {
                 <div></div>
             </ul>
 
-            <img className="picture" src={data.profile} alt="Fotografia Jeisson Alexander" />
+            <Image className="picture" src={data.profile} alt="Fotografia de Jeisson Alexander" />
 
             <ul className="banner_social">{socialElements}</ul>
         </motion.figure>

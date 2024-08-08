@@ -10,9 +10,12 @@
         "adobe": "adobe.svg",
         "figma": "figma.svg",
 
+        "notion": "notion.svg",
+        "git": "git.svg",
+
+        "php": "php.svg",
         "java": "java.svg",
         "javascript": "javascript.svg",
-        "php": "php.svg",
 
         "react": "react.svg",
         "sass": "sass.svg",
@@ -22,9 +25,6 @@
 
         "mongodb": "mongodb.svg",
         "mysql": "mysql.svg",
-
-        "notion": "notion.svg",
-        "git": "git.svg",
 
         "wordpress": "wordpress.svg",
         "moodle": "moodle.svg",

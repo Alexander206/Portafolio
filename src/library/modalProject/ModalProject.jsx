@@ -1,127 +1,123 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import "./modalProject.scss";
 
-/* import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react"; */
-/* 
-import Carousel from "react-bootstrap/Carousel"; */
+import { Modal, ModalContent, ModalBody, Button, useDisclosure } from "@nextui-org/react";
 
+import Carousel from "../carousel/Carousel";
 import ProjectsContext from "../../context/ProjectsContext";
 
-const ModalProject = (props) => {
+const ModalProject = ({ modalShow, id }) => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
+    const handleOpen = () => {
+        onOpen();
+    };
+
+    useEffect(() => {
+        modalShow ? onOpen() : onClose();
+    }, [modalShow]);
+
     // Contexto del modal
-    const projectData = useContext(ProjectsContext)[props.id];
-
-    // Imagenes del modal
-    const carouselImages = projectData.modal.images.map((item, index) => {
-        // Enrutamiento de las imagenes
-        const img = new URL(`../../assets/proyects/${item[0]}`, import.meta.url).pathname;
-        const img2 = new URL(`../../assets/proyects/${item[1]}`, import.meta.url).pathname;
-
-       /*  return (
-            <Carousel.Item key={index}>
-                <img src={img} alt="First slide" />
-                <img src={img2} alt="First slide" />
-            </Carousel.Item>
-        ); */
-    });
-
-    // tecnologias del modal
-    const tecnologies = projectData.modal.technologies.map((item, index) => {
-        return (
-            <span className="slide" key={index}>
-                {item}
-            </span>
-        );
-    });
-
-    // Logros alcanzados
-    const achievements = projectData.modal.achievements.map((item, index) => {
-        return <li key={index}>{item}</li>;
-    });
-
-    // Validación para los links
-    const iconLink = projectData.link ? (
-        <a href={projectData.link} target="_blank">
-            <ion-icon name="earth-outline"></ion-icon>
-            Sitio web
-        </a>
-    ) : (
-        <span className="upss">Aún está en construcción</span>
-    );
-
-    // Validación para el repositorio
-    const iconRepo = projectData.repo ? (
-        <a href={projectData.repo} target="_blank">
-            <ion-icon name="logo-github"></ion-icon>
-            Repositorio
-        </a>
-    ) : (
-        false
-    );
-
-    // Lista de autores del proyecto
-    const listAuthor = projectData.author.map((item, index) => {
-        return (
-            <li key={index}>
-                {item} <br />
-            </li>
-        );
-    });
+    const projectData = useContext(ProjectsContext)[id];
 
     return (
-        <div
-            {...props}
-            className="modal_personalized este debe ser un modal"
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-            key={projectData.title}
-        >
-            <section className="modal_header">
-                <button onClick={props.onHide}>
-                    <ion-icon name="close-circle-outline"></ion-icon>
-                </button>
-            </section>
+        <>
+            {projectData.link ? (
+                <Button className="btn_modal" onPress={() => handleOpen()}>
+                    <ion-icon name="open"></ion-icon>
+                </Button>
+            ) : (
+                false
+            )}
 
-            <section className="modal_body">
-               {/*  <Carousel data-bs-theme="dark">{carouselImages}</Carousel> */}
+            <Modal
+                size="5xl"
+                isOpen={isOpen}
+                onClose={onClose}
+                placement="top"
+                shouldBlockScroll
+                backdrop="blur"
+                className="modal_personalized"
+            >
+                <ModalContent>
+                    {() => (
+                        <>
+                            <ModalBody className="modal_body">
+                                <Carousel images={projectData.modal.images} />
 
-                <article className="text">
-                    <article className="slider">
-                        <div className="slide-track">{tecnologies}</div>
-                    </article>
+                                <article className="text">
+                                    <article className="slider">
+                                        <div className="slide-track">
+                                            {projectData.modal.technologies.map((item, index) => {
+                                                return (
+                                                    <span className="slide" key={index}>
+                                                        {item}
+                                                    </span>
+                                                );
+                                            })}
+                                        </div>
+                                    </article>
 
-                    <article className="info">
-                        <ul className="links">
-                            {iconLink}
-                            {iconRepo}
-                        </ul>
+                                    <article className="info">
+                                        <ul className="links">
+                                            {projectData.link ? (
+                                                <a href={projectData.link} target="_blank">
+                                                    <ion-icon name="earth-outline"></ion-icon>
+                                                    Sitio web
+                                                </a>
+                                            ) : (
+                                                <span className="upss">Aún está en construcción</span>
+                                            )}
 
-                        <div className="separator"></div>
+                                            {projectData.repo ? (
+                                                <a href={projectData.repo} target="_blank">
+                                                    <ion-icon name="logo-github"></ion-icon>
+                                                    Repositorio
+                                                </a>
+                                            ) : (
+                                                false
+                                            )}
+                                        </ul>
 
-                        <ul className="author">
-                            <h4>Autores</h4>
-                            {listAuthor}
-                        </ul>
+                                        <div className="separator"></div>
 
-                        <div className="separator"></div>
+                                        <ul className="author">
+                                            <h4>Autores</h4>
 
-                        <ul className="achievements">
-                            <h4>Logros significativos y Retos superados</h4>
-                            {achievements}
-                        </ul>
-                    </article>
-                </article>
-            </section>
-        </div>
+                                            {projectData.author.map((item, index) => {
+                                                return (
+                                                    <li key={index}>
+                                                        {item} <br />
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
+
+                                        <div className="separator"></div>
+
+                                        <ul className="achievements">
+                                            <h4>Logros significativos y Retos superados</h4>
+
+                                            {projectData.modal.achievements.map((item, index) => {
+                                                return <li key={index}>{item}</li>;
+                                            })}
+                                        </ul>
+                                    </article>
+                                </article>
+                            </ModalBody>
+                        </>
+                    )}
+                </ModalContent>
+            </Modal>
+        </>
     );
 };
 
 ModalProject.propTypes = {
-    id: PropTypes.string.isRequired,
-    onHide: PropTypes.func.isRequired,
+    modalShow: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
 };
 
 export default ModalProject;

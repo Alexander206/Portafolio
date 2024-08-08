@@ -1,73 +1,72 @@
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
+
+import { Accordion, AccordionItem } from "@nextui-org/react";
 
 import "./projects.scss";
 import "./components/templates/game.scss";
 
-import LoadingPage from "../../library/loadingPage/LoadingPage.jsx";
 import Nav from "../../library/nav/Nav.jsx";
 import Footer from "../../library/footer/Footer.jsx";
-import ProjectsTitle from "../../library/title/Title.jsx";
 import CategoriesComponent from "./components/templates/CategoriesComponent.jsx";
 import Project from "./components/organisms/Project.jsx";
 
 import ProjectsContext from "../../context/ProjectsContext.jsx";
 import data from "./data.json";
+import BtnUp from "../../library/btns/BtnUp.jsx";
 
-const Proyects = () => {
-    const [selectCategory, setSelectCategory] = useState(true);
-    const [itemSelect, setItemSelect] = useState("Todos");
-    const [stateProjects, setStateProjects] = useState();
+import Carousel from "../../library/carousel/Carousel.jsx";
 
-    const Categories = data.categories.map((item, index) => {
+const Projects = () => {
+    const [itemSelect, setItemSelect] = useState(0);
+    const { projects, categories } = data;
+    const categoriesList = categories.map((item) => item.toLocaleUpperCase());
+
+    // Filtrar proyectos basados en la categoría seleccionada
+    const filteredProjects = useMemo(() => {
+        return projects.filter((item) =>
+            itemSelect !== 0 ? item.category.some((category) => category === categoriesList[itemSelect]) : true
+        );
+    }, [itemSelect]);
+
+    const listCategories = categories.map((item, index) => {
         return (
             <CategoriesComponent
                 key={index}
-                id={item}
+                id={index}
                 category={item}
-                componentClass={selectCategory && itemSelect === item ? "btn_active" : "btn_desactive"}
-                selectCategory={selectCategory}
-                setSelectCategory={setSelectCategory}
                 itemSelect={itemSelect}
                 setItemSelect={setItemSelect}
             />
         );
     });
 
-    const FilterProjects = data.projects.filter((item) => {
-        return item.category.some((elemento) => elemento.toUpperCase().includes(itemSelect.toUpperCase()));
-    });
-
-    const Projects = FilterProjects.map((item, index) => {
-        return <Project key={index} id={item.id} />;
-    });
-
-    const AllProjects = data.projects.map((item, index) => {
-        return <Project key={index} id={index} />;
-    });
-
-    useEffect(() => {
-        data.categories.forEach((item) => {
-            if (itemSelect === item) {
-                setStateProjects(Projects);
-            } else if (itemSelect === "Todos") {
-                setStateProjects(AllProjects);
-            }
-        });
-    }, [itemSelect, Projects, AllProjects]);
-
     return (
-        <ProjectsContext.Provider value={data.projects}>
-            <Nav classPage={"header_projects"} />
+        <ProjectsContext.Provider value={projects}>
+            <Nav classPage="header_projects" />
+            <BtnUp />
             <main className="main_projects">
-                <ProjectsTitle title={data.title} text1={data.text1} textSpan={data.textSpan} text2={data.text2} />
-
                 <section className="container_filter">
                     <article className="filtrer">
-                        <h2>{data.categoryText}</h2>
-                        <ul>{Categories}</ul>
+                        <article className="text">
+                            <h2>Proyectos</h2>
+                            <p>
+                                Cada proyecto ha sido una oportunidad para crecer personal y profesionalmente.{" "}
+                                <span>¿Quieres obtener más detalles?</span> No dudes en contactarme.
+                            </p>
+                        </article>
+
+                        <Accordion className="categories">
+                            <AccordionItem className="filters_box" key="1" aria-label="Filtros" title="Filtros">
+                                <ul>{listCategories}</ul>
+                            </AccordionItem>
+                        </Accordion>
                     </article>
 
-                    <article className="projects_container">{stateProjects}</article>
+                    <article className="projects_container">
+                        {filteredProjects.map((item, index) => (
+                            <Project key={index} id={item.id} />
+                        ))}
+                    </article>
                 </section>
             </main>
             <Footer />
@@ -75,4 +74,4 @@ const Proyects = () => {
     );
 };
 
-export default Proyects;
+export default Projects;

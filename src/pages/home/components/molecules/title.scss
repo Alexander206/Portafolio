@@ -12,7 +12,7 @@
         width: 65vw;
         margin-top: rem(10px);
 
-        h2 {
+        h1 {
             text-align: right;
             font-size: $font-size-sm;
             color: $contrast-color-400;
@@ -27,7 +27,7 @@
             width: 100%;
             font-size: $font-size-sm;
 
-            div {
+            .separator {
                 display: none;
             }
         }
@@ -41,7 +41,7 @@
             width: 100%;
             margin: 1;
 
-            h2 {
+            h1 {
                 text-align: left;
                 font-size: $icon-size-md;
                 color: $contrast-color-400;
@@ -56,7 +56,7 @@
                 width: 100%;
                 font-size: $font-size-lg;
 
-                div {
+                .separator {
                     width: 38%;
                     height: rem(2px);
                     background-color: $contrast-color-800;

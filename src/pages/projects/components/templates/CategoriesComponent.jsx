@@ -1,22 +1,13 @@
 import PropTypes from "prop-types";
 
-const CategoriesComponent = ({
-    id,
-    category,
-    componentClass,
-    selectCategory,
-    setSelectCategory,
-    itemSelect,
-    setItemSelect,
-}) => {
+const CategoriesComponent = ({ id, category, itemSelect, setItemSelect }) => {
     const handlerCategory = (event) => {
-        itemSelect == event.target.value ? setSelectCategory(!selectCategory) : setSelectCategory(true);
-        setItemSelect(event.target.value);
+        setItemSelect(parseInt(event.target.value));
     };
 
     return (
         <li>
-            <button onClick={handlerCategory} className={componentClass} value={id}>
+            <button onClick={handlerCategory} className={id === itemSelect ? "btn_active" : "btn_desactive"} value={id}>
                 {category}
             </button>
         </li>
@@ -26,9 +17,6 @@ const CategoriesComponent = ({
 CategoriesComponent.propTypes = {
     id: PropTypes.number.isRequired,
     category: PropTypes.string.isRequired,
-    componentClass: PropTypes.string.isRequired,
-    selectCategory: PropTypes.bool.isRequired,
-    setSelectCategory: PropTypes.func.isRequired,
     itemSelect: PropTypes.number.isRequired,
     setItemSelect: PropTypes.func.isRequired,
 };

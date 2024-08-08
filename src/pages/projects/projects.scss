@@ -11,8 +11,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-
-    padding-top: rem(100px);
+    background: $dark-gradient-dark;
 
     @include projectsTitle;
 
@@ -23,37 +22,64 @@
         justify-content: center;
         width: 100%;
         max-width: rem(1420px);
-
         margin-bottom: rem(70px);
 
         .filtrer {
-            position: sticky;
-            top: rem(80px);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: rem(20px);
+
             width: 100%;
-            background-color: $dark-color-950;
-            padding: 0 rem(20px);
-            padding-top: rem(20px);
+            padding: rem(20px);
 
             z-index: 1;
 
-            h2 {
-                font-size: rem(20px);
-                display: none;
+            .text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: rem(20px);
+                padding: rem(20px) rem(30px);
+                padding-bottom: rem(10px);
+
+                h2 {
+                    color: $primary-color;
+                    font-size: $font-size-xl;
+                }
+
+                p {
+                    max-width: rem(315px);
+                    color: $contrast-color;
+                    font-size: $font-size-md;
+                    font-weight: $font-weight-regular;
+                    text-align: center;
+
+                    span {
+                        color: $primary-color;
+                    }
+                }
             }
 
-            ul {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
+            .categories {
+                max-width: rem(330px);
+                padding: 0;
 
-                margin-bottom: rem(20px);
+                h2 button {
+                    padding: rem(5px) rem(20px);
+                }
 
-                @include categoriesComponent;
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: rem(5px);
+                    width: 100%;
+
+                    @include categoriesComponent;
+                }
             }
         }
 
@@ -62,11 +88,11 @@
             display: flex;
             flex-wrap: wrap;
             align-items: stretch;
-            justify-content: space-evenly;
+            justify-content: left;
             gap: rem(20px);
             width: 100%;
             padding: 0 rem(20px);
-            margin-top: rem(40px);
+            margin-top: rem(10px);
 
             @include project;
         }

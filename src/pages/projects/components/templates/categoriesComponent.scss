@@ -6,30 +6,43 @@
 
         .btn_desactive,
         .btn_active {
-            color: $contrast-color-800;
-            font-size: $font-size-sm;
-            padding: rem(10px);
-            border-bottom: none;
+            font-size: $icon-size-sm;
+            color: $contrast-color;
+            border-right: 1px solid $primary-color;
+            padding: rem(8px) rem(10px);
+
             transition: $transition;
 
             &:hover {
                 color: $contrast-color-400;
                 transition: $transition;
             }
+
+            &:last-child {
+                border-right: none;
+            }
         }
 
         .btn_desactive {
+            border-bottom: 1px solid transparent;
             transition: $transition;
+
+            &:hover {
+                transition: $transition;
+                border-bottom: 1px solid $contrast-color;
+                color: $primary-color-400;
+            }
         }
 
         .btn_active {
             color: $primary-color;
-            border-bottom: rem(1px) solid $primary-color;
             transition: $transition;
-        }
+            border-bottom: 1px solid $contrast-color;
 
-        .btn_active:hover {
-            color: $primary-color;
+            &:hover {
+                color: $primary-color-400;
+                border-bottom: 1px solid $contrast-color-400;
+            }
         }
     }
 
@@ -42,5 +55,3 @@
         }
     }
 }
-
-

@@ -11,10 +11,12 @@
         text-decoration: none;
         max-width: rem(370px);
         background-color: $dark-color;
-        border-radius: rem(10px);
+        border-radius: rem(25px);
+        border: 1px solid $dark-color-800;
         transition: $transition;
 
-        margin: rem(10px) 0;
+        margin: rem(10px) auto;
+        overflow: hidden;
 
         &:hover {
             box-shadow: 0 rem(0px) (10px) rgb(26 26 26 / 38%);
@@ -46,8 +48,8 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: rem(260px);
-            height: rem(260px);
+            min-height: rem(240px);
+            height: rem(240px);
             border-radius: rem(10px) rem(10px) 0 0;
             overflow: hidden;
 
@@ -57,7 +59,7 @@
         }
 
         .projects_data > * {
-            margin: rem(10px) 0;
+            margin: rem(8px) 0;
             line-height: 1.5;
             letter-spacing: rem(0.8px);
         }
@@ -67,7 +69,7 @@
             height: 100%;
             background-color: $dark-color;
             padding: rem(20px);
-            margin-bottom: rem(50px);
+            margin-bottom: rem(40px);
 
             .projects_category {
                 font-size: $font-size-xs;
@@ -99,7 +101,7 @@
                 width: 100%;
                 font-size: $font-size-xs;
                 font-weight: $font-weight-bold;
-                color: $contrast-color-800;
+                color: $contrast-color-500;
                 border: rem(1px) solid $dark-color-700;
                 border-radius: rem(10px);
 
@@ -117,8 +119,7 @@
             gap: rem(20px);
             width: 100%;
 
-            padding: rem(20px) 0;
-            padding-left: rem(20px);
+            padding: rem(15px) rem(20px);
 
             .upss {
                 width: 100%;
@@ -128,15 +129,39 @@
             }
 
             a ion-icon {
-                color: $secondary-color;
+                color: $primary-color-300;
                 font-size: $icon-size-lg;
                 transition: $transition;
             }
 
             a ion-icon:hover {
-                color: var(--secondaryHover);
+                color: $primary-color-400;
                 transition: $transition;
             }
+        }
+
+        .btn_modal {
+            position: absolute;
+            top: rem(220px);
+            right: rem(15px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: $primary-color;
+            font-size: $font-size-xl;
+            min-width: auto;
+            width: rem(40px);
+            height: rem(40px);
+            border-radius: 50%;
+            background-color: $dark-color;
+            box-shadow: $box-shadow-hover;
+            border: 1px solid $contrast-color-700;
+
+            padding: 0;
+            margin: 0;
+            transition: $transition;
         }
     }
 }

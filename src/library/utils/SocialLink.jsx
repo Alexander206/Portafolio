@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import Image from "../image/Image.jsx";
 
 const SocialLink = ({ icon, link }) => (
     <li>
         <a className="clickable" href={link} target="_blank" aria-label="icon social">
-            <img src={icon} alt="icon social" />
+            <Image src={icon} alt="icon social" />
         </a>
     </li>
 );

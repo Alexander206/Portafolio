@@ -8,7 +8,7 @@ const NotFound = () => {
     return (
         <>
             <Nav classPage={"header_home"} />
-            Services
+            NotFound
             <Footer />
         </>
     );

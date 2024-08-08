@@ -19,11 +19,6 @@ const Nav = ({ classPage }) => {
             text: "Sobre mí",
         },
         {
-            icon: "cube",
-            route: route.services,
-            text: "Servicios",
-        },
-        {
             icon: "code-slash",
             route: route.projects,
             text: "Proyectos",
@@ -33,11 +28,6 @@ const Nav = ({ classPage }) => {
             route: route.contact,
             text: "Contacto",
         },
-        /* {
-            icon: "color-palette",
-            route: route.resume,
-            text: "Tema",
-        }, */
     ];
 
     return (

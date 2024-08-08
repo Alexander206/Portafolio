@@ -8,13 +8,13 @@
         max-width: rem(1320px);
 
         padding: 0 rem(30px);
-        margin-bottom: rem(70px);
+        margin-bottom: rem(20px);
 
         h1 {
             text-align: center;
-            color: $light-color;
-            font-size: rem(40px);
-            padding-top: rem(70px);
+            color: $primary-color;
+            font-size: $font-size-xxl;
+            padding-top: rem(50px);
             padding-bottom: rem(0px);
         }
 
@@ -22,7 +22,7 @@
             width: 30%;
             height: rem(2px);
             background-color: $contrast-color;
-            margin: rem(40px);
+            margin: rem(20px);
         }
 
         p {
@@ -31,7 +31,7 @@
             max-width: rem(900px);
 
             color: $contrast-color-100;
-            font-size: $font-size-md;
+            font-size: $font-size-sm;
             letter-spacing: rem(0.8px);
             line-height: 1.5;
 

@@ -9,7 +9,7 @@ const Title = ({ title }) => {
 
     return (
         <motion.article variants={scrollAnimation} className="title">
-            <h2>{title[0]}</h2>
+            <h1>{title[0]}</h1>
 
             <span>
                 {title[1]} <div className="separator" />
