@@ -1,0 +1,38 @@
+// Component
+@import "../molecules/title.scss";
+@import "../molecules/greeting.scss";
+@import "../molecules/buttons.scss";
+
+@mixin bannerText {
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: rem(300px);
+
+        text-align: center;
+        width: 100%;
+
+        padding: rem(60px) rem(30px);
+        padding-top: rem(50px);
+
+        @include title;
+        @include greeting;
+        @include buttons;
+    }
+
+    @include responsive {
+        .text {
+            align-items: start;
+            justify-content: center;
+            gap: rem(100px);
+            width: 60%;
+
+            p {
+                text-align: left;
+                max-width: rem(640px);
+            }
+        }
+    }
+}

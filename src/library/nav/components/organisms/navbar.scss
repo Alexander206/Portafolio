@@ -1,0 +1,34 @@
+@import "../atoms/hashLink.scss";
+
+@mixin headerNavbar() {
+    .header_navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .navbar_list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(10px);
+
+            width: 100%;
+
+            list-style: none;
+
+            margin: 0;
+            padding: 0;
+
+            @include hashLink;
+        }
+    }
+
+    @include responsive {
+        .header_navbar {
+            .navbar_list {
+                flex-direction: column;
+            }
+        }
+    }
+}

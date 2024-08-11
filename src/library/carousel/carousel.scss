@@ -1,0 +1,101 @@
+@import "@styles/autoload.scss";
+
+$btn-border: 1px 1px 0px $dark-color;
+
+.carousel {
+    position: relative;
+    height: rem(600px);
+    width: 100%;
+    margin: 0 auto;
+
+    .carousel__button {
+        cursor: pointer;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: rem(40px);
+        height: rem(40px);
+        background: transparent;
+        border-radius: 50%;
+        border: none;
+        font-size: rem(20px);
+        color: $contrast-color;
+        -webkit-text-stroke: rem(1px) $dark-color;
+        text-stroke: rem(1px) $dark-color;
+
+        z-index: 10;
+    }
+
+    .carousel__button--left {
+        left: rem(5px);
+    }
+
+    .carousel__button--right {
+        right: rem(5px);
+    }
+
+    .is-hidden {
+        display: none;
+    }
+
+    .carousel__track-container {
+        background: lightgreen;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+
+        .carousel__track {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+            height: 100%;
+            transition: transform 250ms ease-in;
+
+            .carousel__slide {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+
+                .carousel__image {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .carousel__nav {
+        position: relative;
+        top: -50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(6px);
+        padding: rem(20px) 0;
+
+        .carousel__indicator {
+            height: rem(10px);
+            width: rem(10px);
+            border: 0;
+            border-radius: 50%;
+            background: $contrast-color-600;
+            cursor: pointer;
+            transition: 250ms ease-in-out;
+            border: 1px solid transparent;
+        }
+
+        .current-slide {
+            background: $primary-color;
+            border: 1px solid $dark-color-300;
+        }
+    }
+}

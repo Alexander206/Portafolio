@@ -1,0 +1,111 @@
+@mixin hashLink {
+    li {
+        margin: rem(5px);
+
+        &.active {
+            background-color: $primary-color;
+            border-radius: 50%;
+            transition: $transition;
+
+            a {
+                opacity: 1;
+                color: $dark-color;
+                font-weight: $font-weight-regular;
+                transition: $transition;
+            }
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: rem(10px);
+
+            width: 100%;
+            height: 100%;
+            font-size: $font-size-xs;
+            color: $contrast-color-100;
+            opacity: 0.75;
+            transition: $transition;
+
+            padding: rem(15px);
+
+            &:hover {
+                opacity: 1;
+                transition: $transition;
+            }
+
+            ion-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $icon-size-md;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    @include responsive {
+        li {
+            position: relative;
+
+            &.active:hover a span {
+                border: rem(1px) solid $dark-color-700;
+                background: $primary-color;
+                backdrop-filter: blur(rem(7.6px));
+
+                padding-left: rem(60px);
+                padding-right: rem(20px);
+                transition: $transition;
+                z-index: -1;
+            }
+
+            &:hover a span {
+                opacity: 1;
+                position: absolute;
+                left: 0;
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                border: rem(1px) solid $dark-color-700;
+                background: $dark-color;
+                backdrop-filter: blur(rem(7.6px));
+                width: rem(140px);
+                height: calc(100% + rem(2px));
+                border-radius: rem(60px);
+
+                padding-left: rem(60px);
+                padding-right: rem(20px);
+                transition: $transition;
+                z-index: -1;
+            }
+
+            a {
+                flex-direction: row;
+                gap: 0;
+
+                ion-icon {
+                    padding: 0;
+                }
+
+                span {
+                    position: absolute;
+                    width: 0;
+                    opacity: 0;
+                    display: flex;
+                    font-size: $font-size-sm;
+                    white-space: nowrap;
+                    border: rem(1px) solid transparent;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,27 +1,19 @@
-@import url("./_vars.scss");
-
-/************ Custom Font ************/
-@font-face {
-    font-family: Centra;
-    src: url("../assets/fonts/CentraNo2-Bold.ttf");
-    font-weight: 700;
-}
-@font-face {
-    font-family: Centra;
-    src: url("../assets/fonts/CentraNo2-Medium.ttf");
-    font-weight: 500;
-}
-@font-face {
-    font-family: Centra;
-    src: url("../assets/fonts/CentraNo2-Book.ttf");
-    font-weight: 400;
-}
+@import "@styles/autoload.scss";
+@import "@styles/tailwind.scss";
 
 /************ Default Css ************/
+
+::selection {
+    background-color: $primary-color-600;
+    color: $dark-color;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $font-family;
+    font-weight: $font-weight-medium;
 }
 
 code {
@@ -30,22 +22,20 @@ code {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 75px;
+    scroll-padding-top: rem(75px);
     height: 100%;
     min-height: auto;
-    font-size: 62.5%;
 
     body {
         position: relative;
 
         overflow-x: hidden;
+        min-height: 100vh;
         height: 100%;
-        font-family: "Centra", sans-serif !important;
+        font-family: $font-family !important;
         font-weight: 400;
 
-        background-color: var(--black);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-            "Helvetica Neue", sans-serif;
+        background: $dark-gradient-dark;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 
@@ -58,7 +48,7 @@ html {
             min-height: 100%;
             width: 100%;
 
-            border-radius: 1rem;
+            border-radius: rem(10px);
         }
     }
 
@@ -106,17 +96,18 @@ html {
 
     /* * Scroll personalizado */
     body::-webkit-scrollbar {
-        width: 7px;
+        width: rem(7px);
+        background-color: $dark-color-900;
     }
 
     body::-webkit-scrollbar-thumb {
-        background-color: var(--darkPrimary);
-        border-radius: 5px;
+        background-color: $primary-color-600;
+        border-radius: rem(5px);
         height: 40%;
     }
 }
 
-@media (min-width: 800px) {
+@include responsive {
     html body {
         background-attachment: scroll;
     }
