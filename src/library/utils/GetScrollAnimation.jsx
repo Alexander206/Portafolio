@@ -1,4 +1,4 @@
-function getScrollAnimation() {
+const getScrollAnimation = () => {
     return {
         offscreen: {
             y: 70,

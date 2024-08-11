@@ -1,9 +1,13 @@
 import { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 import "./projects.scss";
 import "./components/templates/game.scss";
+
+import ScrollAnimationWrapper from "../../library/utils/ScrollAnimationWrapper";
+import getScrollAnimation from "../../library/utils/GetScrollAnimation.jsx";
 
 import Nav from "../../library/nav/Nav.jsx";
 import Footer from "../../library/footer/Footer.jsx";
@@ -13,10 +17,10 @@ import Project from "./components/organisms/Project.jsx";
 import ProjectsContext from "../../context/ProjectsContext.jsx";
 import data from "./data.json";
 import BtnUp from "../../library/btns/BtnUp.jsx";
-
-import Carousel from "../../library/carousel/Carousel.jsx";
+import BtnScroll from "../../library/btns/BtnScroll.jsx";
 
 const Projects = () => {
+    const scrollAnimation = useMemo(() => getScrollAnimation(), []);
     const [itemSelect, setItemSelect] = useState(0);
     const { projects, categories } = data;
     const categoriesList = categories.map((item) => item.toLocaleUpperCase());
@@ -44,27 +48,27 @@ const Projects = () => {
         <ProjectsContext.Provider value={projects}>
             <Nav classPage="header_projects" />
             <BtnUp />
+            <BtnScroll href="#id_4" />
             <main className="main_projects">
                 <section className="container_filter">
-                    <article className="filtrer">
-                        <article className="text">
-                            <h2>Proyectos</h2>
-                            <p>
-                                Cada proyecto ha sido una oportunidad para crecer personal y profesionalmente.{" "}
-                                <span>¿Quieres obtener más detalles?</span> No dudes en contactarme.
-                            </p>
-                        </article>
+                    <ScrollAnimationWrapper className="filtrer" variants={scrollAnimation}>
+                        <motion.article variants={scrollAnimation}>
+                            <article className="text">
+                                <h2>Proyectos</h2>
+                                <p>Cada proyecto ha sido una oportunidad para crecer personal y profesionalmente. </p>
+                            </article>
 
-                        <Accordion className="categories">
-                            <AccordionItem className="filters_box" key="1" aria-label="Filtros" title="Filtros">
-                                <ul>{listCategories}</ul>
-                            </AccordionItem>
-                        </Accordion>
-                    </article>
+                            <Accordion className="categories" defaultExpandedKeys={["1"]}>
+                                <AccordionItem className="filters_box" key="1" aria-label="Filtros" title="Filtros">
+                                    <ul>{listCategories}</ul>
+                                </AccordionItem>
+                            </Accordion>
+                        </motion.article>
+                    </ScrollAnimationWrapper>
 
                     <article className="projects_container">
                         {filteredProjects.map((item, index) => (
-                            <Project key={index} id={item.id} />
+                            <Project key={index} id={item.id} count={index + 1} />
                         ))}
                     </article>
                 </section>

@@ -7,10 +7,10 @@
             "title": "Sitio Relacionamiento Javeriana",
             "category": ["FRONT END", "BACK END"],
             "date": "2024/ Bogotá - Colombia",
-            "text": "Plataforma web diseñada para gestionar actividades con colegios y personas interesadas en la Pontificia Universidad Javeriana.",
+            "text": "Plataforma web diseñada para la gestión de actividades con instituciones y personas interesadas en la Pontificia Universidad Javeriana.",
             "author": ["Jeisson Gavilán", "Pontificia Universidad Javeriana"],
-            "location": "DMPA | Pontificia ",
-            "link": "https://www.javeriana.edu.co/relacionamiento/",
+            "location": "Dirección de Mercadeo | Javeriana",
+            "link": "",
             "repo": "",
             "modal": {
                 "images": [
@@ -21,43 +21,15 @@
                     "etitc_5.webp",
                     "etitc_6.webp"
                 ],
-                "technologies": ["Java", "Spring Boot", "Docker", "Node Js", "React Js", "MySQL"],
+                "technologies": ["Java", "Spring Boot", "Docker Compose", "React JS", "MySQL"],
                 "achievements": [
-                    "Se implementaron componentes modulares y reutilizables con Js Vanilla en el desarrollo de la plataforma, lo que permitió agilizar el proceso de creación de contenido y facilitó la escalabilidad del sistema.",
-                    "Se desarrollaron layouts tipo plantilla para la virtualización del contenido, lo que garantizó una estructura coherente y consistente en todas las páginas del curso."
+                    "Implementación y despliegue de frontend y backend mediante la configuración y orquestación de dos contenedores en Docker.",
+                    "Establecimiento de robustas configuraciones de seguridad para la gestión de recursos de la API, utilizando JWT para autenticación, serialización de datos, encriptación, y configuraciones de CORS para asegurar la comunicación."
                 ]
             }
         },
         {
             "id": 1,
-            "img": "etitc.webp",
-            "title": "Sitio Relacionamiento Javeriana",
-            "category": ["FRONT END", "BACK END"],
-            "date": "2023/ Bogotá - Colombia",
-            "text": "Desarrollo de una plataforma web integral para capacitar a 220 docentes de la Escuela Tecnológica Instituto Técnico Central (ETITC).",
-            "author": ["Jeisson Gavilán", "Cinndet UPN"],
-            "location": "CINNDET UPN",
-            "link": "https://etitc.netlify.app/m1_modelacion/_0_inicio",
-            "repo": "",
-            "modal": {
-                "images": [
-                    "etitc_1.webp",
-                    "etitc_2.webp",
-                    "etitc_3.webp",
-                    "etitc_4.webp",
-                    "etitc_5.webp",
-                    "etitc_6.webp"
-                ],
-
-                "technologies": ["HTML", "CSS", "JavaScript", "Boostrap", "CSS Pico"],
-                "achievements": [
-                    "Se implementaron componentes modulares y reutilizables con Js Vanilla en el desarrollo de la plataforma, lo que permitió agilizar el proceso de creación de contenido y facilitó la escalabilidad del sistema.",
-                    "Se desarrollaron layouts tipo plantilla para la virtualización del contenido, lo que garantizó una estructura coherente y consistente en todas las páginas del curso."
-                ]
-            }
-        },
-        {
-            "id": 2,
             "img": "etitc.webp",
             "title": "Plataforma virtual para ETICT",
             "category": ["FRONT END"],
@@ -84,12 +56,12 @@
             }
         },
         {
-            "id": 3,
+            "id": 2,
             "img": "romeliny.webp",
             "title": "Sitio web de Romeliny",
             "category": ["FRONT END", "BACK END"],
             "date": "2023/ Bogotá - Colombia",
-            "text": "Sitio web de comercio electrónico para Romeliny, una empresa colombiana dedicada a la fabricación de calzado. El objetivo del sitio es brindar una experiencia de compra online elegante y cómoda.",
+            "text": "Sitio web de comercio electrónico para Romeliny, una empresa colombiana dedicada a la fabricación de calzado.",
             "author": ["Jeisson Gavilán", "Liliana Camargo"],
             "location": "FREELANCER",
             "link": "https://www.romeliny.com/",
@@ -103,15 +75,15 @@
                     "romeliny_5.webp",
                     "romeliny_6.webp"
                 ],
-                "technologies": ["React Js", "Sass", "Bootstrap", "Node Js", "Express Js", "MongoDB"],
+                "technologies": ["Node Js", "Express Js", "MongoDB", "React Js", "Sass", "Bootstrap"],
                 "achievements": [
-                    "Integración de tecnologías: Se logró integrar React, SASS y Bootstrap de manera armoniosa, aprovechando las ventajas de cada tecnología para lograr un diseño atractivo y una interfaz de usuario fluida.",
-                    "Implementación de la API RESTful: Se utilizó el módulo Express de Node.js para construir una API RESTful que permite realizar operaciones CRUD de productos en la plataforma de comercio electrónico."
+                    "Implementación de la API RESTful: Se utilizó el módulo Express de Node.js para construir una API RESTful que permite realizar operaciones CRUD de productos en la plataforma de comercio electrónico.",
+                    "Integración de tecnologías: Se logró integrar React, SASS y Bootstrap de manera armoniosa, aprovechando las ventajas de cada tecnología para lograr un diseño atractivo y una interfaz de usuario fluida."
                 ]
             }
         },
         {
-            "id": 4,
+            "id": 3,
             "img": "sifa.webp",
             "title": "Buscador de seminarios electivos SIFA",
             "category": ["FRONT END", "BACK END"],
@@ -131,7 +103,7 @@
             }
         },
         {
-            "id": 5,
+            "id": 4,
             "img": "campusupn.webp",
             "title": "Campus Virtual de la UPN",
             "category": ["FRONT END"],

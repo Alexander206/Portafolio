@@ -1,18 +1,29 @@
+import { useMemo } from "react";
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
+
+import ScrollAnimationWrapper from "../utils/ScrollAnimationWrapper";
+import getScrollAnimation from "../utils/GetScrollAnimation.jsx";
 
 import "./title.scss";
 
-const Title = ({ title, text1, textSpan, text2 }) => (
-    <section className="title">
-        <h1>{title}</h1>
+const Title = ({ title, text1, textSpan, text2 }) => {
+    const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
-        <div className="separator"></div>
+    return (
+        <section className="title">
+            <motion.h1 variants={scrollAnimation} custom={{ duration: 1 }}>
+                {title}
+            </motion.h1>
 
-        <p>
-            {text1} <span>{textSpan}</span> {text2}
-        </p>
-    </section>
-);
+            <motion.div className="separator" variants={scrollAnimation} custom={{ duration: 2 }}></motion.div>
+
+            <motion.p variants={scrollAnimation} custom={{ duration: 3 }}>
+                {text1} <span>{textSpan}</span> {text2}
+            </motion.p>
+        </section>
+    );
+};
 
 Title.propTypes = {
     title: PropTypes.string.isRequired,

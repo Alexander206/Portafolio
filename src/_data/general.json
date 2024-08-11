@@ -4,6 +4,7 @@
         "linkedin": "https://www.linkedin.com/in/jeisson-alexander",
         "github": "https://github.com/AllexanderGM",
         "instagram": "https://www.instagram.com/allexander.gm/",
+        "whatsapp": "573203096016",
         "cv": "https://drive.google.com/file/d/1n_tr705SApeCEc8g8inonNdTXohGEzDY/view?usp=sharing"
     },
 
@@ -11,8 +12,8 @@
         "home": "/",
         "about": "/about",
         "projects": "/project",
-        "services": "/services",
         "contact": "/contact",
+        "info": "/info",
         "notFound": "/*"
     }
 }

@@ -9,13 +9,13 @@
         justify-content: flex-start;
 
         text-decoration: none;
-        max-width: rem(370px);
+        max-width: rem(350px);
         background-color: $dark-color;
         border-radius: rem(25px);
         border: 1px solid $dark-color-800;
         transition: $transition;
 
-        margin: rem(10px) auto;
+        margin: rem(10px) 0;
         overflow: hidden;
 
         &:hover {
@@ -26,7 +26,7 @@
 
         .container_game {
             width: 100%;
-            min-height: rem(260px);
+            min-height: rem(240px);
             height: rem(260px);
             overflow: hidden;
 
@@ -69,7 +69,7 @@
             height: 100%;
             background-color: $dark-color;
             padding: rem(20px);
-            margin-bottom: rem(40px);
+            margin-bottom: rem(35px);
 
             .projects_category {
                 font-size: $font-size-xs;
@@ -124,7 +124,7 @@
             .upss {
                 width: 100%;
                 text-align: center;
-                color: $secondary-color;
+                color: $secondary-color-300;
                 font-size: $font-size-sm;
             }
 
@@ -138,30 +138,6 @@
                 color: $primary-color-400;
                 transition: $transition;
             }
-        }
-
-        .btn_modal {
-            position: absolute;
-            top: rem(220px);
-            right: rem(15px);
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            color: $primary-color;
-            font-size: $font-size-xl;
-            min-width: auto;
-            width: rem(40px);
-            height: rem(40px);
-            border-radius: 50%;
-            background-color: $dark-color;
-            box-shadow: $box-shadow-hover;
-            border: 1px solid $contrast-color-700;
-
-            padding: 0;
-            margin: 0;
-            transition: $transition;
         }
     }
 }

@@ -12,7 +12,9 @@ const ModalProject = ({ modalShow, id }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     const handleOpen = () => {
-        onOpen();
+        setTimeout(() => {
+            onOpen();
+        }, 200);
     };
 
     useEffect(() => {
@@ -26,6 +28,7 @@ const ModalProject = ({ modalShow, id }) => {
         <>
             {projectData.link ? (
                 <Button className="btn_modal" onPress={() => handleOpen()}>
+                    <span>Saber más</span>
                     <ion-icon name="open"></ion-icon>
                 </Button>
             ) : (
@@ -64,7 +67,7 @@ const ModalProject = ({ modalShow, id }) => {
                                         <ul className="links">
                                             {projectData.link ? (
                                                 <a href={projectData.link} target="_blank">
-                                                    <ion-icon name="earth-outline"></ion-icon>
+                                                    <ion-icon name="earth"></ion-icon>
                                                     Sitio web
                                                 </a>
                                             ) : (

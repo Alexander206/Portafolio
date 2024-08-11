@@ -1,33 +1,18 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-
+import { useState, useEffect, useRef, useCallback } from "react";
 import "./carousel.scss";
 
-/**
- * Key Benefits:
- * 1. Flexible: Supports showing multiple slides at once with the 'slidesToShow' prop.
- * 2. Circular Navigation: Optional circular navigation with the 'circular' prop.
- * 3. Responsive: Adjusts to window resizes automatically.
- * 4. Accessible: Implements ARIA attributes for better screen reader support.
- * 5. Dynamic: Works with any number of slides in the 'slideArray'.
- * 6. Optimized Performance: Uses React hooks like useCallback for better performance.
- * 7. Interactive: Supports navigation through buttons and dot indicators.
- * 8. Customizable: Easy to style and modify for different visual designs.
- * 9. Smooth Transitions: Utilizes CSS transforms for smooth slide transitions.
- * 10. Error Prevention: Includes logic to prevent invalid slide indices.
- */
-
-const Carousel = ({ images, slidesToShow = 1, circular = true }) => {
+const Carousel = ({ images, circular = true }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [slidesToShow, setSlidesToShow] = useState(window.innerWidth > 800 ? 2 : 1);
+    const [imageHeight, setImageHeight] = useState(0);
     const trackRef = useRef(null);
     const dotNavRef = useRef(null);
+    const imageRef = useRef(null);
 
     images = images.map((image) => {
         return new URL(`../../assets/proyects/${image}`, import.meta.url).pathname;
     });
-
-    console.log(images);
-
-    const slideArray = ["red", "blue", "yellow", "green", "purple", "orange", "pink"];
 
     const moveToSlide = useCallback(
         (targetIndex) => {
@@ -49,11 +34,30 @@ const Carousel = ({ images, slidesToShow = 1, circular = true }) => {
     }, [currentSlide, updateSlidePosition]);
 
     useEffect(() => {
-        window.addEventListener("resize", updateSlidePosition);
-        return () => {
-            window.removeEventListener("resize", updateSlidePosition);
+        const handleResize = () => {
+            const width = window.innerWidth;
+            setScreenWidth(width);
+            setSlidesToShow(width > 800 ? 2 : 1);
+            setCurrentSlide(0); // Reset the slide index when changing slidesToShow
+
+            if (imageRef.current) {
+                // Accede a la altura del elemento cuando el componente se monta
+                const height = imageRef.current.offsetWidth - imageRef.current.offsetWidth * 0.23;
+                setImageHeight(height);
+            }
         };
-    }, [updateSlidePosition]);
+
+        if (imageRef.current) {
+            // Accede a la altura del elemento cuando el componente se monta
+            const height = imageRef.current.offsetWidth - imageRef.current.offsetWidth * 0.23;
+            setImageHeight(height);
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     const handlePrevClick = useCallback(() => {
         setCurrentSlide((prev) => {
@@ -76,7 +80,13 @@ const Carousel = ({ images, slidesToShow = 1, circular = true }) => {
     }, [images.length, slidesToShow, circular]);
 
     return (
-        <div className="carousel" role="region" aria-roledescription="carousel" aria-live="polite">
+        <div
+            className="carousel"
+            role="region"
+            aria-roledescription="carousel"
+            aria-live="polite"
+            style={{ height: `${imageHeight}px` }}
+        >
             <button
                 onClick={handlePrevClick}
                 aria-label="Previous slide"
@@ -101,7 +111,7 @@ const Carousel = ({ images, slidesToShow = 1, circular = true }) => {
                                 width: `${100 / slidesToShow}%`,
                             }}
                         >
-                            <img src={image} alt={`Slide ${index + 1}`} className="carousel__image" />
+                            <img ref={imageRef} src={image} alt={`Slide ${index + 1}`} className="carousel__image" />
                         </li>
                     ))}
                 </ul>

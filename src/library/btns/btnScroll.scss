@@ -16,7 +16,8 @@ $animDuration: 6s;
 .mouse {
     cursor: pointer;
     position: fixed;
-    bottom: 12vh;
+    bottom: rem(25px);
+    right: rem(25px);
 
     display: none;
     width: $widthMouse;

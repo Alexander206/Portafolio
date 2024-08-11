@@ -31,12 +31,12 @@ const Project = ({ id }) => {
     };
 
     return (
-        <article className="projects_link" style={screenStyle}>
+        <article className="projects_link" style={screenStyle} id={`id_${id}`}>
             {projectData.link.length < 1 ? (
                 <div className="container_game">
-                    <button className="projects_img" onClick={() => setModalShow(true)}>
+                    <figure className="projects_img">
                         <img src={img} alt="image project" />
-                    </button>
+                    </figure>
 
                     <div className="grab-zone-wrapper">
                         <GrabZone
@@ -47,9 +47,9 @@ const Project = ({ id }) => {
                     </div>
                 </div>
             ) : (
-                <button className="projects_img" onClick={() => setModalShow(true)}>
+                <figure className="projects_img">
                     <img src={img} alt="image project" />
-                </button>
+                </figure>
             )}
 
             <article className="projects_data">
@@ -62,9 +62,15 @@ const Project = ({ id }) => {
                         );
                     })}
                 </article>
-                <a href={projectData.link} className="projects_title" target="_blank">
-                    {projectData.title}
-                </a>
+
+                {projectData.link ? (
+                    <a href={projectData.link} className="projects_title" target="_blank">
+                        {projectData.title}
+                    </a>
+                ) : (
+                    <span className="projects_title">{projectData.title}</span>
+                )}
+
                 <span className="projects_date"> {projectData.date} </span>
                 <p className="projects_text">{projectData.text}</p>
                 <p className="projects_location">{projectData.location}</p>

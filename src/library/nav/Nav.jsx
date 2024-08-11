@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import "./nav.scss";
 
 import Navbar from "./components/organisms/Navbar";
-
 import GeneralContext from "../../context/GeneralContext";
 
 const Nav = ({ classPage }) => {
@@ -14,8 +13,13 @@ const Nav = ({ classPage }) => {
 
     const navItems = [
         {
-            icon: "bulb",
+            icon: "home",
             route: route.home,
+            text: "Inicio",
+        },
+        {
+            icon: "bulb",
+            route: route.about,
             text: "Sobre mí",
         },
         {

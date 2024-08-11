@@ -1,10 +1,9 @@
 @import "@styles/autoload.scss";
 
 .toTop {
-    border: none;
     display: flex;
     right: rem(20px);
-    bottom: rem(25px);
+    bottom: rem(90px);
     position: fixed;
     z-index: 9999;
     cursor: pointer;
@@ -36,5 +35,11 @@
         stroke: currentColor;
         fill: none;
         width: 24px;
+    }
+}
+
+@include responsive {
+    .toTop {
+        bottom: rem(25px);
     }
 }

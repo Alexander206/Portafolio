@@ -14,7 +14,7 @@ import data from "../_data/general.json";
 import Routes from "./Routes.jsx";
 
 // Principal component
-function App() {
+const App = () => {
     const { social, route } = data;
 
     const [cursorActive, setCursorActive] = useState(false);
@@ -43,6 +43,6 @@ function App() {
             </BrowserRouter>
         </GeneralContext.Provider>
     );
-}
+};
 
 export default App;

@@ -4,7 +4,7 @@ import "./splash.scss";
 
 import logo_figure from "../../assets/icon/logo.svg";
 
-function Splash({ onFinish }) {
+const Splash = ({ onFinish }) => {
     const [stateClass, setStateClass] = useState("splash_screen-container");
 
     useEffect(() => {
@@ -37,7 +37,7 @@ function Splash({ onFinish }) {
             <p className="splash_screen-logo-text">Jeisson Alexander</p>
         </section>
     );
-}
+};
 
 Splash.propTypes = {
     onFinish: PropTypes.func.isRequired,
